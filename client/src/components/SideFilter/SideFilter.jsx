@@ -4,7 +4,12 @@ class SideFilter extends Component {
   render() {
     return (
       <div>
-        SideFilter
+        <h3>Filter</h3>
+        <lable>Product</lable>
+        <select>
+          <option>Cereals</option>
+          <option>Waffle and Pancake Mix</option>
+        </select>
       </div >
     )
   }
