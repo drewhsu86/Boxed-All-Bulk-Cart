@@ -14,7 +14,7 @@ const productsData = [
     rating: 3,
     stock: 25,
     categories: 'grocery',
-    subcategory: 'cereal & breakfast'
+    subcategories: 'cereal & breakfast'
   },
   {
     name: 'Product 002',
@@ -24,7 +24,7 @@ const productsData = [
     rating: 3,
     stock: 25,
     categories: 'grocery',
-    subcategory: 'cereal & breakfast'
+    subcategories: 'cereal & breakfast'
   },
   {
     name: 'Product 003',
@@ -34,7 +34,7 @@ const productsData = [
     rating: 3,
     stock: 25,
     categories: 'grocery',
-    subcategory: 'cereal & breakfast'
+    subcategories: 'cereal & breakfast'
   },
   {
     name: 'Product 004',
@@ -44,7 +44,7 @@ const productsData = [
     rating: 3,
     stock: 25,
     categories: 'grocery',
-    subcategory: 'cereal & breakfast'
+    subcategories: 'cereal & breakfast'
   },
   {
     name: 'Product 005',
@@ -54,7 +54,7 @@ const productsData = [
     rating: 3,
     stock: 25,
     categories: 'grocery',
-    subcategory: 'cereal & breakfast'
+    subcategories: 'cereal & breakfast'
   },
   {
     name: 'Product 006',
@@ -64,24 +64,44 @@ const productsData = [
     rating: 3,
     stock: 25,
     categories: 'grocery',
-    subcategory: 'cereal & breakfast'
+    subcategories: 'cereal & breakfast'
   }
 ]
 
 
 
 class Products extends Component {
+  constructor() {
+    super()
+    this.state = {
+      products: [],
+      filteredProducts: null
+    }
+  }
+
   render() {
+
+    const PRODUCTS = productsData.map(product => (
+      <Carousel
+        name={product.name}
+        img={product.imgURL}
+        description={product.description}
+        price={product.price}
+        rating={product.rating}
+        stock={product.stock}
+        categories={product.categories}
+        subcategories={product.subcategories}
+      />
+    ))
+
     return (
       <div className="products">
         <SideBar />
-        <div>
+        <div className="main">
           <div>Banner</div>
           <Switch>
             <Route exact path='/:category'>
-              <Carousel num={1} />
-              <Carousel num={2} />
-              <Carousel num={3} />
+              {PRODUCTS}
             </Route>
             <Route path='/:category/:subcategory' />
           </Switch>
