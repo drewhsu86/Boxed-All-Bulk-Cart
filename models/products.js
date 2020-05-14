@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const Product = new Schema({
   name: { type: String, required: true },
   
-  imgURL: { type: Array, required: true },
+  images: { type: Array, required: true },
   
   description: { type: String, required: true },
 
@@ -17,6 +17,12 @@ const Product = new Schema({
   categories: { type: String, required: true },
 
   subcategories: { type: String, required: true },
+
+  typeOfProduct: { type: String, required: true },
+  
+  values: { type: String, required: true },
+  
+  brands : { type: String, required: true },
 },
   {
     timestamps: true
