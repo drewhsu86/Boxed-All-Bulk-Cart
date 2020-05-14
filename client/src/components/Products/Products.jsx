@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SideBar from '../SideBar/SideBar'
+import { Link, Route, Switch } from 'react-router-dom'
 
 
 const productsData = [
@@ -71,8 +72,16 @@ class Products extends Component {
   render() {
     return (
       <>
-        <div>Products List</div>
         <SideBar />
+        <div>
+          <div>Banner</div>
+          <Switch>
+            <Route exact path='/:category'></Route>
+            <Route path='/:category/:subcategory' />
+          </Switch>
+
+          <button>LOAD MORE</button>
+        </div>
       </>
     )
   }
