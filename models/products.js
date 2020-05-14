@@ -10,9 +10,9 @@ const Product = new Schema({
 
   price: { type: String, required: true },
 
-  rating: { type: String, required: true },
+  rating: { type: Number, required: true },
   
-  stock: { type: String, required: true }
+  stock: { type: Number, required: true }
 },
   {
     timestamps: true
