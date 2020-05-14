@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class SideNav extends Component {
   render() {
     return (
       <nav>
         <h3>Categories</h3>
+        <Link to="products/snacks">LINK</Link>
         <li>All Bulk</li>
         <li>Snacks</li>
         <li>Beverages</li>

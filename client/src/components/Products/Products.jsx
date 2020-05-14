@@ -3,7 +3,7 @@ import SideBar from '../SideBar/SideBar'
 import './Products.css'
 import Carousel from '../Carousel/Carousel'
 import { Link, Route, Switch } from 'react-router-dom'
-
+import { withRouter } from 'react-router-dom'
 
 const productsData = [
   {
@@ -115,4 +115,4 @@ class Products extends Component {
 
 
 
-export default Products
+export default withRouter(Products)
