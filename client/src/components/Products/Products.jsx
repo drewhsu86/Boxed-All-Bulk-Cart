@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SideBar from '../SideBar/SideBar'
 import './Products.css'
+import Carousel from '../Carousel/Carousel'
 import { Link, Route, Switch } from 'react-router-dom'
 
 
@@ -78,8 +79,9 @@ class Products extends Component {
           <div>Banner</div>
           <Switch>
             <Route exact path='/:category'>
-              Row1 - carousel
-              Row2
+              <Carousel num={1} />
+              <Carousel num={2} />
+              <Carousel num={3} />
             </Route>
             <Route path='/:category/:subcategory' />
           </Switch>
