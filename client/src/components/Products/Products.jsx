@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SideBar from '../SideBar/SideBar'
+import './Products.css'
 import { Link, Route, Switch } from 'react-router-dom'
 
 
@@ -71,18 +72,21 @@ const productsData = [
 class Products extends Component {
   render() {
     return (
-      <>
+      <div className="products">
         <SideBar />
         <div>
           <div>Banner</div>
           <Switch>
-            <Route exact path='/:category'></Route>
+            <Route exact path='/:category'>
+              Row1 - carousel
+              Row2
+            </Route>
             <Route path='/:category/:subcategory' />
           </Switch>
 
           <button>LOAD MORE</button>
         </div>
-      </>
+      </div>
     )
   }
 }
