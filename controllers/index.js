@@ -37,7 +37,7 @@ async function getProduct(req, res) {
 async function createProduct(req, res) {
   try {
     console.log(res.locals.user)
-    const product = await new Product({ ...req.body, authors: [res.locals.user.id] })
+    const product = await new Product(req.body)
     await product.save()
 
     res.status(201).json(product)
@@ -69,7 +69,7 @@ async function deleteProduct(req, res) {
   try {
     const product = await Product.findById(req.params.id)
 
-    const deleted = await Entry.findByIdAndDelete(req.params.id)
+    const deleted = await Product.findByIdAndDelete(req.params.id)
 
     if (deleted) {
       return res.status(200).send("Product deleted!")
