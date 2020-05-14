@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Reviews from '../ProductDetails/Reviews/Reviews'
 
 export default class ProductDetails extends Component {
 
@@ -8,7 +8,7 @@ export default class ProductDetails extends Component {
   render() {
     return (
       <div>
-        
+        <Reviews />
       </div>
     )
   }
