@@ -4,7 +4,7 @@
 
 Ever use an online super-store like Amazon or Boxed? As a design exercise, we've tried to implement our own version of the Boxed online store, but with some informational pop-ups that direct the user to either the All-bulk (warehouse items) store or the Express (grocery shopping service) store. We also implement corresponding separate shopping carts to improve the shopper's experience.
 
-We also incorporate a 
+We also incorporate a database where products can be added to, edited and deleted from. The webpage will pull products from this database and display them for users. A secret administrator page will be used to edit products.
 
 Built using MERN stack: MongoDB, Express, React, Nodejs
 
