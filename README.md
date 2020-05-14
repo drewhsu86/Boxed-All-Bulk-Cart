@@ -1,6 +1,18 @@
 # Boxed-All-Bulk-Cart
 
+# Summary
+
+Ever use an online super-store like Amazon or Boxed? As a design exercise, we've tried to implement our own version of the Boxed online store, but with some informational pop-ups that direct the user to either the All-bulk (warehouse items) store or the Express (grocery shopping service) store. We also implement corresponding separate shopping carts to improve the shopper's experience.
+
+We also incorporate a 
+
+Built using MERN stack: MongoDB, Express, React, Nodejs
+
+# Development
+
 [Development Trello Board](https://trello.com/b/OVCriFYj/ga-sei-apollo-project-3-boxed)
+
+## Code Examples And References
 
 #### Example for product schema and thumbnail
 ```js
