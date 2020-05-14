@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const User = require("../models/users")
 const db = require('../db')
-const Entry = require("../models/products")
+const Product = require("../models/products")
 
 
 const SALT_ROUNDS = 11
