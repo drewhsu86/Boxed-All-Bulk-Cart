@@ -14,14 +14,64 @@ class Products extends Component {
   constructor() {
     super()
     this.state = {
-      products: [],
-      filteredProducts: null
+      // products: [],
+      filteredProducts: [],
+      typeOfProduct: [],
+      values: [],
+      brands: [],
+      typeOfProductFilter: [],
+      valuesFilter: [],
+      brandsFilter: []
     }
   }
 
-  render() {
 
-    const PRODUCTS = productsData.map(product => (
+  componentDidMount() {
+
+    this.setState({
+      filteredProducts: productsData
+    })
+    this.populateFilter(productsData, 'typeOfProduct')
+    this.populateFilter(productsData, 'values')
+    this.populateFilter(productsData, 'brands')
+    this.forceUpdate()
+  }
+
+  populateFilter(arr, dest) {
+    let available = []
+    arr.forEach(prod => {
+      // if its not included in available array AND if product[dest] is truthy (got rid of empty string)
+      // deletes repeats
+      if (!available.includes(prod[dest]) && prod[dest]) {
+        available.push(prod[dest])
+      }
+    })
+    this.setState({
+      [dest]: available
+    })
+  }
+
+
+  pushOrSplice = (dest, checked, label) => {
+    let arr = this.state[dest]
+    if (checked) {
+      arr.push(label)
+      this.setState({ [dest]: arr })
+    } else {
+      arr.splice(arr.indexOf(label), 1)
+      this.setState({ [dest]: arr })
+    }
+  }
+
+
+
+
+  render() {
+    console.log(this.state.typeOfProductFilter)
+    console.log(this.state.valuesFilter)
+    console.log(this.state.brandsFilter)
+
+    const PRODUCTS = this.state.filteredProducts.map(product => (
       <Carousel
         name={product.name}
         img={product.images[0]}
@@ -34,11 +84,14 @@ class Products extends Component {
       />
     ))
 
-
-
     return (
       <div className="products">
-        <SideBar />
+        <SideBar
+          typeOfChoices={this.state.typeOfProduct}
+          valuesChoices={this.state.values}
+          brandsChoices={this.state.brands}
+          onClickFilter={this.pushOrSplice}
+        />
         <div className="main">
           <div>Banner</div>
           <Switch>

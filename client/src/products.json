@@ -15,7 +15,7 @@
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "cereals",
     "values": "",
-    "brands": "Kellog's"
+    "brands": "Kellogg's"
   },
   {
     "name": "Frosted Mini Wheats",
@@ -33,7 +33,7 @@
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "cereals",
     "values": "",
-    "brands": "Kellog's"
+    "brands": "Kellogg's"
   },
   {
     "name": "Pancake & Waffle Mix",
@@ -49,7 +49,7 @@
     "stock": "25",
     "categories": "Grocery",
     "subcategories": "cereal & breakfast",
-    "typeOfProduct": "waffle & pancake mix",
+    "typeOfProduct": "waffles & pancake mix",
     "values": "",
     "brands": "Aunt Jemima"
   },
@@ -121,7 +121,7 @@
     "stock": "25",
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
-    "typeOfProduct": "cereal",
+    "typeOfProduct": "cereals",
     "values": "",
     "brands": "Kellogg's"
   },
@@ -139,8 +139,8 @@
     "stock": "25",
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
-    "typeOfProduct": "cereal",
-    "values": "",
+    "typeOfProduct": "cereals",
+    "values": "gluten",
     "brands": "Kellogg's"
   },
   {
@@ -158,7 +158,7 @@
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "waffles & pancake mix",
-    "values": "",
+    "values": "keto",
     "brands": "Aunt Jemima"
   },
   {
