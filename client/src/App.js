@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import Products from './components/Products/Products'
 
+import Products from './components/Products/Products'
 import { Switch, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import ProductDetails from './components/ProductDetails/ProductDetails';
+
+
 
 class App extends Component {
   constructor() {
@@ -18,13 +22,17 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/" />
+
+          <Route exact path="/" render={Home} />
           <Route exact path="/products" render={(props) => <Products />} />
           <Route path="/add-product" />
-          <Route exact path="/products/:id/edit" />
+          <Route path="/test"><ProductDetails/></Route>
+          <Route path="/products/:id/edit"  />
           <Route exact path="/products/:id" />
           <Route path="/login" />
           <Route path="/logout" />
+          {/* <Route path="/test" component={Info}/> */}
+
         </Switch>
       </div>
     );
