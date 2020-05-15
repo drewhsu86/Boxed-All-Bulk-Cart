@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+// testing purposes only!!!!!!
+import Info from './components/ProductDetails/Info/Info'
+
+class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {}
+    
+  }
+
+
+  render() {
+
+    return (
+      <div className="App">
+        <Switch>
+          <Route exact path="/" render={Home} />
+          <Route path="/products" />
+          <Route path="/add-product" />
+          <Route path="/test"><ProductDetails/></Route>
+          <Route path="/products/:id/edit"  />
+          <Route path="/login" />
+          <Route path="/logout" />
+          {/* <Route path="/test" component={Info}/> */}
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
