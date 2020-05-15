@@ -2,7 +2,7 @@ const db = require("../db")
 const Product = require("../models/products")
 const User = require("../models/users")
 const bcrypt = require('bcrypt')
-// const products = require("./product.json")
+const products = require("./products.json")
   
 db.on("error", console.error.bind(console, "MongoDB Connection Error:"))
 
@@ -22,25 +22,6 @@ const main = async () => {
     await User.insertMany(users)
     console.log("Seeded initial users!")
 
-    const products = [{
-      "name": "Product 001",
-      "images": [
-        "https://i.imgur.com/aJIBBDK.jpg",
-        "https://i.imgur.com/hqxVr7Q.jpg",
-        "https://i.imgur.com/BAe5mwe.jpg",
-        "https://i.imgur.com/3z1wuuc.png"
-      ],
-      "description": "Yummy in my tummy :)",
-      "price": "4.99",
-      "rating": "3",
-      "stock": "25",
-      "categories": "grocery",
-      "subcategories": "cereal & breakfast",
-      "typeOfProduct": "cereals",
-      "values": "gluten free",
-      "brands": "Kellog's"
-    }]
-  
     await Product.insertMany(products)
     console.log("Seeded initial products!")
   } catch (er) {
