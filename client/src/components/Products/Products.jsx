@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SideBar from '../SideBar/SideBar'
 import './Products.css'
 import Carousel from '../Carousel/Carousel'
+import ProductThumb from '../Carousel/ProductThumb'
 import { Link, Route, Switch } from 'react-router-dom'
 import productsData from '../../products.json'
 import { withRouter } from 'react-router-dom'
@@ -14,7 +15,7 @@ class Products extends Component {
   constructor() {
     super()
     this.state = {
-      // products: [],
+      products: [],
       filteredProducts: [],
       typeOfProduct: [],
       values: [],
@@ -29,6 +30,7 @@ class Products extends Component {
   componentDidMount() {
 
     this.setState({
+      products: productsData,
       filteredProducts: productsData
     })
     this.populateFilter(productsData, 'typeOfProduct')
@@ -53,14 +55,49 @@ class Products extends Component {
 
 
   pushOrSplice = (dest, checked, label) => {
-    let arr = this.state[dest]
+    let arr = this.state[dest + 'Filter']
     if (checked) {
       arr.push(label)
-      this.setState({ [dest]: arr })
+      this.setState({ [dest + 'Filter']: arr })
     } else {
       arr.splice(arr.indexOf(label), 1)
-      this.setState({ [dest]: arr })
+      this.setState({ [dest + 'Filter']: arr })
     }
+    this.threeFilter()
+    //this.filterbrandsOnClick(arr, newFilteredProducts)
+  }
+
+
+
+  threeFilter = () => {
+
+    const filterNames = ['typeOfProduct', 'values', 'brands']
+    let productsArray = this.state.products
+    filterNames.forEach(filterName => {
+      productsArray = this.filterOnClick(this.state[filterName + 'Filter'], productsArray, filterName)
+      console.log(filterName, productsArray)
+    })
+    this.setState({
+      filteredProducts: productsArray
+    })
+  }
+
+  filterOnClick = (arr, prodsArray, dest) => {
+    console.log('the filtered arr is', arr)
+    let newArr = prodsArray.filter((prod) => {
+      return arr.includes(prod[dest]) || arr.length === 0
+    })
+    return newArr
+  }
+
+  filterbrandsOnClick = (arr, prodsArray) => {
+    console.log('the filtered arr is', arr)
+    let newArr = prodsArray.filter((prod) => (
+      arr.includes(prod.brands) || arr.length === 0
+    ))
+
+    return newArr
+
   }
 
 
@@ -71,18 +108,7 @@ class Products extends Component {
     console.log(this.state.valuesFilter)
     console.log(this.state.brandsFilter)
 
-    const PRODUCTS = this.state.filteredProducts.map(product => (
-      <Carousel
-        name={product.name}
-        img={product.images[0]}
-        description={product.description}
-        price={product.price}
-        rating={product.rating}
-        stock={product.stock}
-        categories={product.categories}
-        subcategories={product.subcategories}
-      />
-    ))
+
 
     return (
       <div className="products">
@@ -95,10 +121,25 @@ class Products extends Component {
         <div className="main">
           <div>Banner</div>
           <Switch>
-            <Route exact path='/:category'>
-              {PRODUCTS}
+            <Route exact path='/products'>
+              {this.state.filteredProducts.map(product => (
+                <ProductThumb
+                  product={product}
+                />
+              ))}
             </Route>
-            <Route path='/:category/:subcategory' />
+            <Route exact path='/products/:category'>
+              <Carousel
+                products={this.state.filteredProducts}
+              />
+            </Route>
+            <Route path='/products/:category/:subcategory'>
+              {this.state.filteredProducts.map(product => (
+                <ProductThumb
+                  product={product}
+                />
+              ))}
+            </Route>
           </Switch>
 
           <button>LOAD MORE</button>

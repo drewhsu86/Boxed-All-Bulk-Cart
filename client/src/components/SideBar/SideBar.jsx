@@ -16,19 +16,19 @@ class SideBar extends Component {
             title={"Product"}
             choices={this.props.typeOfChoices}
             onClickFilter={this.props.onClickFilter}
-            name={'typeOfProductFilter'}
+            name={'typeOfProduct'}
           />
           <SideFilter
             title={"Values"}
             choices={this.props.valuesChoices}
             onClickFilter={this.props.onClickFilter}
-            name={'valuesFilter'}
+            name={'values'}
           />
           <SideFilter
             title={"Brand"}
             choices={this.props.brandsChoices}
             onClickFilter={this.props.onClickFilter}
-            name={'brandsFilter'}
+            name={'brands'}
           />
         </div>
       </div>
