@@ -20,9 +20,9 @@ export default class ProductDetails extends Component {
     console.log(this.state.items)
     return (
       <div>
-        <Images />
-        <Info items={this.state.items}/>
-        <Reviews /> 
+        <Images images={this.state.items[0].images} altText={this.state.items[0].name} />
+        <Info items={this.state.items} />
+        <Reviews />
         <RelatedItems items={this.state.items} />
       </div>
     )
@@ -32,8 +32,3 @@ export default class ProductDetails extends Component {
 
 
 
-//images is one component
-// array.map(product.images) for all images, maybe write an if statement to display images: current product.image[0] 
-// current product image[0] 
-
-//

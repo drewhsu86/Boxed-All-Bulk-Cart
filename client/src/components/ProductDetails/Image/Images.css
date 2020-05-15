@@ -1,0 +1,25 @@
+.imageChooser {
+  display: flex;
+}
+
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.imageButton {
+  width: 100%;
+}
+
+.imageMain {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  width: 80%;
+}
+
+.imageImg {
+  width: 100%;
+}
