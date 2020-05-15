@@ -1,0 +1,182 @@
+[
+  {
+    "name": "TriFun Cereal Box",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140429902.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140428983.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140430817.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140433415.jpg"
+    ],
+    "description": "Variety Pack. 58 oz. In stock",
+    "price": "11.59",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "cereals",
+    "values": "",
+    "brands": "Kellogg's"
+  },
+  {
+    "name": "Frosted Mini Wheats",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564514844257.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564514844351.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564514844479.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564514844117.jpg"
+    ],
+    "description": "Original. 55 oz. In stock",
+    "price": "8.39",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "cereals",
+    "values": "",
+    "brands": "Kellogg's"
+  },
+  {
+    "name": "Pancake & Waffle Mix",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462848498691.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462848502882.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462848501442.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462848505171.jpg"
+    ],
+    "description": "Buttermilk Complete. 80 oz. In stock",
+    "price": "5.29",
+    "rating": "3",
+    "stock": "25",
+    "categories": "Grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "waffles & pancake mix",
+    "values": "",
+    "brands": "Aunt Jemima"
+  },
+  {
+    "name": "Honey Nut Cheerios",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1582146223847.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564156802278.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564156803151.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564156803291.jpg"
+    ],
+    "description": "55 oz. In stock",
+    "price": "8.99",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "cereals",
+    "values": "",
+    "brands": "General Mills"
+  },
+  {
+    "name": "Cinnamon Toast Crunch",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1447261588295.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1459659383993.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1459659383037.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1459659458821.jpg"
+    ],
+    "description": "49.5 oz. In stock",
+    "price": "8.39",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "cereals",
+    "values": "",
+    "brands": "General Mills"
+  },
+  {
+    "name": "Pop-Tarts Toaster Pastries",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1578670364088.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1578670363820.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1578670363765.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1578670365401.jpg"
+    ],
+    "description": "Variety Pack. 48 Ct. In stock",
+    "price": "11.09",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "pastries",
+    "values": "",
+    "brands": "Kellogg's"
+  },
+  {
+    "name": "Assortment Pack",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462389697533.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458281139443.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458281143732.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458281135734.jpg"
+    ],
+    "description": "Variety Pack. 30 Count. In stock",
+    "price": "14.69",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "cereals",
+    "values": "",
+    "brands": "Kellogg's"
+  },
+  {
+    "name": "Raisin Bran",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1447263037045.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458409646094.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458409649844.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458409648636.jpg"
+    ],
+    "description": "2 Bags. 76.5 oz. In stock",
+    "price": "10.49",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "cereals",
+    "values": "gluten",
+    "brands": "Kellogg's"
+  },
+  {
+    "name": "Pancake Cups",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564673913155.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564673914381.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564673912591.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564673912664.jpg"
+    ],
+    "description": "Variety Pack. 12 Ct. In stock",
+    "price": "15.79",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "waffles & pancake mix",
+    "values": "keto",
+    "brands": "Aunt Jemima"
+  },
+  {
+    "name": "Pop-Tarts Toaster Pastries",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1493147459921.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576784498894.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576784498983.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576784498635.jpg"
+    ],
+    "description": "Brown Sugar. 36 Ct. In stock",
+    "price": "9.49",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "pastries",
+    "values": "",
+    "brands": "Kellogg's"
+  }
+]

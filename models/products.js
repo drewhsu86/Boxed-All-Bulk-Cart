@@ -18,11 +18,11 @@ const Product = new Schema({
 
   subcategories: { type: String, required: true },
 
-  typeOfProduct: { type: String, required: true },
+  typeOfProduct: { type: String, required: false },
   
-  values: { type: String, required: true },
+  values: { type: String, required: false },
   
-  brands : { type: String, required: true },
+  brands : { type: String, required: false },
 },
   {
     timestamps: true
