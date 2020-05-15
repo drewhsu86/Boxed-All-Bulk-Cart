@@ -12,6 +12,23 @@
   position: relative;
 }
 
+.carousel-info {
+  position: absolute;
+  top: 0;
+  padding: 30px;
+  font-size: 15px;
+  color: darkslateblue;
+}
+
+.carousel-info h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.carousel-shop {
+  padding: 10px;
+}
+
 .carousel-img {
   width: 100%;
 }
@@ -73,4 +90,26 @@
 
 .carousel-arrow:hover {
   opacity: 50%;
+}
+
+@media (min-width: 1000px) {
+  .carousel-info {
+    top: 5%;
+    font-size: 20px;
+  }
+
+  .carousel-info h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .carousel-info {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .carousel-info h3 {
+    font-size: 16px;
+  }
 }

@@ -42,15 +42,27 @@ export default class CarouselHomeWithButtons extends Component {
 
   render() {
     console.log(this.state.banners)
+    const banner = this.state.banners[this.state.currIndex]
     return (
       <div className="carousel-container">
         <img className="carousel-img"
-          src={this.state.banners[this.state.currIndex].imgURL}
+          src={banner.imgURL}
           alt="Banner for our sale"
         />
 
+        <div className="carousel-info"
+          style={{
+            left: banner.txtLeft,
+            width: banner.txtWidth,
+            color: banner.txtColor
+          }}
+        >
+          <h3>{banner.title}</h3>
+          <p>{banner.description}</p>
+        </div>
+
         <div className="carousel-fade"
-          key={new Date()}
+          key={Math.random()}
         ></div>
 
         <div className="carousel-buttons">
