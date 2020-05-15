@@ -14,6 +14,7 @@ class Products extends Component {
   constructor() {
     super()
     this.state = {
+      products: [],
       filteredProducts: [],
       typeOfProduct: [],
       values: [],
@@ -28,6 +29,7 @@ class Products extends Component {
   componentDidMount() {
 
     this.setState({
+      products: productsData,
       filteredProducts: productsData
     })
     this.populateFilter(productsData, 'typeOfProduct')
@@ -52,38 +54,58 @@ class Products extends Component {
 
 
   pushOrSplice = (dest, checked, label) => {
-    let arr = this.state[dest]
+    let arr = this.state[dest + 'Filter']
     if (checked) {
       arr.push(label)
-      this.setState({ [dest]: arr })
+      this.setState({ [dest + 'Filter']: arr })
     } else {
       arr.splice(arr.indexOf(label), 1)
-      this.setState({ [dest]: arr })
+      this.setState({ [dest + 'Filter']: arr })
     }
-    this.filterTypeOfProductsOnClick(arr)
-    //this.filterbrandsOnClick(arr)
+    this.threeFilter()
+    //this.filterbrandsOnClick(arr, newFilteredProducts)
   }
 
 
-  filterTypeOfProductsOnClick = (arr) => {
-    console.log('the filtered arr is', arr)
-    let newArr = this.state.filteredProducts.filter((prod) => (
-      arr.includes(prod.typeOfProduct) || arr.length === 0
-    ))
+
+  threeFilter = () => {
+    let newFilteredProducts = this.state.products
+    let productsArray = this.filterOnClick(this.state.typeOfProductFilter, newFilteredProducts, 'typeOfProducts')
+    console.log('typeofproduct state filter4', this.state.typeOfProductFilter)
+    console.log('typeOfProducts filter:', productsArray)
+    productsArray = this.filterOnClick(this.state.valuesFilter, newFilteredProducts, 'values')
+    console.log('values filter:', productsArray)
+    productsArray = this.filterOnClick(this.state.brandsFilter, newFilteredProducts, 'brands')
+    console.log('brands filter:', productsArray)
     this.setState({
-      filteredProducts: newArr
+      filteredProducts: productsArray
     })
+  }
+
+  filterOnClick = (arr, prodsArray, dest) => {
+    console.log('the filtered arr is', arr)
+    let newArr = prodsArray.filter((prod) => {
+      console.log('prod:', prod)
+      console.log('dest:', dest)
+      return arr.includes(prod[dest]) || arr.length === 0
+    })
+    // this.setState({
+    //   filteredProducts: newArr
+    // })
+    return newArr
     console.log('new arr is', newArr)
   }
 
-  filterbrandsOnClick = (arr) => {
+  filterbrandsOnClick = (arr, prodsArray) => {
     console.log('the filtered arr is', arr)
-    let newArr = this.state.filteredProducts.filter((prod) => (
-      prod.brands === this.state.brandsFilter[0]
+    let newArr = prodsArray.filter((prod) => (
+      //prod.brands === this.state.brandsFilter[0]
+      arr.includes(prod.brands) || arr.length === 0
     ))
-    this.setState({
-      filteredProducts: newArr
-    })
+    // this.setState({
+    //   filteredProducts: newArr
+    // })
+    return newArr
     console.log('new arr is', newArr)
   }
 
