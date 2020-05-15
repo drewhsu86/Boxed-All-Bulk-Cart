@@ -10,7 +10,19 @@ export default class Images extends Component {
     }
   }
 
+  // =========
+  // methods
+  // =========
 
+  handleCurrIndex = (ind) => {
+    this.setState({
+      currIndex: ind
+    })
+  }
+
+  // =========
+  // render
+  // =========
   render() {
 
     // images is an array of image urls 
@@ -36,11 +48,20 @@ export default class Images extends Component {
       return (
         <div className="imageChooser">
           <div className="imageColumn">
-
+            {
+              images.map((image, ind) => {
+                // if we click each button then the currIndex
+                // should become the index of the button
+                // since we mapped from images 
+                return <img className="imageButton"
+                  src={image} alt="button for showing images" onClick={() => { this.handleCurrIndex(ind) }} />
+              })
+            }
           </div>
 
           <div className="imageMain">
-            <img src={images[this.state.currIndex]} alt={this.state.altText} />
+            <img className="imageImg"
+              src={images[this.state.currIndex]} alt={this.state.altText} />
           </div>
         </div>
       )
