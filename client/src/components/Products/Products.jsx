@@ -14,7 +14,6 @@ class Products extends Component {
   constructor() {
     super()
     this.state = {
-      // products: [],
       filteredProducts: [],
       typeOfProduct: [],
       values: [],
@@ -61,6 +60,31 @@ class Products extends Component {
       arr.splice(arr.indexOf(label), 1)
       this.setState({ [dest]: arr })
     }
+    this.filterTypeOfProductsOnClick(arr)
+    //this.filterbrandsOnClick(arr)
+  }
+
+
+  filterTypeOfProductsOnClick = (arr) => {
+    console.log('the filtered arr is', arr)
+    let newArr = this.state.filteredProducts.filter((prod) => (
+      arr.includes(prod.typeOfProduct) || arr.length === 0
+    ))
+    this.setState({
+      filteredProducts: newArr
+    })
+    console.log('new arr is', newArr)
+  }
+
+  filterbrandsOnClick = (arr) => {
+    console.log('the filtered arr is', arr)
+    let newArr = this.state.filteredProducts.filter((prod) => (
+      prod.brands === this.state.brandsFilter[0]
+    ))
+    this.setState({
+      filteredProducts: newArr
+    })
+    console.log('new arr is', newArr)
   }
 
 
