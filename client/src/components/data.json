@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "name": "Product 001",
+    "images": [
+      "https://i.imgur.com/aJIBBDK.jpg",
+      "https://i.imgur.com/hqxVr7Q.jpg",
+      "https://i.imgur.com/BAe5mwe.jpg",
+      "https://i.imgur.com/3z1wuuc.png"
+    ],
+    "description": "Yummy in my tummy :)",
+    "price": "4.99",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "cereals",
+    "values": "gluten free",
+    "brands": "Kellog's",
+    "size": "Organic 8 oz"
+  }
+]
