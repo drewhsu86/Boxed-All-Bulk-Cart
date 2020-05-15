@@ -69,14 +69,13 @@ class Products extends Component {
 
 
   threeFilter = () => {
-    let newFilteredProducts = this.state.products
-    let productsArray = this.filterOnClick(this.state.typeOfProductFilter, newFilteredProducts, 'typeOfProducts')
-    console.log('typeofproduct state filter4', this.state.typeOfProductFilter)
-    console.log('typeOfProducts filter:', productsArray)
-    productsArray = this.filterOnClick(this.state.valuesFilter, newFilteredProducts, 'values')
-    console.log('values filter:', productsArray)
-    productsArray = this.filterOnClick(this.state.brandsFilter, newFilteredProducts, 'brands')
-    console.log('brands filter:', productsArray)
+
+    const filterNames = ['typeOfProduct', 'values', 'brands']
+    let productsArray = this.state.products
+    filterNames.forEach(filterName => {
+      productsArray = this.filterOnClick(this.state[filterName + 'Filter'], productsArray, filterName)
+      console.log(filterName, productsArray)
+    })
     this.setState({
       filteredProducts: productsArray
     })
@@ -85,28 +84,19 @@ class Products extends Component {
   filterOnClick = (arr, prodsArray, dest) => {
     console.log('the filtered arr is', arr)
     let newArr = prodsArray.filter((prod) => {
-      console.log('prod:', prod)
-      console.log('dest:', dest)
       return arr.includes(prod[dest]) || arr.length === 0
     })
-    // this.setState({
-    //   filteredProducts: newArr
-    // })
     return newArr
-    console.log('new arr is', newArr)
   }
 
   filterbrandsOnClick = (arr, prodsArray) => {
     console.log('the filtered arr is', arr)
     let newArr = prodsArray.filter((prod) => (
-      //prod.brands === this.state.brandsFilter[0]
       arr.includes(prod.brands) || arr.length === 0
     ))
-    // this.setState({
-    //   filteredProducts: newArr
-    // })
+
     return newArr
-    console.log('new arr is', newArr)
+
   }
 
 
