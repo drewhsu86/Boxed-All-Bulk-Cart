@@ -1,31 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import StarRating from './components/StarRating'
+import Products from './components/Products/Products'
+import { Switch, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
-class App extends React.Component {
+
+
+class App extends Component {
   constructor() {
     super()
-    this.state = {
-      rating: 3
-    }
+
+    this.state = {}
+
   }
 
-  handleRating = (e) => {
-    let rating = e.target.value
-    if (rating > 5) { rating = 5 }
-    if (rating < 0) { rating = 0 }
-    this.setState({
-      rating
-    })
-  }
 
   render() {
+
     return (
-      <div className="App" >
-        <input type="number" value={this.state.rating} onChange={this.handleRating} />
-        <StarRating rating={this.state.rating} />
+      <div className="App">
+        <Switch>
+
+          <Route exact path="/" render={Home} />
+          <Route exact path="/products" render={(props) => <Products />} />
+          <Route path="/add-product" />
+          <Route path="/test"><ProductDetails/></Route>
+          <Route path="/products/:id/edit"  />
+          <Route exact path="/products/:id" />
+          <Route path="/login" />
+          <Route path="/logout" />
+          {/* <Route path="/test" component={Info}/> */}
+
+        </Switch>
       </div>
-    )
+    );
+
   }
 }
 
