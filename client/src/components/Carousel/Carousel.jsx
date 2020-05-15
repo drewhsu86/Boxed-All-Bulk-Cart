@@ -1,15 +1,90 @@
 import React, { Component } from 'react'
 import './Carousel.css'
+import ProductThumb from './ProductThumb'
+
+// ============
+// notes
+// ============
+// We want to make a carousel that 
+// shows 3 thumbnails at a time 
+// and when you press left, it shifts left
+// and when you press right, it shifts right
+// maybe with css and javascript animations 
 
 class Carousel extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      currIndex: 0
+    }
+  }
+
+
+  // ============
+  // methods
+  // ============
+
+  // on click handler that changes the index 
+  // so that it either goes left or right
+  // left is lower by 1, right is greater by 1
+  // moveBy is the movement amount; -1 for left, 1 for right
+  // length is products.length
+  handleLeftRight = (moveBy, length) => {
+    // change the current index
+    let currentIndex = this.state.currIndex + moveBy
+    // if the value goes too high above the array's last index
+    currentIndex = currentIndex % length
+    // if the value is negative (going left) we shift it back up by the length
+    // -1 would be going to the last index from the first index
+    // -1 + products.length = products.length - 1
+    if (currentIndex < 0) { currentIndex += length }
+
+    this.setState({
+      currIndex: currentIndex
+    })
+  }
+
+
+  // ============
+  // render
+  // ============ 
   render() {
-    return (
-      <div className="carousel">
-        <h3>{this.props.name}</h3>
-        <img src={this.props.img}></img>
-        <p>{this.props.description}</p>
-      </div>
-    )
+
+    // as long as this.props.products doesn't change the index won't be wrong
+    // if this.props.products becomes a new array that's too short we will reset the index to zero
+    const products = this.props.products
+    const displayIndex = this.state.currIndex < products.length - 1 ? this.state.currIndex : 0
+
+    // calculate the next 2 after displayIndex, taking into account overflowing the array 
+    const displayIndices = [displayIndex, (displayIndex + 1) % products.length, (displayIndex + 2) % products.length]
+
+    if (products) {
+      return (
+        <div className="carousel">
+          <button
+            onClick={() => { this.handleLeftRight(-1, products.length) }} >
+            Left
+            </button>
+
+          {displayIndices.map((displayIndex) => {
+            // for each display index, show the thumbnail
+            return <ProductThumb product={products[displayIndex]} />
+          })}
+
+          <button
+            onClick={() => { this.handleLeftRight(1, products.length) }} >
+            Right
+            </button>
+        </div>
+      )
+    } else {
+      return (
+        <div className="carousel">
+          Nothing to display in carousel
+        </div>
+      )
+    }
   }
 }
 

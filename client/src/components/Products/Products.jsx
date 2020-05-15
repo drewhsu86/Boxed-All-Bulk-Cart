@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SideBar from '../SideBar/SideBar'
 import './Products.css'
 import Carousel from '../Carousel/Carousel'
+import ProductThumb from '../Carousel/ProductThumb'
 import { Link, Route, Switch } from 'react-router-dom'
 import productsData from '../../products.json'
 import { withRouter } from 'react-router-dom'
@@ -71,18 +72,7 @@ class Products extends Component {
     console.log(this.state.valuesFilter)
     console.log(this.state.brandsFilter)
 
-    const PRODUCTS = this.state.filteredProducts.map(product => (
-      <Carousel
-        name={product.name}
-        img={product.images[0]}
-        description={product.description}
-        price={product.price}
-        rating={product.rating}
-        stock={product.stock}
-        categories={product.categories}
-        subcategories={product.subcategories}
-      />
-    ))
+
 
     return (
       <div className="products">
@@ -95,10 +85,25 @@ class Products extends Component {
         <div className="main">
           <div>Banner</div>
           <Switch>
-            <Route exact path='/:category'>
-              {PRODUCTS}
+            <Route exact path='/products'>
+              {this.state.filteredProducts.map(product => (
+                <ProductThumb
+                  product={product}
+                />
+              ))}
             </Route>
-            <Route path='/:category/:subcategory' />
+            <Route exact path='/products/:category'>
+              <Carousel
+                products={this.state.filteredProducts}
+              />
+            </Route>
+            <Route path='/products/:category/:subcategory'>
+              {this.state.filteredProducts.map(product => (
+                <ProductThumb
+                  product={product}
+                />
+              ))}
+            </Route>
           </Switch>
 
           <button>LOAD MORE</button>

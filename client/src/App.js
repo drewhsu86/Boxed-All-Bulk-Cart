@@ -24,11 +24,11 @@ class App extends Component {
         <Switch>
 
           <Route exact path="/" render={Home} />
-          <Route exact path="/products" render={(props) => <Products />} />
+          <Route path="/products" render={(props) => <Products />} />
           <Route path="/add-product" />
-          <Route path="/test"><ProductDetails/></Route>
-          <Route path="/products/:id/edit"  />
-          <Route exact path="/products/:id" />
+          <Route path="/test"><ProductDetails /></Route>
+          {/* <Route path="/products/:id/edit"  />
+          <Route exact path="/products/:id" /> */}
           <Route path="/login" />
           <Route path="/logout" />
           {/* <Route path="/test" component={Info}/> */}
