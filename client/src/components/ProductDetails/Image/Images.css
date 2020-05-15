@@ -1,0 +1,33 @@
+.imageChooser {
+  position: relative;
+  display: flex;
+  width: 800px;
+  height: 400px;
+}
+
+.imageColumn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.imageButton {
+  width: 100%;
+  max-height: 100px;
+}
+
+.imageMain {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  width: 500px;
+}
+
+.imageImg {
+  max-width: 100%;
+  max-height: 100%;
+}
