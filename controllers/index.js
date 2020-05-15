@@ -1,7 +1,7 @@
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
+const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken")
 const User = require("../models/users")
-const db = require('../db')
+const db = require("../db")
 const Product = require("../models/products")
 
 
@@ -89,15 +89,12 @@ const verifyUser = async (req, res) => {
     const legit = jwt.verify(token, TOKEN_KEY)
     console.log(legit)
     if (legit) {
-      const id = req.params.id
-      const user = await User.findById(id)
-      res.json(user)
+      res.json(legit)
     }
   } catch (error) {
     res.status(401).send('Not Authorized')
   }
 }
-
 
 //sign-in
 const signIn = async (req, res) => {

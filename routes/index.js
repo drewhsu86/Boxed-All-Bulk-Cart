@@ -31,6 +31,6 @@ router.post("/signin", (req, res) => controllers.signIn(req, res))
 router.post("/signup", (req, res) => controllers.signUp(req, res))
 
 //verify user
-router.get('/users/:id', (req, res) => controllers.verifyUser(req, res))
+router.get('/verifyuser', (req, res) => controllers.verifyUser(req, res))
 
 module.exports = router
