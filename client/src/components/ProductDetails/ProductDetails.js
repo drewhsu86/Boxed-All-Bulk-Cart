@@ -19,11 +19,15 @@ export default class ProductDetails extends Component {
   render() {
     console.log(this.state.items)
     return (
-      <div>
-        <Images images={this.state.items[0].images} altText={this.state.items[0].name} />
-        <Info items={this.state.items} />
-        <Reviews />
-        <RelatedItems items={this.state.items } />
+      <div className="detail-container">
+        <div className="prodColumn">
+          <Images images={this.state.items[0].images} altText={this.state.items[0].name} />
+          <Reviews />
+        </div>
+        <div className="prodColumn">
+          <Info items={this.state.items} />
+          <RelatedItems items={this.state.items} />
+        </div>
       </div>
     )
   }
