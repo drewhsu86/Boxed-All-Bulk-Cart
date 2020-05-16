@@ -23,7 +23,7 @@ export default class ProductDetails extends Component {
         <Images images={this.state.items[0].images} altText={this.state.items[0].name} />
         <Info items={this.state.items} />
         <Reviews />
-        <RelatedItems items={this.state.items} />
+        <RelatedItems items={this.state.items } />
       </div>
     )
   }

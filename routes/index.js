@@ -33,4 +33,20 @@ router.post("/signup", (req, res) => controllers.signUp(req, res))
 //verify user
 router.get('/verifyuser', (req, res) => controllers.verifyUser(req, res))
 
+//get array of products by IDs
+//would normally be get but we use post to include an array
+//with the key requestIDs (of ID strings)
+// a function for finding products for orderAgain if each customer
+// has products saved to their account 
+router.post('/searchIDs/products', (req, res) => controllers.searchIDs(req, res))
+
+// get all items with the category schema key match
+// case insensitive match but correct spelling required
+router.get('/categories/:category', (req, res) => controllers.category(req, res))
+
+// get all items with the category schema key match
+// as well as subcategory schema key match
+// case insensitive match but correct spelling required
+router.get('/categories/:category/:subcategory', (req, res) => controllers.subcategory(req, res))
+
 module.exports = router
