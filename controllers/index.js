@@ -17,7 +17,7 @@ async function getProducts(req, res) {
 
     res.json(products)
   } catch (error) {
-    res.status(500).json({error: error.message})
+    res.status(500).json({ error: error.message })
   }
 }
 
@@ -54,7 +54,7 @@ async function editProduct(req, res) {
         return res.status(500).json({ error: error.message })
       }
       if (!product) {
-        return res.status(404).json({message: "Product not found!"})
+        return res.status(404).json({ message: "Product not found!" })
       }
       res.status(200).json(product)
     })
@@ -74,7 +74,7 @@ async function deleteProduct(req, res) {
     if (deleted) {
       return res.status(200).send("Product deleted!")
     }
-    throw new Error ("Product not found!")
+    throw new Error("Product not found!")
   } catch (error) {
     res.status(500).json({
       error: error.message
@@ -146,13 +146,87 @@ async function signUp(req, res) {
   }
 }
 
+// searchIDs
+// a function for finding products for orderAgain if each customer
+// has products saved to their account 
+async function searchIDs(req, res) {
+  try {
+    const requestIDs = req.body.requestIDs
+    // console.log(requestIDs)
+
+    let matchedProducts = []
+
+    // forEach didn't work here because the async functions finished
+    // after the response was already going out 
+    // but for loop tries to run the commands in order so it
+    // waits for things marked by await 
+    for (let requestedID of requestIDs) {
+      const foundProduct = await Product.findById(requestedID)
+      console.log(foundProduct.name)
+      matchedProducts.push(foundProduct)
+    }
+
+    console.log('before res.json', matchedProducts)
+    res.json(matchedProducts)
+  } catch (error) {
+    return res.status(400).json({ error: error.message })
+  }
+}
+
+// category (get)
+// find all products that have a matching category (schema key)
+// case insensitive but requires correct spelling 
+async function category(req, res) {
+  try {
+    // the category is stored on /category/:category 
+    const catName = req.params.category
+    console.log(catName)
+
+    // we use '$regex' with the option 'i' to make it 
+    // case insensitive 
+    const matchedProducts = await Product.find({ categories: { '$regex': catName, '$options': 'i' } })
+    // console.log(matchedProducts)
+
+    res.json(matchedProducts)
+  } catch (error) {
+    return res.status(400).json({ error: error.message })
+  }
+}
+
+// subcategory (get)
+// find all products that have a matching category (schema key)
+// as well as matching subcategory (schema key)
+// case insensitive but requires correct spelling 
+async function subcategory(req, res) {
+  try {
+    // the category is stored on /category/:category/:subcategory
+    // same with subcategory
+    const catName = req.params.category
+    const subcatName = req.params.subcategory
+
+    // we use '$regex' with the option 'i' to make it 
+    // case insensitive 
+    const matchedProducts = await Product.find({
+      categories: { '$regex': catName, '$options': 'i' },
+      subcategories: { '$regex': subcatName, '$options': 'i' }
+    })
+
+    res.json(matchedProducts)
+  } catch (error) {
+    return res.status(400).json({ error: error.message })
+  }
+}
+
 module.exports = {
-  signIn,
   getProducts,
   getProduct,
   createProduct,
   editProduct,
   deleteProduct,
   verifyUser,
-  signUp
+  signUp,
+  signIn,
+  searchIDs,
+  category,
+  subcategory
 }

@@ -4,13 +4,13 @@ import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';    
 
 
 ReactDOM.render(
 
   <React.StrictMode>
-  <Router>
+    <Router>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <App />
   </Router>
   </React.StrictMode>,
