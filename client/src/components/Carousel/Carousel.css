@@ -1,7 +1,27 @@
-/* .carousel {
-  width: 250px;
+.carousel {
+  position: relative;
+  width: 90%;
+  height: 300px;
+  margin: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.carousel img {
-  width: 200px;
-} */
+.carousel-move {
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  background-color: transparent;
+  font-size: 100%;
+}
+
+.carousel-move.left {
+  left: 0;
+  background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(255,255,255,0.5), rgba(255,255,255,1), rgba(255,255,255,1));
+}
+
+.carousel-move.right {
+  right: 0;
+  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(255,255,255,0.5), rgba(255,255,255,1), rgba(255,255,255,1));
+}
