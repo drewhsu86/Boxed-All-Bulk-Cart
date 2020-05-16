@@ -16,7 +16,7 @@
 }
 
 .imageButton {
-  width: 100%;
+  width: 50%;
   max-height: 100px;
 }
 
@@ -24,10 +24,11 @@
   display: flex;
   justify-self: center;
   align-items: center;
-  width: 500px;
+  width: 400px;
 }
 
 .imageImg {
-  max-width: 100%;
+  margin: 0 0 0 40px;
+  max-width: 50%;
   max-height: 100%;
 }

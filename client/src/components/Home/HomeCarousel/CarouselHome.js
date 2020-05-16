@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel/'
 import './CarouselHome.css'
 
 
+
 export default class CarouselHome extends Component {
   render() {
     return (
