@@ -1,9 +1,7 @@
 .detail-container {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   width: 100%;
-
 }
 
 .prodColumn {
@@ -11,5 +9,18 @@
   flex-direction: column;
 	justify-content: space-between;
   align-items: flex-start;
-  width: 400px;
+  width: 50%;
+  height: stretch;
 }
+
+.topRow {
+  height: 450px;
+  overflow-y: auto;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
