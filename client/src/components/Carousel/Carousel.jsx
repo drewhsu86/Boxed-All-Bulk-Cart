@@ -64,7 +64,9 @@ class Carousel extends Component {
         <div className="carousel">
           <button className="carousel-move left"
             onClick={() => { this.handleLeftRight(-1, products.length) }} >
+
             {`<`}
+
           </button>
 
           {displayIndices.map((displayIndex) => {
@@ -74,7 +76,9 @@ class Carousel extends Component {
 
           <button className="carousel-move right"
             onClick={() => { this.handleLeftRight(1, products.length) }} >
+
             {`>`}
+
           </button>
         </div>
       )
