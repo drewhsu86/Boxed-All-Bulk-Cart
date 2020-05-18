@@ -6,7 +6,7 @@ export default class Reviews extends Component {
     return (
       <div className="review-box">
         <div className="review-title">
-          <h1>Product Reviews</h1>
+          <h1 className="product-reviews">Product Reviews</h1>
         </div>
         <div className="one-review">
           <img className="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQsg6KXHm6o4SYhPycSwdsJnlGOWCVyIhWBWcg5y8_pki6coDzG&usqp=CAU" />

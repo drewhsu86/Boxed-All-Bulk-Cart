@@ -24,6 +24,12 @@
   padding: 0 0 10px 0;
 }
 
+.item-div {
+  display: inline-block;
+  /* height: 250px; */
+  width: 400px;
+}
+
 .item-name {
   color: #273645;
   font-family: "Open Sans";
