@@ -3,6 +3,8 @@ import SideBar from '../SideBar/SideBar'
 import './Products.css'
 import Carousel from '../Carousel/Carousel'
 import ProductThumb from '../Carousel/ProductThumb'
+import SubCat from './SubCat'
+
 import { Link, Route, Switch } from 'react-router-dom'
 import productsData from '../../products.json'
 import { withRouter } from 'react-router-dom'
@@ -87,27 +89,26 @@ class Products extends Component {
     let newArr = prodsArray.filter((prod) => {
       return arr.includes(prod[dest]) || arr.length === 0
     })
+
     return newArr
   }
 
-  // filterbrandsOnClick = (arr, prodsArray) => {
-  //   console.log('the filtered arr is', arr)
-  //   let newArr = prodsArray.filter((prod) => (
-  //     arr.includes(prod.brands) || arr.length === 0
-  //   ))
 
-  //   return newArr
-
-  // }
-
+  setProducts = (arr) => {
+    this.setState({
+      products: arr,
+      filteredProducts: arr
+    })
+  }
 
 
 
   render() {
-    console.log(this.state.typeOfProductFilter)
-    console.log(this.state.valuesFilter)
-    console.log(this.state.brandsFilter)
-
+    // console.log(this.state.typeOfProductFilter)
+    // console.log(this.state.valuesFilter)
+    // console.log(this.state.brandsFilter)
+    console.log(window.location.pathname)
+    console.log(this.state.products, this.state.filteredProducts)
 
 
     return (
@@ -134,11 +135,10 @@ class Products extends Component {
               />
             </Route>
             <Route path='/products/:category/:subcategory'>
-              {this.state.filteredProducts.map(product => (
-                <ProductThumb
-                  product={product}
-                />
-              ))}
+              <SubCat
+                setProducts={this.setProducts}
+                filteredProducts={this.state.filteredProducts}
+              />
             </Route>
           </Switch>
 
