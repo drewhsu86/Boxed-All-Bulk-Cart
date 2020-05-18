@@ -36,7 +36,12 @@
 }
 
 .carousel-shop {
-  padding: 10px;
+  background-color: darkslateblue;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
 }
 
 .carousel-img {
@@ -44,6 +49,7 @@
 }
 
 .carousel-fade {
+  pointer-events: none;
   background-color: white;
   position: absolute;
   top: 0;

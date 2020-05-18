@@ -6,9 +6,6 @@ const controllers = require("../controllers")
 //home
 router.get("/", (req, res) => res.send("This is root!"))
 
-//get user based on token
-router.get("/user", (req, res) => controllers.tokenUser(req, res))
-
 //get all products
 router.get("/products", (req, res) => controllers.getProducts(req, res))
 
