@@ -59,6 +59,7 @@ export default class CarouselHomeWithButtons extends Component {
         >
           <h3>{banner.title}</h3>
           <p>{banner.description}</p>
+
         </div>
 
         <div className="carousel-fade"
