@@ -231,7 +231,7 @@ async function searchBar(req, res) {
 
     // multiple search terms are separated by spaces
     // we want to search multiple fields (commented above)
-    const relevantFields = ["name", "categories", "subcategories", "typeOfProduct", "values", "brands"]
+    const relevantFields = ["name", "description", "categories", "subcategories", "typeOfProduct", "values", "brands"]
 
     // for each field we check if there are matches
     // then add them to an array 

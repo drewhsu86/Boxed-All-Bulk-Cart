@@ -55,6 +55,7 @@ export default class Manage extends Component {
     if (this.state.inputSearch) {
       this.apiCall(`/search/${this.state.inputSearch}`)
     }
+
   }
 
   // =============

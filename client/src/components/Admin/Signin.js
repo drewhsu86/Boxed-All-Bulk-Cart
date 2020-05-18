@@ -108,7 +108,7 @@ export default class Signin extends Component {
             />
 
             <label>Password</label>
-            <input type="text" value={this.state.inputPassword}
+            <input type="password" value={this.state.inputPassword}
               onChange={e => this.handleChange(e, 'inputPassword')}
             />
 
