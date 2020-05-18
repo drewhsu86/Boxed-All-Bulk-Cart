@@ -3,6 +3,9 @@ import SideBar from '../SideBar/SideBar'
 import './Products.css'
 import Carousel from '../Carousel/Carousel'
 import ProductThumb from '../Carousel/ProductThumb'
+import Cat from './Cat'
+import SubCat from './SubCat'
+
 import { Link, Route, Switch } from 'react-router-dom'
 import productsData from '../../products.json'
 import { withRouter } from 'react-router-dom'
@@ -87,27 +90,30 @@ class Products extends Component {
     let newArr = prodsArray.filter((prod) => {
       return arr.includes(prod[dest]) || arr.length === 0
     })
+
     return newArr
   }
 
-  filterbrandsOnClick = (arr, prodsArray) => {
-    console.log('the filtered arr is', arr)
-    let newArr = prodsArray.filter((prod) => (
-      arr.includes(prod.brands) || arr.length === 0
-    ))
 
-    return newArr
-
+  setProducts = async (arr) => {
+    await this.setState({
+      products: arr,
+      filteredProducts: arr
+    })
+    this.populateFilter(arr, 'typeOfProduct')
+    this.populateFilter(arr, 'values')
+    this.populateFilter(arr, 'brands')
+    this.forceUpdate()
   }
-
 
 
 
   render() {
-    console.log(this.state.typeOfProductFilter)
-    console.log(this.state.valuesFilter)
-    console.log(this.state.brandsFilter)
-
+    // console.log(this.state.typeOfProductFilter)
+    // console.log(this.state.valuesFilter)
+    // console.log(this.state.brandsFilter)
+    console.log(window.location.pathname)
+    console.log(this.state.products, this.state.filteredProducts)
 
 
     return (
@@ -129,16 +135,19 @@ class Products extends Component {
               ))}
             </Route>
             <Route exact path='/products/:category'>
-              <Carousel
+              {/* <Carousel
                 products={this.state.filteredProducts}
+              /> */}
+              <Cat
+                setProducts={this.setProducts}
+                filteredProducts={this.state.filteredProducts}
               />
             </Route>
             <Route path='/products/:category/:subcategory'>
-              {this.state.filteredProducts.map(product => (
-                <ProductThumb
-                  product={product}
-                />
-              ))}
+              <SubCat
+                setProducts={this.setProducts}
+                filteredProducts={this.state.filteredProducts}
+              />
             </Route>
           </Switch>
 
