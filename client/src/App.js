@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Admin from './components/Admin'
-
+import Nav from './components/shared/Nav/Nav'
 class App extends Component {
   // ============
   // render
@@ -15,6 +15,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Nav />
         <Switch>
 
           <Route exact path="/" render={Home} />
