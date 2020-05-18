@@ -4,6 +4,10 @@
   font-weight: bold;
 }
 
+.admin .productThumb {
+  width: 300px;
+}
+
 .admin button {
   margin: 20px;
 }
