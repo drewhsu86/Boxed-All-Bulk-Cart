@@ -30,7 +30,9 @@ export default class Images extends Component {
     // alt text should just come from name of the product 
     const altText = this.props.altText || "No images available"
 
-    if (images.length < 1) {
+    if (!images) {
+      return null
+    } else if (images.length < 1) {
       // if no images return a big "no images"
       return (
         <div className="imageChooser">

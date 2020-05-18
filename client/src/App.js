@@ -19,7 +19,7 @@ class App extends Component {
 
           <Route exact path="/" render={Home} />
           <Route path="/products" render={(props) => <Products />} />
-          <Route path="/test"><ProductDetails /></Route>
+          <Route path="/productdetails/:id"><ProductDetails /></Route>
 
           {/* CRUD functions handled by admin with its own routes */}
           <Route path="/admin" render={() => <Admin />} />

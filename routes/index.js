@@ -49,4 +49,10 @@ router.get('/categories/:category', (req, res) => controllers.category(req, res)
 // case insensitive match but correct spelling required
 router.get('/categories/:category/:subcategory', (req, res) => controllers.subcategory(req, res))
 
+// get all items that match a search term in the searchbar
+// so we use $regex to see if it includes a phrase, and make it case insensitive
+// and we check the following fields in the products schema:
+// name, categories, subcategories, typeOfProduct, values, brands
+router.get('/search/:terms', (req, res) => controllers.searchBar(req, res))
+
 module.exports = router

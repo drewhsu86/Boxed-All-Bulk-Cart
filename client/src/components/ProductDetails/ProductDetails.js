@@ -3,36 +3,59 @@ import Reviews from '../ProductDetails/Reviews/Reviews'
 import Info from './Info/Info'
 import Images from './Image/Images'
 import RelatedItems from './RelatedItems/RelatedItems'
+import './ProductDetails.css'
 
-const data = require('../data.json')
+import { getProduct, deleteProduct } from '../../services/products'
+import { withRouter, Link } from 'react-router-dom'
 
-export default class ProductDetails extends Component {
-  constructor() {
-    super()
+// const data = require('../../products.json')
+
+class ProductDetails extends Component {
+  constructor(props) {
+    super(props)
 
     this.state = {
-      items: data
+      product: null,
+      items: [],
     }
+  }
+
+  async componentDidMount() {
+    let id = this.props.match.params.id
+    const product = await getProduct(id)
+    this.setState({ product })
+
   }
 
 
   render() {
-    console.log(this.state.items)
-    return (
-      <div className="detail-container">
-        <div className="prodColumn">
-          <Images images={this.state.items[0].images} altText={this.state.items[0].name} />
-          <Reviews />
+    const { product } = this.state
+    console.log(this.state)
+    if (!product) {
+      return null
+    } else {
+      return (
+        <div className="detail-container">
+          <div className="prodColumn">
+            <div className="topRow">
+              <Images images={this.state.product.images} altText={this.state.product.name} />
+            </div>
+            <Reviews />
+          </div>
+          <div className="prodColumn">
+            <div className="topRow">
+              <Info product={this.state.product} />
+            </div>
+            <RelatedItems items={this.state.product} />
+          </div>
         </div>
-        <div className="prodColumn">
-          <Info items={this.state.items} />
-          <RelatedItems items={this.state.items} />
-        </div>
-      </div>
-    )
+      )
+    }
   }
 }
 
 
 
 
+
+export default withRouter(ProductDetails)
