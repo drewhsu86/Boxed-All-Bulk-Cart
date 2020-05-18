@@ -3,13 +3,14 @@
     opacity: 100%;
   }
   to {
-    opacity: 0%;
+    opacity: 0%;        
   }
 }
 
 .carousel-container {
-  width: 100vw;
+  width: auto;
   position: relative;
+  margin: 22px;
 }
 
 .carousel-info {
@@ -22,7 +23,16 @@
 
 .carousel-info h3 {
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 800;
+}
+
+.carousel-info p {
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .carousel-shop {
@@ -63,6 +73,7 @@
   background-color: white;
   padding: 10px 20px;
   margin: 0 10px;
+  box-shadow: 2px 5px rgb(00, 00, 00, 0.5);
 }
 
 .carousel-button:hover {

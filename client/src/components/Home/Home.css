@@ -1,3 +1,11 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+}
+
 .bottom-banner {
-  width: 84%;
+  width: 97vw;
+  padding: 20px;
 }
