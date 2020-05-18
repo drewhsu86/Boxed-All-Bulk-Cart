@@ -90,15 +90,15 @@ class Products extends Component {
     return newArr
   }
 
-  filterbrandsOnClick = (arr, prodsArray) => {
-    console.log('the filtered arr is', arr)
-    let newArr = prodsArray.filter((prod) => (
-      arr.includes(prod.brands) || arr.length === 0
-    ))
+  // filterbrandsOnClick = (arr, prodsArray) => {
+  //   console.log('the filtered arr is', arr)
+  //   let newArr = prodsArray.filter((prod) => (
+  //     arr.includes(prod.brands) || arr.length === 0
+  //   ))
 
-    return newArr
+  //   return newArr
 
-  }
+  // }
 
 
 
