@@ -46,22 +46,24 @@ export default class Images extends Component {
     } else {
 
       return (
-        <div className="imageChooser">
-          <div className="imageColumn">
-            {
-              images.map((image, ind) => {
-                // if we click each button then the currIndex
-                // should become the index of the button
-                // since we mapped from images 
-                return <img className="imageButton"
-                  src={image} alt="button for showing images" onClick={() => { this.handleCurrIndex(ind) }} />
-              })
-            }
-          </div>
+        <div className="image-container">
+          <div className="imageChooser">
+            <div className="imageColumn">
+              {
+                images.map((image, ind) => {
+                  // if we click each button then the currIndex
+                  // should become the index of the button
+                  // since we mapped from images 
+                  return <img className="imageButton"
+                    src={image} alt="button for showing images" onClick={() => { this.handleCurrIndex(ind) }} />
+                })
+              }
+            </div>
 
-          <div className="imageMain">
-            <img className="imageImg"
-              src={images[this.state.currIndex]} alt={this.state.altText} />
+            <div className="imageMain">
+              <img className="imageImg"
+                src={images[this.state.currIndex]} alt={this.state.altText} />
+            </div>
           </div>
         </div>
       )

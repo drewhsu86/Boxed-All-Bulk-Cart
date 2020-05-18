@@ -1,8 +1,9 @@
 .imageChooser {
   position: relative;
   display: flex;
-  width: 800px;
+  width: 500px;
   height: 400px;
+  margin: 0;
 }
 
 .imageColumn {
@@ -31,4 +32,10 @@
   margin: 0 0 0 40px;
   max-width: 50%;
   max-height: 100%;
+}
+
+.image-container {
+  /* display: inline-block; */
+  margin: 0;
+  width: 500px;
 }

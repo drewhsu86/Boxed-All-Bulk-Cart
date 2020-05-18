@@ -62,20 +62,24 @@ class Carousel extends Component {
     if (products) {
       return (
         <div className="carousel">
-          <button
+          <button className="carousel-move left"
             onClick={() => { this.handleLeftRight(-1, products.length) }} >
-            Left
-            </button>
+
+            {`<`}
+
+          </button>
 
           {displayIndices.map((displayIndex) => {
             // for each display index, show the thumbnail
             return <ProductThumb product={products[displayIndex]} />
           })}
 
-          <button
+          <button className="carousel-move right"
             onClick={() => { this.handleLeftRight(1, products.length) }} >
-            Right
-            </button>
+
+            {`>`}
+
+          </button>
         </div>
       )
     } else {

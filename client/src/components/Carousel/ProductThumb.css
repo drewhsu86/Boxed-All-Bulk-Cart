@@ -1,0 +1,17 @@
+.productThumb {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productThumb h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.productThumb img {
+  max-width: 80%;
+  max-height: 80%;
+}
