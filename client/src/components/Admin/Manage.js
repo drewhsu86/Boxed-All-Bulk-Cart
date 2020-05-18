@@ -8,7 +8,8 @@ export default class Manage extends Component {
     super()
 
     this.state = {
-      products: []
+      products: [],
+      inputSearch: ''
     }
   }
   // point of this component is to help us find products to edit or delete 
@@ -26,25 +27,62 @@ export default class Manage extends Component {
 
   // api call to get all products
   // '/products'
-  apiAllProducts = async () => {
-    const response = await api.get('/products')
+  apiCall = async (url) => {
+    const response = await api.get(url)
     this.setState({
       products: response.data
     })
+  }
+
+  // handle search bar onChange 
+  handleChangeSearch = (e) => {
+    this.setState({
+      inputSearch: e.target.value
+    })
+  }
+
+  // handle clicking the search button 
+  handleClickSearch = () => {
+    if (this.state.inputSearch.length > 0) {
+      this.apiCall(`/search/${this.state.inputSearch}`)
+    }
+  }
+
+  // handle submitting the search form (with search terms)
+  handleSubmitSearch = (e) => {
+    e.preventDefault()
+
+    if (this.state.inputSearch) {
+      this.apiCall(`/search/${this.state.inputSearch}`)
+    }
   }
 
   // =============
   // render
   // =============
   render() {
-    console.log(this.state)
+
     return (
       <div>
-        <button onClick={this.apiAllProducts} >
-          Show All Products
+
+
+        <form onSubmit={this.handleSubmitSearch} >
+
+          <button
+            type="button"
+            onClick={() => this.apiCall('/products')} >
+            Show All Products
         </button>
 
-        <div>
+          <input type="text" value={this.state.inputSearch}
+            onChange={this.handleChangeSearch} />
+
+          <button>
+            Show Searched Products
+          </button>
+        </form>
+
+        <div className="adminManageProducts">
           {
             this.state.products.map(prod => {
               return (

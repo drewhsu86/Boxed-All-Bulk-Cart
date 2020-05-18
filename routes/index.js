@@ -1,7 +1,7 @@
 const { Router } = require("express")
 const router = Router()
 const controllers = require("../controllers")
-// const restrict = require("../helpers")
+const restrict = require("../helpers")
 
 //home
 router.get("/", (req, res) => res.send("This is root!"))
@@ -16,13 +16,13 @@ router.get("/products", (req, res) => controllers.getProducts(req, res))
 router.get("/products/:id", (req, res) => controllers.getProduct(req, res))
 
 //add one product
-router.post("/products", (req, res) => controllers.createProduct(req, res))
+router.post("/products", restrict, (req, res) => controllers.createProduct(req, res))
 
 //edit one product 
-router.put("/products/:id", (req, res) => controllers.editProduct(req, res))
+router.put("/products/:id", restrict, (req, res) => controllers.editProduct(req, res))
 
 //delete one product 
-router.delete("/products/:id", (req, res) => controllers.deleteProduct(req, res))
+router.delete("/products/:id", restrict, (req, res) => controllers.deleteProduct(req, res))
 
 //sign-in
 router.post("/signin", (req, res) => controllers.signIn(req, res))

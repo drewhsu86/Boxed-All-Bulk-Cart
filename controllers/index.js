@@ -249,20 +249,22 @@ async function searchBar(req, res) {
 
       const matchedProducts = await Product.find(findArg)
 
-      foundMatches = [...foundMatches, ...matchedProducts]
-    }
+      // filter out repeated products (same id)
+      // make a hash table of seen ids in O(n) time and check against it in O(m) time (n and m are the lengths of the 2 arrays)
+      let seenIDs = {}
 
-    // filter out repeated products (same id)
-    let seenIDs = {}
-    foundMatches.filter(product => {
-      // console.log(seenIDs)
-      if (!seenIDs[product['_id']]) {
-        seenIDs[product['_id']] = true
-        return true
-      } else {
-        return false
+      for (let prod of foundMatches) {
+        seenIDs[prod['_id']] = true
       }
-    })
+
+      for (let mProd of matchedProducts) {
+        if (!seenIDs[mProd['_id']]) {
+          // console.log(matchedProducts)
+          seenIDs[mProd['_id']] = true
+          foundMatches.push(mProd)
+        }
+      }
+    }
 
     res.json(foundMatches)
   } catch (error) {

@@ -71,6 +71,11 @@ export default class Create extends Component {
         errMsg: "Product added"
       })
 
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
     } catch (er) {
       console.log(er)
       this.setState({
@@ -101,6 +106,9 @@ export default class Create extends Component {
   // will only check this for strings 
   // numbers can't be negative 
   canSubmit = () => {
+    // must be logged in 
+    if (!localStorage.getItem('token')) return false
+
     // required fields from schema
     // ignore images because it's an array 
     // ignore the two numbers (bad inputs set it to zero)
@@ -126,7 +134,7 @@ export default class Create extends Component {
     const keys = Object.keys(this.state.inputCreate)
     console.log(this.state)
     return (
-      <div>
+      <div className="adminInputs">
         <h3>Add a product</h3>
         <ul>
           <li> Images: please type image urls and separate multiple with commas </li>
@@ -134,6 +142,12 @@ export default class Create extends Component {
 
         <form onSubmit={this.handleSubmit}>
           {this.state.errMsg ? <p className="error">{this.state.errMsg}</p> : null}
+
+          <h4>Submit To Create</h4>
+          <button disabled={!this.state.canSubmit}>
+            Submit
+          </button>
+          <br />
           {
             keys.map((inputField) => {
               return (<>

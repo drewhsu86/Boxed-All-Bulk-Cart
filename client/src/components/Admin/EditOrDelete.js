@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import api from '../../services/apiConfig'
 
-export default class EditOrDelete extends Component {
+const validInputs = [
+  'name', 'images', 'description', 'price', 'rating', 'stock',
+  'categories', 'subcategories', 'typeOfProduct', 'values', 'brands'
+]
+
+class EditOrDelete extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -15,6 +21,26 @@ export default class EditOrDelete extends Component {
   // ==============
   // methods
   // ==============
+
+  async componentDidMount() {
+    try {
+      const id = this.props.match.params.id
+      const response = await api.get(`/products/${id}`)
+      console.log(response)
+
+      // make sure that images is a string instead of array 
+      response.data.images = response.data.images.join(', ')
+      this.setState({
+        inputEdit: response.data
+      })
+
+    } catch (er) {
+      console.log(er)
+      this.setState({
+        errMsg: er.message
+      })
+    }
+  }
 
   // change of any of the input fields 
   handleChange = (e, field) => {
@@ -57,12 +83,23 @@ export default class EditOrDelete extends Component {
     // we assume image urls split by either "," or ", "
     // 1. remove spaces
     // 2. split by comma and that is an array format 
+    console.log('newProduct', newProduct)
     const imagesNoSpaces = newProduct.images.split(' ').join('')
     newProduct.images = imagesNoSpaces.split(',')
 
     // API call 
-    const response = await api.post(`/products/${this.props.match.params.id}`, newProduct)
+    const response = await api.put(`/products/${this.props.match.params.id}`, newProduct)
     console.log(response)
+
+    this.setState({
+      inputEdit: response.data,
+      errMsg: "Product edited"
+    })
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 
   // true or false - can form be submitted?
@@ -70,6 +107,9 @@ export default class EditOrDelete extends Component {
   // will only check this for strings 
   // numbers can't be negative 
   canSubmit = () => {
+    // must be logged in 
+    if (!localStorage.getItem('token')) return false
+
     // required fields from schema
     // ignore images because it's an array 
     // ignore the two numbers (bad inputs set it to zero)
@@ -85,6 +125,32 @@ export default class EditOrDelete extends Component {
     return true
   }
 
+  // ask the user if they want to delete 
+  // do it (or attempt the api call) if they say yes 
+  tryDelete = async (e) => {
+    e.preventDefault()
+
+    // confirm with user
+    const delConfirm = window.confirm('Are you sure you want to delete this item?')
+
+    if (delConfirm) {
+      try {
+        const response = await api.delete(`/products/${this.state.inputEdit['_id']}`)
+
+        console.log(response)
+        this.setState({
+          errMsg: 'Product deleted',
+          inputEdit: null
+        })
+      } catch (er) {
+        console.log(er)
+        this.setState({
+          errMsg: er.message
+        })
+      }
+    }
+  }
+
   // ==============
   // render
   // ==============
@@ -97,19 +163,29 @@ export default class EditOrDelete extends Component {
       </div>
     }
     else {
-      const keys = Object.keys(this.state.inputEdit)
+
       // console.log(this.state)
       return (
-        <div>
-          <h3>Edit a product</h3>
+        <div className="adminInputs">
+          <h3>Edit/Delete a product</h3>
+
+          <h4>Delete Here (Warning: Permanent!)</h4>
+          <button onClick={this.tryDelete}>Delete</button>
+
           <ul>
             <li> Images: please type image urls and separate multiple with commas </li>
           </ul>
 
           <form onSubmit={this.handleSubmit}>
             {this.state.errMsg ? <p className="error">{this.state.errMsg}</p> : null}
+
+            <h4>Edit Here</h4>
+            <button disabled={!this.state.canSubmit}>
+              Submit
+            </button>
+            <br />
             {
-              keys.map((inputField) => {
+              validInputs.map((inputField) => {
                 return (<>
                   <label>{inputField}</label> <br />
                   <input
@@ -131,3 +207,4 @@ export default class EditOrDelete extends Component {
   }
 }
 
+export default withRouter(EditOrDelete)
