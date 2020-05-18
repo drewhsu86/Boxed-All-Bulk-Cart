@@ -15,6 +15,7 @@ class SubCat extends Component {
     const res = await api.get(`/categories/${category}/${subCategory}`)
     console.log(res)
     this.props.setProducts(res.data)
+    this.props.setCats(res.data)
   }
 
   render() {

@@ -25,7 +25,9 @@ class Products extends Component {
       brands: [],
       typeOfProductFilter: [],
       valuesFilter: [],
-      brandsFilter: []
+      brandsFilter: [],
+      categories: [],
+      subCategories: []
     }
   }
 
@@ -107,14 +109,20 @@ class Products extends Component {
   }
 
 
+  setCats = (arr) => {
+    console.log('This is the arr:', arr)
+  }
+
 
   render() {
     // console.log(this.state.typeOfProductFilter)
     // console.log(this.state.valuesFilter)
     // console.log(this.state.brandsFilter)
-    console.log(window.location.pathname)
     console.log(this.state.products, this.state.filteredProducts)
 
+    if (this.state.categories) {
+      console.log('luke')
+    }
 
     return (
       <div className="products">
@@ -139,6 +147,7 @@ class Products extends Component {
                 products={this.state.filteredProducts}
               /> */}
               <Cat
+                setCats={this.setCats}
                 setProducts={this.setProducts}
                 filteredProducts={this.state.filteredProducts}
               />
