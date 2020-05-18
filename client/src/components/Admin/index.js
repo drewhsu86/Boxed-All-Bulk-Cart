@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
+import './Admin.css'
 import api from '../../services/apiConfig'
 import AdminNav from './AdminNav'
 import Signup from './Signup'
 import Signin from './Signin'
-
+import Create from './Create'
 
 class Index extends Component {
   // component to hold the routes for all admin stuff
@@ -64,6 +65,10 @@ class Index extends Component {
 
         <Route path="/admin/signin">
           <Signin setToken={this.setToken} />
+        </Route>
+
+        <Route path="/admin/create">
+          <Create />
         </Route>
       </div>
     )

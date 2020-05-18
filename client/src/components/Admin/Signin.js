@@ -85,9 +85,10 @@ export default class Signin extends Component {
   // render
   // ============
   render() {
-    if (this.state.creationSuccess) {
+    if (localStorage.getItem('token')) {
       return (<div>
-        <h1>Thank you for signing up!</h1>
+        <h3>Sign in</h3>
+        <h1>You are logged in.</h1>
       </div>)
     } else {
 

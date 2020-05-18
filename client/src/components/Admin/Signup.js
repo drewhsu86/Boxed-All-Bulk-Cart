@@ -90,7 +90,12 @@ export default class Signup extends Component {
   // render
   // ============
   render() {
-    if (this.state.creationSuccess) {
+    if (localStorage.getItem('token')) {
+      return (<div>
+        <h3>Create an Account</h3>
+        <h1>You are logged in.</h1>
+      </div>)
+    } else if (this.state.creationSuccess) {
       return (<div>
         <h1>Thank you for signing up!</h1>
       </div>)
