@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './ProductThumb.css'
 
 class ProductThumb extends Component {
@@ -12,8 +13,11 @@ class ProductThumb extends Component {
 
     return (
       <div className="productThumb">
-        <h3>{product.name}</h3>
-        {product.images[0] ? <img src={product.images[0]} alt="Product Image" /> : <h5>No Image Available</h5>}
+        <Link to={`/productdetails/${product['_id']}`}>
+          <h3>{product.name}</h3>
+          {product.images[0] ? <img src={product.images[0]}
+            alt="Product Image" /> : <h5>No Image Available</h5>}
+        </Link>
         <p>{product.description}</p>
       </div>
     )
