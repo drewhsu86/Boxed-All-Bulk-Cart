@@ -126,7 +126,7 @@ export default class Signup extends Component {
               onChange={e => this.handleChange(e, 'inputPassword')}
             />
 
-            <button disable={!this.state.canSubmit}>Submit</button>
+            <button disabled={!this.state.canSubmit}>Submit</button>
           </form>
         </div>
       )

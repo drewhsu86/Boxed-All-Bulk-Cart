@@ -6,6 +6,8 @@ import AdminNav from './AdminNav'
 import Signup from './Signup'
 import Signin from './Signin'
 import Create from './Create'
+import Manage from './Manage'
+import EditOrDelete from './EditOrDelete'
 
 class Index extends Component {
   // component to hold the routes for all admin stuff
@@ -69,6 +71,14 @@ class Index extends Component {
 
         <Route path="/admin/create">
           <Create />
+        </Route>
+
+        <Route exact path="/admin/manage">
+          <Manage />
+        </Route>
+
+        <Route path="/admin/manage/:id">
+          <EditOrDelete />
         </Route>
       </div>
     )
