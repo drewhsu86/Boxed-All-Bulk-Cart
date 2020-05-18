@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Carousel.css'
+import './ProductThumb.css'
 
 class ProductThumb extends Component {
   render() {

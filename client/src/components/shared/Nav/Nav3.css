@@ -1,0 +1,56 @@
+a {
+  color: #273645;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.allNew {
+  color: #273645;
+  font-family: 'Open Sans';
+  margin: 0 20px 0 0;
+  text-decoration: none;
+}
+
+.categories {
+  color: #273645;
+  margin: 0 20px 0 15px;
+  text-decoration: none;
+}
+
+.covid {
+  color: #273645;
+  margin: 0 20px 0 0;
+  text-decoration: none;
+}
+
+.deals {
+  color: #273645;
+  margin: 0 20px 0 0;
+  text-decoration: none;
+}
+
+.expressDelivery {
+  color: #273645;
+  margin: 0 20px 0 0;
+  text-decoration: none;
+}
+
+.favs {
+  color: #273645;
+  margin: 0 20px 0 0;
+  text-decoration: none;
+}
+
+.featured {
+  color: #273645;
+  margin: 0 20px 0 0;
+  text-decoration: none;
+}
+
+.nav3-container {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .25);
+  margin: 10px 0 40px 0;
+  padding: 10px 0;
+}

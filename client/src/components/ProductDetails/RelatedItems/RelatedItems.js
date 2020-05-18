@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './RelatedItems.css'
 import { Link } from 'react-router-dom'
-
-// const data = require('../../data.json')
+import StarRating from '../../StarRating'
+const data = require('../../data.json')
 
 
 
@@ -39,43 +39,45 @@ import { Link } from 'react-router-dom'
 //   }
 // }
 
-const RelatedItems = ({ items }) => {
-  return (
-    <>
-      {items.map(item => {
-        return (
-          <>
-            <div className="component-title">
-              <h1>Related Items</h1>
-            </div>
-            <div key={item.name} className="related-container">
-              <div className="one-item">
-                <img className="related-image" alt="related item image" src={item.images[1]} />
-                <h1 className="item-title">{item.name}</h1>
-                <h2 className="item-size">{item.size}</h2>
-                <h1 className="item-price">${item.price}</h1>
-                <h3 className="rating">Rating: {item.rating}</h3>
+const RelatedItems = () => {
+const item = data
+    return (
+      <>
+        {item.map(item => {
+          return (
+            <>
+              <div className="related-container">
+                <h1 className="related-items-title">Related Items</h1>
+                <div key={item.name} className="related-box">
+                  <div className="item-one">
+                    <img className="related-image" alt="related item image" src={item.images[1]} />
+                    <h1 className="item-title">{item.name}</h1>
+                    <h2 className="item-size">{item.size}</h2>
+                    <h1 className="item-price">${item.price}</h1>
+                    <StarRating className="rating" rating={item.rating} />
+                  </div>
+                  <div className="item-two">
+                    <img className="related-image" alt="related item image" src={item.images[2]} />
+                    <h1 className="item-title">{item.name}</h1>
+                    <h2 className="item-size">{item.size}</h2>
+                    <h1 className="item-price">${item.price}</h1>
+                    <StarRating className="rating" rating={item.rating} />
+                  </div>
+                  <div className="item-three">
+                    <img className="related-image" alt="related item image" src={item.images[3]} />
+                    <h1 className="item-title">{item.name}</h1>
+                    <h2 className="item-size">{item.size}</h2>
+                    <h1 className="item-price">${item.price}</h1>
+                    <StarRating className="rating" rating={item.rating} />
+                  </div>
+                </div>
               </div>
-              <div className="one-item">
-                <img className="related-image" alt="related item image" src={item.images[2]} />
-                <h1 className="item-title">{item.name}</h1>
-                <h2 className="item-size">{item.size}</h2>
-                <h1 className="item-price">${item.price}</h1>
-                <h3 className="rating">Rating: {item.rating}</h3>
-              </div>
-              <div className="one-item">
-                <img className="related-image" alt="related item image" src={item.images[3]} />
-                <h1 className="item-title">{item.name}</h1>
-                <h2 className="item-size">{item.size}</h2>
-                <h1 className="item-price">${item.price}</h1>
-                <h3 className="rating">Rating: {item.rating}</h3>
-              </div>
-            </div>
-          </>
-        )
-      })}
-    </>
-  )
-}
+            </>
+          )
+        })}
+      </>
+    )
+  }
+
 
 export default RelatedItems

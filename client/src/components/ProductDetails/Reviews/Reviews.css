@@ -1,4 +1,38 @@
 .profile-pic {
   border-radius: 50%;
-  width: 8%;
+  height: 30px;
+  margin: 10px 5px;
+  width: 30px;
+}
+
+.product-reviews {
+  color: #273645;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: bold;
+  margin: 50px 0 10px 10px;
+}
+
+.review-body {
+  color: #273645;
+  font-family: "Open Sans";
+  font-size: 10px;
+  letter-spacing: .22px;
+  padding: 0 0 0 40px;
+
+}
+
+.review-box {
+  /* display: inline-block; */
+  width: 500px;
+}
+
+.review-title {
+  color: #273645;
+  display: inline-block;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .24px;
+  padding: 5px;
 }
