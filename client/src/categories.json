@@ -10,19 +10,19 @@
     "subcat": [
       {
         "name": "Cereals & breakfast",
-        "url": "cereal-breakfast"
+        "url": "cereal & breakfast"
       },
       {
         "name": "Meals & Canned Goods",
-        "url": "meals-and-canned-goods"
+        "url": "meals & canned goods"
       },
       {
         "name": "Condoments & Spreads",
-        "url": "condoments-and-spreads"
+        "url": "condoments & spreads"
       },
       {
         "name": "Cooking & Baking",
-        "url": "cooking-and-baking"
+        "url": "cooking & baking"
       }
     ]
   }

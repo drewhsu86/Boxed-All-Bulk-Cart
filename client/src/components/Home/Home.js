@@ -8,7 +8,7 @@ import CarouselHomeWithButtons from './HomeCarousel/CarouselHomeWithButtons'
 
 const Home = (props) => {
   return (
-    <Layout>
+    // <Layout>
       <div className="home">
 
         <CarouselHomeWithButtons />
@@ -20,7 +20,7 @@ const Home = (props) => {
           path="/products"
         />
       </div>
-    </Layout>
+    // </Layout>
   )
 }
 
