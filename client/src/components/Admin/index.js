@@ -65,6 +65,19 @@ class Index extends Component {
         <Route path="/admin/signin">
           <Signin setToken={this.setToken} />
         </Route>
+
+        <Route path="/admin/create">
+          <Create />
+        </Route>
+
+        {/* manage actually does a product search */}
+        <Route path="/admin/manage">
+          <Manage />
+        </Route>
+
+        <Route path="/admin/edit">
+          <EditOrDelete />
+        </Route>
       </div>
     )
   }
