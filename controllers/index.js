@@ -36,7 +36,6 @@ async function getProduct(req, res) {
 //Create a product
 async function createProduct(req, res) {
   try {
-    console.log(res.locals.user)
     const product = await new Product(req.body)
     await product.save()
 
