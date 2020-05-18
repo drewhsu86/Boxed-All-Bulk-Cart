@@ -1,0 +1,49 @@
+a {
+  color: #273645;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.boxedBusiness {
+  color: #273645;
+  font-weight: 600;
+  margin: 5px 0 0 15px;
+  text-decoration: none;
+}
+
+.favorites {
+  color: #273645;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+  text-decoration: none;
+}
+
+.groupOrder {
+  color: #273645;
+  font-weight: 600;
+  margin: 5px 0 0 15px;
+  text-decoration: none;
+}
+
+.leftLink {
+  display: inline-block;
+  margin: 5px 0 0 15px;
+}
+
+.nav1-container {
+  background-color: #f0f7fd;
+  padding: 2px 0;
+}
+
+.rightLink {
+  display: flex;
+  margin: 5px 15px 0 0;
+  float: right;
+}
+
+.shipping {
+  color: #273645;
+  font-weight: 600;
+  text-decoration: none;
+}

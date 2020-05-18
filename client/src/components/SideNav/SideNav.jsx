@@ -41,8 +41,6 @@ class SideNav extends Component {
     return (
       <nav className="nav">
         <h3>Categories</h3>
-        <Link to="/products/snacks">LINK</Link>
-
         {CATEGORIES}
       </nav>
     )

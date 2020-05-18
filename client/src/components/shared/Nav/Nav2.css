@@ -1,0 +1,66 @@
+.cartImage {
+  width: 20px;
+}
+
+.createAccount {
+  color: #273645;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 40px 0 0;
+  text-decoration: none;
+}
+
+.ellipse {
+  margin: 0 5px 0 0;
+  width: 10px;
+}
+
+.freeShippingLogo {
+  margin: 0 0 0 50px;
+  width: 220px;
+}
+
+.login {
+  color: #273645;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 25px 0 0;
+  text-decoration: none;
+}
+
+.logo {
+  display: inline-block;
+  margin: 0 0 0 15px;
+  width: 120px;
+}
+
+.nav2-container {
+  padding: 10px 0;
+}
+
+.rightLink2 {
+  /* display: flex; */
+  margin: 5px 15px 0 0;
+  float: right;
+}
+
+.search-form {
+  display: inline-block;
+
+}
+.search-input {
+  color: #4b6786;
+  font-family: 'Roboto';
+  font-size: 12px;
+  margin: 0 0 0 20px;
+  width: 250px;
+  height: 30px;
+}
+
+.zipcode {
+  color: #273645;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 35px 0 0;
+  text-decoration: none;
+}
