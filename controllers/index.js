@@ -217,6 +217,59 @@ async function subcategory(req, res) {
   }
 }
 
+// searchBar
+// get all items that match a search term in the searchbar
+// so we use $regex to see if it includes a phrase, and make it case insensitive
+// and we check the following fields in the products schema:
+// name, categories, subcategories, typeOfProduct, values, brands
+async function searchBar(req, res) {
+  try {
+    // the search terms string is stored on /search/:terms
+    // same with subcategory
+    const searchTerms = req.params.terms
+    console.log('search terms: ', searchTerms)
+
+    // multiple search terms are separated by spaces
+    // we want to search multiple fields (commented above)
+    const relevantFields = ["name", "categories", "subcategories", "typeOfProduct", "values", "brands"]
+
+    // for each field we check if there are matches
+    // then add them to an array 
+    let foundMatches = []
+
+    for (let field of relevantFields) {
+      // we use '$regex' with the option 'i' to make it 
+      // case insensitive 
+      // we also use | in the search term to mean OR
+      const pattern = searchTerms.split(' ').join('|')
+
+      const findArg = {
+        [field]: { '$regex': pattern, '$options': 'i' }
+      }
+
+      const matchedProducts = await Product.find(findArg)
+
+      foundMatches = [...foundMatches, ...matchedProducts]
+    }
+
+    // filter out repeated products (same id)
+    let seenIDs = {}
+    foundMatches.filter(product => {
+      // console.log(seenIDs)
+      if (!seenIDs[product['_id']]) {
+        seenIDs[product['_id']] = true
+        return true
+      } else {
+        return false
+      }
+    })
+
+    res.json(foundMatches)
+  } catch (error) {
+    return res.status(400).json({ error: error.message })
+  }
+}
+
 module.exports = {
   getProducts,
   getProduct,
@@ -228,5 +281,6 @@ module.exports = {
   signIn,
   searchIDs,
   category,
-  subcategory
+  subcategory,
+  searchBar
 }
