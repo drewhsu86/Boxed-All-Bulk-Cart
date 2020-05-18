@@ -3,6 +3,7 @@ import SideBar from '../SideBar/SideBar'
 import './Products.css'
 import Carousel from '../Carousel/Carousel'
 import ProductThumb from '../Carousel/ProductThumb'
+import Cat from './Cat'
 import SubCat from './SubCat'
 
 import { Link, Route, Switch } from 'react-router-dom'
@@ -94,11 +95,15 @@ class Products extends Component {
   }
 
 
-  setProducts = (arr) => {
-    this.setState({
+  setProducts = async (arr) => {
+    await this.setState({
       products: arr,
       filteredProducts: arr
     })
+    this.populateFilter(arr, 'typeOfProduct')
+    this.populateFilter(arr, 'values')
+    this.populateFilter(arr, 'brands')
+    this.forceUpdate()
   }
 
 
@@ -130,8 +135,12 @@ class Products extends Component {
               ))}
             </Route>
             <Route exact path='/products/:category'>
-              <Carousel
+              {/* <Carousel
                 products={this.state.filteredProducts}
+              /> */}
+              <Cat
+                setProducts={this.setProducts}
+                filteredProducts={this.state.filteredProducts}
               />
             </Route>
             <Route path='/products/:category/:subcategory'>
