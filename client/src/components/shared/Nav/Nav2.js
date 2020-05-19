@@ -3,7 +3,7 @@ import './Nav2.css'
 import { NavLink } from 'react-router-dom'
 
 
-const Nav = ({ user }) => {
+const Nav = ({ user, toggleCart }) => {
   return (
     <nav>
       <div className="nav2-container">
@@ -56,7 +56,7 @@ const Nav = ({ user }) => {
             to="admin/signup">Create Account</NavLink>
 
           <a
-            href="#">
+            href="#" onClick={toggleCart}>
             <img
               className="cartImage"
               src="https://i.imgur.com/3LYIYEJ.png"
