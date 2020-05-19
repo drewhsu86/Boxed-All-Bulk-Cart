@@ -8,13 +8,10 @@
 }
 
 .carousel-container {
-<<<<<<< HEAD
   width: auto;
-=======
   font-family: 'Open Sans';
   margin: auto;
   width: 80%;
->>>>>>> 94fe653f7020ecf59c34a29d4449d1d827bbdd57
   position: relative;
   margin: 22px;
 }

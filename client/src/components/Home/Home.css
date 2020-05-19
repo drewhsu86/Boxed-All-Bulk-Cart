@@ -6,14 +6,11 @@
 }
 
 .bottom-banner {
-<<<<<<< HEAD
   width: 97vw;
   padding: 20px;
-=======
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
   width: 80%;
->>>>>>> 94fe653f7020ecf59c34a29d4449d1d827bbdd57
 }

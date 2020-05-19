@@ -7,7 +7,7 @@
 .prodColumn {
   display: flex;
   flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
   align-items: flex-start;
   width: 50%;
   height: stretch;
@@ -16,8 +16,7 @@
 .topRow {
   height: 450px;
   overflow-y: auto;
-  border: 1px solid black;
-  /* ^ remove border when done ^ */
+  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
