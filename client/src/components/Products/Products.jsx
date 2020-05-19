@@ -5,6 +5,8 @@ import Carousel from '../Carousel/Carousel'
 import ProductThumb from '../Carousel/ProductThumb'
 import Cat from './Cat'
 import SubCat from './SubCat'
+import Sort from '../Sort/Sort'
+import { AZ, ZA, lowestFirst, highestFirst, rating } from "../Sort/Sort"
 
 import { Link, Route, Switch } from 'react-router-dom'
 import productsData from '../../products.json'
@@ -27,7 +29,8 @@ class Products extends Component {
       valuesFilter: [],
       brandsFilter: [],
       categories: [],
-      subCategories: []
+      subCategories: [],
+      selectedValue: 'Featured'
     }
   }
 
@@ -80,7 +83,7 @@ class Products extends Component {
     let productsArray = this.state.products
     filterNames.forEach(filterName => {
       productsArray = this.filterOnClick(this.state[filterName + 'Filter'], productsArray, filterName)
-      console.log(filterName, productsArray)
+      //console.log(filterName, productsArray)
     })
     this.setState({
       filteredProducts: productsArray
@@ -88,7 +91,7 @@ class Products extends Component {
   }
 
   filterOnClick = (arr, prodsArray, dest) => {
-    console.log('the filtered arr is', arr)
+    //console.log('the filtered arr is', arr)
     let newArr = prodsArray.filter((prod) => {
       return arr.includes(prod[dest]) || arr.length === 0
     })
@@ -109,20 +112,56 @@ class Products extends Component {
   }
 
 
-  setCats = (arr) => {
-    console.log('This is the arr:', arr)
+  handleSortChange = event => {
+    this.setState({ selectValue: event.target.value });
+    let input = event.target.value; // a-z
+    const { products, filteredProducts } = this.state;
+    switch (input) {
+      case "title-ascending":
+        this.setState({
+          products: AZ(products),
+          filteredProducts: AZ(filteredProducts)
+        });
+        break;
+      case "title-descending":
+        this.setState({
+          products: ZA(products),
+          filteredProducts: ZA(filteredProducts)
+        });
+        break;
+      case "highestFirst":
+        this.setState({
+          products: highestFirst(products),
+          filteredProducts: highestFirst(filteredProducts)
+        });
+        break;
+      case "lowestFirst":
+        this.setState({
+          products: lowestFirst(products),
+          filteredProducts: lowestFirst(filteredProducts)
+        });
+        break;
+      case "rating":
+        this.setState({
+          products: rating(products),
+          filteredProducts: rating(filteredProducts)
+        });
+        break;
+      default:
+        break
+    }
   }
+
+
 
 
   render() {
     // console.log(this.state.typeOfProductFilter)
     // console.log(this.state.valuesFilter)
     // console.log(this.state.brandsFilter)
-    console.log(this.state.products, this.state.filteredProducts)
+    //console.log(this.state.products, this.state.filteredProducts)
 
-    if (this.state.categories) {
-      console.log('luke')
-    }
+
 
     return (
       <div className="products">
@@ -134,6 +173,11 @@ class Products extends Component {
         />
         <div className="main">
           <div>Banner</div>
+          <Sort
+            products={this.state.products}
+            selectedValue={this.state.selectedValue}
+            handleSortChange={this.handleSortChange}
+          />
           <Switch>
             <Route exact path='/products'>
               {this.state.filteredProducts.map(product => (

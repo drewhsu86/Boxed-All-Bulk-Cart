@@ -11,14 +11,14 @@ class Cat extends Component {
 
   async componentDidMount() {
     const category = this.props.match.params.category
-    console.log(category)
+    // console.log(category)
     const res = await api.get(`/categories/${category}`)
-    console.log(res)
+    // console.log(res)
     this.props.setProducts(res.data)
   }
 
   render() {
-    console.log(this.props.filteredProducts)
+    //console.log(this.props.filteredProducts)
     return (
       <div>
         <Carousel
