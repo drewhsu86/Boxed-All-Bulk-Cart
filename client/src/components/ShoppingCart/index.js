@@ -10,8 +10,8 @@ import './ShoppingCart.css'
 import Cart from './Cart'
 
 export default class Index extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     // first 3 products used as demo for shopping cart 
     const products3 = products.slice(0, 3)
@@ -26,8 +26,9 @@ export default class Index extends Component {
       localStorage.setItem('cartContents', JSON.stringify(items3))
     }
 
+    // STATE HERE 
     this.state = {
-      show: true,
+      show: false,
       cartContents: JSON.parse(localStorage.getItem('cartContents'))
     }
   }
@@ -35,6 +36,17 @@ export default class Index extends Component {
   // =============
   // methods
   // =============
+
+  // when component first loads give app all its methods that outside functions can use 
+  componentDidMount() {
+    const initAppMethods = this.props.initAppMethods
+    const cartMethods = {
+      toggleCart: this.toggleCart,
+      cartPush: this.cartPush,
+      cartRemove: this.cartRemove
+    }
+    initAppMethods('cartMethods', cartMethods)
+  }
 
   // toggle cart 
   toggleCart = () => {

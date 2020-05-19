@@ -20,14 +20,26 @@ class App extends Component {
   }
 
   // ============
+  // methods
+  // ============
+
+  // a method to pass to shopping cart that lets it return an object full of methods that other components can use 
+  // this is very generically written so it doesn't have to be used for this one use case 
+  initState = (stateName, stateValue) => {
+    this.setState({
+      [stateName]: stateValue
+    })
+  }
+
+  // ============
   // render
   // ============
   render() {
 
     return (
       <div className="App">
-        <Nav />
-        <ShoppingCart />
+        <Nav toggleCart={this.state.cartMethods.toggleCart || null} />
+        <ShoppingCart initAppMethods={this.initState} />
 
         <Switch>
           <Route exact path="/" render={Home} />
