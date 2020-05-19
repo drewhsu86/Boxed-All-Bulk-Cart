@@ -5,6 +5,7 @@
   justify-content: space-between;
 }
 
+
 .nav p {
   list-style-type: none;
   flex-direction: column;
@@ -13,3 +14,4 @@
   font-weight: bold;
   padding-left: 10px;
 }
+

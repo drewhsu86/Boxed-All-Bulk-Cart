@@ -1,0 +1,41 @@
+.error {
+  color: darkred;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.admin .productThumb {
+  width: 300px;
+}
+
+.admin button {
+  margin: 20px;
+}
+
+.adminManageProducts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.adminInputs {
+  margin: 30px;
+}
+
+.adminInputs input {
+  width: 70%;
+}
+
+.adminInputs label {
+  margin: 20px auto 0px auto;
+}
+
+.adminInputs button {
+  margin: 20px 0;
+}
+
+.editCard {
+  height: 100%;
+  border: 1px solid grey;
+  margin: 5px;
+}
+

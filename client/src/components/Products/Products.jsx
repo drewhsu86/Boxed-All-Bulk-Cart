@@ -113,38 +113,43 @@ class Products extends Component {
 
 
   handleSortChange = event => {
-    this.setState({ selectValue: event.target.value });
+    this.setState({ selectedValue: event.target.value });
     let input = event.target.value; // a-z
-    const { products, filteredProducts } = this.state;
+    const { products, filteredProducts, selectedValue } = this.state;
     switch (input) {
       case "title-ascending":
         this.setState({
           products: AZ(products),
-          filteredProducts: AZ(filteredProducts)
+          filteredProducts: AZ(filteredProducts),
+          selectedValue: input
         });
         break;
       case "title-descending":
         this.setState({
           products: ZA(products),
-          filteredProducts: ZA(filteredProducts)
+          filteredProducts: ZA(filteredProducts),
+          selectedValue: input
         });
         break;
       case "highestFirst":
         this.setState({
           products: highestFirst(products),
-          filteredProducts: highestFirst(filteredProducts)
+          filteredProducts: highestFirst(filteredProducts),
+          selectedValue: input
         });
         break;
       case "lowestFirst":
         this.setState({
           products: lowestFirst(products),
-          filteredProducts: lowestFirst(filteredProducts)
+          filteredProducts: lowestFirst(filteredProducts),
+          selectedValue: input
         });
         break;
       case "rating":
         this.setState({
           products: rating(products),
-          filteredProducts: rating(filteredProducts)
+          filteredProducts: rating(filteredProducts),
+          selectedValue: input
         });
         break;
       default:
