@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ProductThumb from '../Carousel/ProductThumb'
 import api from '../../services/apiConfig'
 import { withRouter } from 'react-router-dom'
+import DisplayNav from './DisplayNav'
 
 class SubCat extends Component {
   constructor(props) {

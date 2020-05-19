@@ -7,6 +7,9 @@ import Home from './components/Home/Home';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Admin from './components/Admin'
 import Nav from './components/shared/Nav/Nav'
+import DisplayNav from './components/Products/DisplayNav'
+
+
 class App extends Component {
   // ============
   // render
@@ -16,12 +19,13 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
+
         <Switch>
-
           <Route exact path="/" render={Home} />
-          <Route path="/products" render={(props) => <Products />} />
+          <Route exact path="/products" render={(props) => <Products />} />
+          <Route exact path="/products/:category" render={(props) => <Products />} />
+          <Route exact path="/products/:category/:subcategory" render={(props) => <Products />} />
           <Route path="/productdetails/:id"><ProductDetails /></Route>
-
           {/* CRUD functions handled by admin with its own routes */}
           <Route path="/admin" render={() => <Admin />} />
 
