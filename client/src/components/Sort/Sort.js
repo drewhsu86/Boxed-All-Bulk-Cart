@@ -42,7 +42,7 @@ class Sort extends Component {
           <option value="title-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
           <option value="highestFirst">&nbsp; Highest Price &nbsp;</option>
           <option value="lowestFirst">&nbsp; Lowest Price &nbsp;</option>
-          <option value="lowestFirst">&nbsp; Top Rated &nbsp;</option>
+          <option value="rating">&nbsp; Top Rated &nbsp;</option>
         </select>
       </form>
     )
