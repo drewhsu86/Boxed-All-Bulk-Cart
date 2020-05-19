@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import './HomeModal.css'
+import { Link } from 'react-router-dom'
 
 
 class HomeModal extends Component {
 
-  state = { show: false }
+  state = { show: true }
 
   showModal = () => {
     this.setState({ show: true });
@@ -20,7 +21,7 @@ class HomeModal extends Component {
       <main>
         <Modal show={this.state.show} handleClose={this.hideModal} >
           <div className="modalLeft">
-            <img 
+            <img
               className="modal-logo1"
               src="https://i.imgur.com/UzEDhSb.png"
               alt="boxed modal logo" />
@@ -31,11 +32,11 @@ class HomeModal extends Component {
               onClick=""
             >
               SHOP BULK
-        </button>
+            </button>
           </div>
 
           <div className="modalRight">
-            <img 
+            <img
               className="modal-logo2"
               src="https://i.imgur.com/1To8mkd.png"
               alt="boxed modal logo 2" />
@@ -49,7 +50,6 @@ class HomeModal extends Component {
 
           </div>
         </Modal>
-        <button type='button' onClick={this.showModal}>Open</button>
       </main>
     )
   }
@@ -62,10 +62,10 @@ const Modal = ({ handleClose, show, children }) => {
     <div className={showHideClassName}>
       <section className='modal-main'>
         {children}
-        <button
+        <button className="button-close"
           onClick={handleClose}
         >
-          Close
+          X
         </button>
 
       </section>
@@ -74,11 +74,8 @@ const Modal = ({ handleClose, show, children }) => {
 };
 
 
-const container = document.createElement('div');
-document.body.appendChild(container);
-ReactDOM.render(<HomeModal />, container);
-
-
-
+// const container = document.createElement('div');
+// document.body.appendChild(container);
+// ReactDOM.render(<HomeModal />, container);
 
 export default HomeModal
