@@ -8,7 +8,9 @@
 }
 
 .carousel-container {
-  width: 100vw;
+  font-family: 'Open Sans';
+  margin: auto;
+  width: 80%;
   position: relative;
 }
 
