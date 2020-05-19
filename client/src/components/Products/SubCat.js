@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ProductThumb from '../Carousel/ProductThumb'
 import api from '../../services/apiConfig'
 import { withRouter } from 'react-router-dom'
+import './Products.css'
 
 class SubCat extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class SubCat extends Component {
     }
 
     return (
-      <div>
+      <div className="sub">
         {this.props.filteredProducts.map(product => (
           <ProductThumb
             product={product}

@@ -6,6 +6,8 @@ import ProductThumb from '../Carousel/ProductThumb'
 import Cat from './Cat'
 import SubCat from './SubCat'
 import Banner from './Banner'
+import DisplayNav from './DisplayNav'
+
 import Sort from '../Sort/Sort'
 import { AZ, ZA, lowestFirst, highestFirst, rating } from "../Sort/Sort"
 
@@ -167,52 +169,63 @@ class Products extends Component {
     // console.log(this.state.brandsFilter)
     //console.log(this.state.products, this.state.filteredProducts)
 
-
+    console.log(this.props.match.params.subcategory)
 
     return (
-      <div className="products">
-        <SideBar
-          typeOfChoices={this.state.typeOfProduct}
-          valuesChoices={this.state.values}
-          brandsChoices={this.state.brands}
-          onClickFilter={this.pushOrSplice}
+
+      <div>
+        <DisplayNav
+          category={this.props.match.params.category}
+          subcategory={this.props.match.params.subcategory}
         />
-        <div className="main">
-          <Banner />
-          <Sort
-            products={this.state.products}
-            selectedValue={this.state.selectedValue}
-            handleSortChange={this.handleSortChange}
+        <div className="products">
+          <SideBar
+            typeOfChoices={this.state.typeOfProduct}
+            valuesChoices={this.state.values}
+            brandsChoices={this.state.brands}
+            onClickFilter={this.pushOrSplice}
           />
-          <Switch>
-            <Route exact path='/products'>
-              {this.state.filteredProducts.map(product => (
-                <ProductThumb
-                  product={product}
-                />
-              ))}
-            </Route>
-            <Route exact path='/products/:category'>
-              {/* <Carousel
+          <div className="main">
+            <Banner />
+            <Sort
+              products={this.state.products}
+              selectedValue={this.state.selectedValue}
+              handleSortChange={this.handleSortChange}
+            />
+            <Switch>
+              <Route exact path='/products'>
+                {this.state.filteredProducts.map(product => (
+                  <ProductThumb
+                    product={product}
+                  />
+                ))}
+              </Route>
+              <Route exact path='/products/:category'>
+                {/* <Carousel
                 products={this.state.filteredProducts}
               /> */}
-              <Cat
-                setCats={this.setCats}
-                setProducts={this.setProducts}
-                filteredProducts={this.state.filteredProducts}
-              />
-            </Route>
-            <Route path='/products/:category/:subcategory'>
-              <SubCat
-                setProducts={this.setProducts}
-                filteredProducts={this.state.filteredProducts}
-              />
-            </Route>
-          </Switch>
 
-          <button className="load-more">LOAD MORE</button>
+                <Cat
+                  setCats={this.setCats}
+                  setProducts={this.setProducts}
+                  filteredProducts={this.state.filteredProducts}
+                />
+              </Route>
+              <Route path='/products/:category/:subcategory'>
+                <SubCat
+                  setProducts={this.setProducts}
+                  filteredProducts={this.state.filteredProducts}
+                />
+              </Route>
+            </Switch>
+
+            <button className="load-more">LOAD MORE</button>
+
+          </div>
         </div>
       </div>
+
+
     )
   }
 }

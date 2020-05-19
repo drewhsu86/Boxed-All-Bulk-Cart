@@ -3,7 +3,7 @@ import React from 'react'
 export default function Banner() {
   return (
     <div style={styler}>
-      <h3 style={{ fontSize: '1.3rem' }}><strong>$20 Oder Minimum on Bulk Items</strong></h3>
+      <h3 style={{ fontSize: '1.3rem' }}><strong>$20 Order Minimum on Bulk Items</strong></h3>
       <p>Orders over $49 ship free!</p>
     </div>
   )
