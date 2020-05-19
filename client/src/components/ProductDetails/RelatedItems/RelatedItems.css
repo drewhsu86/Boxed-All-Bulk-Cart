@@ -46,8 +46,6 @@
 }
 
 .related-container {
-  /* display: inline-block; */
-  margin: 45px 0 0 0;
   width: 300px;
 }
 
@@ -64,5 +62,5 @@
   font-family: "Open Sans";
   font-size: 20px;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 30px;
 }
