@@ -1,7 +1,15 @@
+.item-info {
+  display: inline-block;
+  margin: 0;
+
+}
+
 
 .item-one {
   border-bottom: solid .5px rgba(142, 175, 195, .25);
-  height: 150px;
+  margin: 0 auto;
+  height: 110px;
+  padding: 10px;
 }
 
 .item-title {
@@ -10,37 +18,45 @@
   font-size: 10px;
   font-weight: bold;
   letter-spacing: .24px;
-  margin: 0 0px 0 15px;
+  margin: 0;
   width: 150px;
 }
 
 .item-size {
   color: #4d6988;
-  display: inline-block;
+  /* display: inline-block; */
   font-family: 'Open Sans';
   font-size: 10px;
 
 }
 
-.item-two {
-  border-bottom: solid .5px rgba(142, 175, 195, .25);
-}
-
-.rating {
+.related-price {
+  color: #273645;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .related-box {
   border: solid .5px rgba(142, 175, 195, .25);
 }
 
+.related_component {
+  margin-top: 45px;
+}
+
 .related-container {
   /* display: inline-block; */
+  margin: 45px 0 0 0;
   width: 300px;
 }
 
 .related-image {
-  height: 70px;
-  width: 70px;
+  display: block;
+  float: left;
+  margin: 0;
+  height: 80px;
+  width: 100px;
 }
 
 .related-items-title {
@@ -48,4 +64,5 @@
   font-family: "Open Sans";
   font-size: 20px;
   font-weight: bold;
+  margin: 0;
 }
