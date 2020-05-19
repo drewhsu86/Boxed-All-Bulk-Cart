@@ -28,7 +28,6 @@ class App extends Component {
       <div className="App">
         <Nav />
         <ShoppingCart />
-        <Switch>
 
         <Switch>
           <Route exact path="/" render={Home} />
