@@ -14,9 +14,10 @@ class ProductThumb extends Component {
     return (
       <div className="productThumb">
         <Link to={`/productdetails/${product['_id']}`}>
-          <h3>{product.name}</h3>
+          
           {product.images[0] ? <img src={product.images[0]}
             alt="Product Image" /> : <h5>No Image Available</h5>}
+          <h3>{product.name}</h3>
         </Link>
         <p>{product.description}</p>
       </div>
