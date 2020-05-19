@@ -84,12 +84,16 @@ export default class Manage extends Component {
         </form>
 
         <div className="adminManageProducts">
+
           {
             this.state.products.map(prod => {
               return (
-                <Link to={"/admin/manage/" + prod['_id']}>
+                <div className="editCard">
+                  <Link to={"/admin/manage/" + prod['_id']}>
+                    <button>Edit or Delete</button>
+                  </Link>
                   <ProductThumb product={prod} />
-                </Link>
+                </div>
               )
             })
           }
