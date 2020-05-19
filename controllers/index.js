@@ -3,10 +3,10 @@ const jwt = require("jsonwebtoken")
 const User = require("../models/users")
 const db = require("../db")
 const Product = require("../models/products")
-
+require("dotenv").config()
 
 const SALT_ROUNDS = 11
-const TOKEN_KEY = "cap2crunch0mustache2pancake0party"
+const TOKEN_KEY = process.env.TOKEN_KEY
 
 db.on("error", console.error.bind(console, "MongoDB Connection Error:"))
 
