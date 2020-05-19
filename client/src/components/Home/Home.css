@@ -1,4 +1,13 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+}
+
 .bottom-banner {
+  width: 97vw;
+  padding: 20px;
   display: block;
   margin-left: auto;
   margin-right: auto;

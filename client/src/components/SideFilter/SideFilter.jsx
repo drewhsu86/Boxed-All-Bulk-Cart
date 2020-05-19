@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import "./SideFilter.css"
 
 class SideFilter extends Component {
 
@@ -13,16 +13,16 @@ class SideFilter extends Component {
 
   render() {
     return (
-      <div>
+      <div className="side-filter">
 
 
         <h3>{this.props.title}</h3>
 
         {this.props.choices ? this.props.choices.map(choice => (
-          <>
+          <div className="checkboxes">
             <input onChange={this.boxIsChecked} type="checkbox" name={choice}></input>
             <label for={choice}>{choice}</label>
-          </>
+          </div>
         ))
           : null
         }

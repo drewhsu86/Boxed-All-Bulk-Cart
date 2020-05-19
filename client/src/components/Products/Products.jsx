@@ -5,6 +5,7 @@ import Carousel from '../Carousel/Carousel'
 import ProductThumb from '../Carousel/ProductThumb'
 import Cat from './Cat'
 import SubCat from './SubCat'
+import Banner from './Banner'
 import Sort from '../Sort/Sort'
 import { AZ, ZA, lowestFirst, highestFirst, rating } from "../Sort/Sort"
 
@@ -177,7 +178,7 @@ class Products extends Component {
           onClickFilter={this.pushOrSplice}
         />
         <div className="main">
-          <div>Banner</div>
+          <Banner />
           <Sort
             products={this.state.products}
             selectedValue={this.state.selectedValue}
@@ -209,7 +210,7 @@ class Products extends Component {
             </Route>
           </Switch>
 
-          <button>LOAD MORE</button>
+          <button className="load-more">LOAD MORE</button>
         </div>
       </div>
     )
