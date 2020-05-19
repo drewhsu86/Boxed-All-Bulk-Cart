@@ -5,7 +5,8 @@
     "imgURL": "https://i.imgur.com/BHUrVZ1.jpg",
     "txtLeft": "5%",
     "txtWidth": "40%",
-    "txtColor": "darkslateblue"
+    "txtColor": "darkslateblue",
+    "link": "/products/grocery"
   },
   {
     "title": "Big Sizes, Big Savings",
@@ -13,7 +14,8 @@
     "imgURL": "https://i.imgur.com/HliC00g.jpg",
     "txtLeft": "30%",
     "txtWidth": "40%",
-    "txtColor": "white"
+    "txtColor": "white",
+    "link": "/products"
   },
   {
     "title": "Free Hand Soap",
@@ -21,7 +23,8 @@
     "imgURL": "https://i.imgur.com/NRUtCWB.jpg",
     "txtLeft": "50%",
     "txtWidth": "40%",
-    "txtColor": "lightblue"
+    "txtColor": "lightblue",
+    "link": "/products"
   },
   {
     "title": "Sip, Sip Hooray",
@@ -29,6 +32,7 @@
     "imgURL": "https://i.imgur.com/D8xDFgu.jpg",
     "txtLeft": "10%",
     "txtWidth": "40%",
-    "txtColor": "darkslateblue"
+    "txtColor": "darkslateblue",
+    "link": "/products/grocery"
   }
 ]

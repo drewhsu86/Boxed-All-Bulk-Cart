@@ -5,9 +5,109 @@
     "subcat": []
   },
   {
+    "name": "Snacks",
+    "url": "snacks",
+    "subcat": [
+      {
+        "name": "All Snacks",
+        "url": "all snacks"
+      },
+      {
+        "name": "Salty Snacks",
+        "url": "salty snacks"
+      },
+      {
+        "name": "Bars",
+        "url": "bars"
+      },
+      {
+        "name": "Cookies",
+        "url": "cookies"
+      },
+      {
+        "name": "Nuts & Seeds",
+        "url": "nuts & seeds"
+      },
+      {
+        "name": "Chocoalte & Candy",
+        "url": "chocolate & candy"
+      },
+      {
+        "name": "Fruit Snacks",
+        "url": "fruit snacks"
+      },
+      {
+        "name": "Jerky & Meat Snacks",
+        "url": "jerky & meat snacks"
+      },
+      {
+        "name": "Fruit Cups & Pounces",
+        "url": "fruit cups & pounces"
+      }
+    ]
+  },
+  {
+    "name": "Beverages",
+    "url": "beverages",
+    "subcat": [
+      {
+        "name": "All Beverages",
+        "url": "all beverages"
+      },
+      {
+        "name": "Coffee",
+        "url": "coffee"
+      },
+      {
+        "name": "Water",
+        "url": "water"
+      },
+      {
+        "name": "Seltzer & Sparkling",
+        "url": "seltzer & sparkling"
+      },
+      {
+        "name": "Nuts & Seeds",
+        "url": "nuts & seeds"
+      },
+      {
+        "name": "Juices & Mix",
+        "url": "juices & mix"
+      },
+      {
+        "name": "Fruit Snacks",
+        "url": "fruit snacks"
+      },
+      {
+        "name": "Sports & Energy",
+        "url": "sports & energy"
+      },
+      {
+        "name": "Tea",
+        "url": "tea"
+      },
+      {
+        "name": "Milk & Creamers",
+        "url": "milk & creamers"
+      },
+      {
+        "name": "Protein Shakes",
+        "url": "protein shakes"
+      },
+      {
+        "name": "Soda & Pop",
+        "url": "soda & pop"
+      }
+    ]
+  },
+  {
     "name": "Grocery",
     "url": "grocery",
     "subcat": [
+      {
+        "name": "All Grocery",
+        "url": "all grocery"
+      },
       {
         "name": "Cereals & breakfast",
         "url": "cereal & breakfast"
@@ -17,12 +117,272 @@
         "url": "meals & canned goods"
       },
       {
-        "name": "Condoments & Spreads",
-        "url": "condoments & spreads"
+        "name": "Condiments & Spreads",
+        "url": "condiments & spreads"
       },
       {
         "name": "Cooking & Baking",
         "url": "cooking & baking"
+      }
+    ]
+  },
+  {
+    "name": "Household Essentials",
+    "url": "household essentials",
+    "subcat": [
+      {
+        "name": "Household Essentials",
+        "url": "household essentials"
+      },
+      {
+        "name": "Paper",
+        "url": "paper"
+      },
+      {
+        "name": "Laundry",
+        "url": "laundry"
+      },
+      {
+        "name": "Disposable Tableware",
+        "url": "disposable tableware"
+      },
+      {
+        "name": "Cleaners & Tools",
+        "url": "cleaner & tools"
+      },
+      {
+        "name": "Trash Bags",
+        "url": "trash bags"
+      },
+      {
+        "name": "Food Storage",
+        "url": "food storage"
+      },
+      {
+        "name": "Dish Soap & Detergent",
+        "url": "dish soap & storage"
+      },
+      {
+        "name": "Air Fresheners",
+        "url": "air frsheners"
+      }
+    ]
+  },
+  {
+    "name": "Personal Care",
+    "url": "personal care",
+    "subcat": [
+      {
+        "name": "All Personal Care",
+        "url": "all personal care"
+      },
+      {
+        "name": "Skin Care & Body Wash",
+        "url": "skin care 7 body wash"
+      },
+      {
+        "name": "Feminine Products",
+        "url": "feminine products"
+      },
+      {
+        "name": "Hands Soap & Sanitizer",
+        "url": "hands soap & sanitizer"
+      },
+      {
+        "name": "Hair Care",
+        "url": "hair care"
+      },
+      {
+        "name": "Deodorants",
+        "url": "deodorants"
+      },
+      {
+        "name": "Shaving & Grooming",
+        "url": "shaming & grooming"
+      },
+      {
+        "name": "Incontinence",
+        "url": "incontinence"
+      }
+    ]
+  },
+  {
+    "name": "Health & Wellness",
+    "url": "health & wellness",
+    "subcat": [
+      {
+        "name": "All Health & Wellness",
+        "url": "all health & wellness"
+      },
+      {
+        "name": "Dental & Eye",
+        "url": "dental & eye"
+      },
+      {
+        "name": "Vitamins & Supplements",
+        "url": "vitamins & supplements"
+      },
+      {
+        "name": "Pain Relief & First Aid",
+        "url": "pain relief & first aid"
+      },
+      {
+        "name": "Allergy & Flu",
+        "url": "allergy & flu"
+      },
+      {
+        "name": "Sexual Wellness",
+        "url": "sexual wellness"
+      }
+    ]
+  },
+  {
+    "name": "Baby",
+    "url": "baby",
+    "subcat": [
+      {
+        "name": "All Baby",
+        "url": "all baby"
+      },
+      {
+        "name": "Diapers",
+        "url": "diapers"
+      },
+      {
+        "name": "Baby Wipes",
+        "url": "baby wipes"
+      },
+      {
+        "name": "Food & Formulas",
+        "url": "food & formulas"
+      },
+      {
+        "name": "Bath & Lotion",
+        "url": "bath & lotion"
+      },
+      {
+        "name": "Health & Safety",
+        "url": "health & safety"
+      }
+    ]
+  },
+  {
+    "name": "Home",
+    "url": "home",
+    "subcat": [
+      {
+        "name": "All Home",
+        "url": "all home"
+      },
+      {
+        "name": "Bed & Bath",
+        "url": "bed & bath"
+      },
+      {
+        "name": "Power & Batteries",
+        "url": "power & batteries"
+      },
+      {
+        "name": "Kitchen",
+        "url": "kitchen"
+      },
+      {
+        "name": "Seasonal Gifting",
+        "url": "season gifting"
+      },
+      {
+        "name": "Toys & Games",
+        "url": "toys 7 games"
+      },
+      {
+        "name": "Tech Accessories",
+        "url": "tech accessories"
+      },
+      {
+        "name": "Storage & Organization",
+        "url": "storage & organization"
+      },
+      {
+        "name": "Apparel",
+        "url": "apparel"
+      },
+      {
+        "name": "Sports & Outdoor",
+        "url": "sports & outdoor"
+      }
+    ]
+  },
+  {
+    "name": "School & Office",
+    "url": "school & office",
+    "subcat": [
+      {
+        "name": "All School & Office",
+        "url": "all school & office"
+      },
+      {
+        "name": "Office Supplies",
+        "url": "office supplies"
+      },
+      {
+        "name": "Writing & Stationary",
+        "url": "writing & stationary"
+      },
+      {
+        "name": "Folders & Organization",
+        "url": "folders & organization"
+      },
+      {
+        "name": "Paper & Printing",
+        "url": "paper & printing"
+      },
+      {
+        "name": "Backpacks & Lunch Bags",
+        "url": "backpacks & lunch bags"
+      }
+    ]
+  },
+  {
+    "name": "Pets",
+    "url": "pets",
+    "subcat": [
+      {
+        "name": "All Pets",
+        "url": "all pets"
+      },
+      {
+        "name": "Treats",
+        "url": "treats"
+      },
+      {
+        "name": "Pet Care",
+        "url": "pet care"
+      },
+      {
+        "name": "Dog Food",
+        "url": "dog food"
+      },
+      {
+        "name": "Cat Food",
+        "url": "cat food"
+      },
+      {
+        "name": "Toys & Accessories",
+        "url": "toys & accessories"
+      }
+    ]
+  },
+  {
+    "name": "Wine",
+    "url": "wine",
+    "subcat": [
+      {
+        "name": "All Wine",
+        "url": "all wine"
+      },
+      {
+        "name": "Wine",
+        "url": "wine"
       }
     ]
   }

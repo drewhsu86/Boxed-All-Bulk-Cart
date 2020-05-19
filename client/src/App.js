@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import StarRating from './components/StarRating'
 import Products from './components/Products/Products'
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Admin from './components/Admin'
 import Nav from './components/shared/Nav/Nav'
+import ShoppingCart from './components/ShoppingCart'
+
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      // we need to grab the methods from the cart
+      cartMethods: {}
+    }
+  }
+
   // ============
   // render
   // ============
@@ -16,6 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
+        <ShoppingCart />
         <Switch>
 
           <Route exact path="/" render={Home} />

@@ -3,13 +3,17 @@
     opacity: 100%;
   }
   to {
-    opacity: 0%;
+    opacity: 0%;        
   }
 }
 
 .carousel-container {
-  width: 100vw;
+  width: auto;
+  font-family: 'Open Sans';
+  margin: auto;
+  width: 80%;
   position: relative;
+  margin: 22px;
 }
 
 .carousel-info {
@@ -22,11 +26,25 @@
 
 .carousel-info h3 {
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 800;
+}
+
+.carousel-info p {
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .carousel-shop {
-  padding: 10px;
+  background-color: darkslateblue;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
 }
 
 .carousel-img {
@@ -34,6 +52,7 @@
 }
 
 .carousel-fade {
+  pointer-events: none;
   background-color: white;
   position: absolute;
   top: 0;
@@ -63,6 +82,7 @@
   background-color: white;
   padding: 10px 20px;
   margin: 0 10px;
+  box-shadow: 2px 5px rgb(00, 00, 00, 0.5);
 }
 
 .carousel-button:hover {

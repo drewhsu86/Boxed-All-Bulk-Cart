@@ -5,6 +5,9 @@ import Carousel from '../Carousel/Carousel'
 import ProductThumb from '../Carousel/ProductThumb'
 import Cat from './Cat'
 import SubCat from './SubCat'
+import Banner from './Banner'
+import Sort from '../Sort/Sort'
+import { AZ, ZA, lowestFirst, highestFirst, rating } from "../Sort/Sort"
 
 import { Link, Route, Switch } from 'react-router-dom'
 import productsData from '../../products.json'
@@ -25,7 +28,10 @@ class Products extends Component {
       brands: [],
       typeOfProductFilter: [],
       valuesFilter: [],
-      brandsFilter: []
+      brandsFilter: [],
+      categories: [],
+      subCategories: [],
+      selectedValue: 'Featured'
     }
   }
 
@@ -78,7 +84,7 @@ class Products extends Component {
     let productsArray = this.state.products
     filterNames.forEach(filterName => {
       productsArray = this.filterOnClick(this.state[filterName + 'Filter'], productsArray, filterName)
-      console.log(filterName, productsArray)
+      //console.log(filterName, productsArray)
     })
     this.setState({
       filteredProducts: productsArray
@@ -86,7 +92,7 @@ class Products extends Component {
   }
 
   filterOnClick = (arr, prodsArray, dest) => {
-    console.log('the filtered arr is', arr)
+    //console.log('the filtered arr is', arr)
     let newArr = prodsArray.filter((prod) => {
       return arr.includes(prod[dest]) || arr.length === 0
     })
@@ -107,13 +113,60 @@ class Products extends Component {
   }
 
 
+  handleSortChange = event => {
+    this.setState({ selectedValue: event.target.value });
+    let input = event.target.value; // a-z
+    const { products, filteredProducts, selectedValue } = this.state;
+    switch (input) {
+      case "title-ascending":
+        this.setState({
+          products: AZ(products),
+          filteredProducts: AZ(filteredProducts),
+          selectedValue: input
+        });
+        break;
+      case "title-descending":
+        this.setState({
+          products: ZA(products),
+          filteredProducts: ZA(filteredProducts),
+          selectedValue: input
+        });
+        break;
+      case "highestFirst":
+        this.setState({
+          products: highestFirst(products),
+          filteredProducts: highestFirst(filteredProducts),
+          selectedValue: input
+        });
+        break;
+      case "lowestFirst":
+        this.setState({
+          products: lowestFirst(products),
+          filteredProducts: lowestFirst(filteredProducts),
+          selectedValue: input
+        });
+        break;
+      case "rating":
+        this.setState({
+          products: rating(products),
+          filteredProducts: rating(filteredProducts),
+          selectedValue: input
+        });
+        break;
+      default:
+        break
+    }
+  }
+
+
+
 
   render() {
     // console.log(this.state.typeOfProductFilter)
     // console.log(this.state.valuesFilter)
     // console.log(this.state.brandsFilter)
-    console.log(window.location.pathname)
-    console.log(this.state.products, this.state.filteredProducts)
+    //console.log(this.state.products, this.state.filteredProducts)
+
 
 
     return (
@@ -125,7 +178,12 @@ class Products extends Component {
           onClickFilter={this.pushOrSplice}
         />
         <div className="main">
-          <div>Banner</div>
+          <Banner />
+          <Sort
+            products={this.state.products}
+            selectedValue={this.state.selectedValue}
+            handleSortChange={this.handleSortChange}
+          />
           <Switch>
             <Route exact path='/products'>
               {this.state.filteredProducts.map(product => (
@@ -139,6 +197,7 @@ class Products extends Component {
                 products={this.state.filteredProducts}
               /> */}
               <Cat
+                setCats={this.setCats}
                 setProducts={this.setProducts}
                 filteredProducts={this.state.filteredProducts}
               />
@@ -151,7 +210,7 @@ class Products extends Component {
             </Route>
           </Switch>
 
-          <button>LOAD MORE</button>
+          <button className="load-more">LOAD MORE</button>
         </div>
       </div>
     )
