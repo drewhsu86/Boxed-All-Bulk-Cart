@@ -20,9 +20,9 @@ class SubCat extends Component {
   async apiCall() {
     const category = this.props.match.params.category
     const subCategory = this.props.match.params.subcategory
-    console.log(category, subCategory)
+    //console.log(category, subCategory)
     const res = await api.get(`/categories/${category}/${subCategory}`)
-    console.log(res)
+    //console.log(res)
     this.props.setProducts(res.data)
 
     this.setState({
