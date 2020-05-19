@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import StarRating from './components/StarRating'
 import Products from './components/Products/Products'
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
