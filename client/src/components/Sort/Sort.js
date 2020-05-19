@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./Sort.css"
 
 const compareKey = key =>
   (a, b) => {
@@ -36,7 +37,6 @@ class Sort extends Component {
   render() {
     return (
       <form className="sort-container" onSubmit={this.handleSubmit}>
-        <label htmlFor="sort">SORT BY:</label>
         <select className="sort" value={this.props.selectedValue} onChange={this.props.handleSortChange}>
           <option className="option" value="title-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
           <option value="title-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
