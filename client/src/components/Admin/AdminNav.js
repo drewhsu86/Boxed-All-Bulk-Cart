@@ -13,7 +13,7 @@ export default function AdminNav(props) {
         <Link to="/admin/create">
           <button>
             Create an item
-        </button>
+          </button>
         </Link>
 
         <Link to="/admin/manage">
@@ -25,18 +25,20 @@ export default function AdminNav(props) {
         <Link to="/admin/signup">
           <button>
             Create Account
-        </button>
+          </button>
         </Link>
 
         <Link to="/admin/signin">
           <button>
             Sign in
-        </button>
+          </button>
         </Link>
 
-        <button onClick={() => { props.removeToken() }}>
-          Sign Out
-      </button>
+        <a>
+          <button onClick={() => { props.removeToken() }}>
+            Sign Out
+          </button>
+        </a>
       </div>
     </nav>
   )
