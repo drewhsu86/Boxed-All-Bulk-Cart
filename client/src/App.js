@@ -8,6 +8,7 @@ import Admin from './components/Admin'
 import Nav from './components/shared/Nav/Nav'
 import DisplayNav from './components/Products/DisplayNav'
 import ShoppingCart from './components/ShoppingCart'
+import Login from './components/LoginPage/Login'
 
 
 class App extends Component {
@@ -49,6 +50,7 @@ class App extends Component {
           <Route path="/productdetails/:id"><ProductDetails /></Route>
           {/* CRUD functions handled by admin with its own routes */}
           <Route path="/admin" render={() => <Admin />} />
+          <Route path="/login" render={() => <Login />} />
 
         </Switch>
       </div>

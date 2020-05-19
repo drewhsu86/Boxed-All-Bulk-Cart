@@ -1,0 +1,86 @@
+.already-a-customer {
+  display: inline-block;
+  margin: 60px 0 0 300px;
+  width: 400px;
+}
+
+.create-an-account {
+  display: block;
+  float: right;
+  margin: 60px 300px 0 0;
+}
+
+.create-button {
+  border: 2px solid #293644;
+  color: #293644;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: bold;
+  height: 45px;
+  width: 400px;
+}
+
+.facebook-button {
+  background-color: #4f6fc5;
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-weight: bold;
+  height: 45px;
+  margin-bottom: 10px;
+  width: 400px;
+}
+
+.facebook-icon {
+  margin-right: 20px;
+  width: 20px;
+}
+
+.forgot-password {
+  margin: 10px 0;
+}
+
+.form-title {
+  color: #293644;
+  font-family: 'Open Sans';
+  font-size: 15px;
+}
+
+.google-button {
+  border: 2px solid #1c1c1c;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-weight: bold;
+  height: 45px;
+  width: 400px;
+}
+
+.google-icon {
+  margin-right: 20px;
+  width: 25px;
+}
+
+.login-button {
+  background-color: #334665;
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-weight: bold;
+  height: 45px;
+  margin: 40px 0 ;
+  width: 400px;
+}
+
+.login-input {
+  width: 400px;
+}
+
+.login-title {
+   color: #304767;
+  font-family: 'Open Sans';
+  font-size: 26px;
+  margin-bottom: 50px;
+}
+
+
+
