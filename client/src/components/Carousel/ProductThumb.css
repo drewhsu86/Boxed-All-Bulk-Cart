@@ -9,12 +9,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 25px;
-  box-shadow: 2px 5px 10px rgb(00, 00, 00, 0.5);
-  width: 200px;
-  margin: 7px;
-  /* border: 5px solid black; */
   align-items: flex-start;
 }
 

@@ -42,7 +42,7 @@ class SubCat extends Component {
     }
 
     return (
-      <div>
+      <div className="subCat">
         {this.props.filteredProducts.map(product => (
           <ProductThumb
             product={product}
@@ -52,7 +52,5 @@ class SubCat extends Component {
     )
   }
 }
-
-
 
 export default withRouter(SubCat)

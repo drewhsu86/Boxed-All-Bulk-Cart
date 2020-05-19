@@ -7,6 +7,7 @@ require("dotenv").config()
 
 const SALT_ROUNDS = 11
 const TOKEN_KEY = process.env.TOKEN_KEY
+console.log('env', process.env)
 
 db.on("error", console.error.bind(console, "MongoDB Connection Error:"))
 
@@ -106,7 +107,9 @@ const signIn = async (req, res) => {
         username: user.username,
         email: user.email
       }
+      console.log('about to sign')
       const token = jwt.sign(payload, TOKEN_KEY)
+      console.log('token')
       return res.status(201).json({ user, token })
     } else {
       res.status(401).send("Invalid Credentials")

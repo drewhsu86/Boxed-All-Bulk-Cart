@@ -22,7 +22,7 @@ class SideNav extends Component {
   render() {
 
     const CATEGORIES = categories.map((cat, ind) => (
-      <div>
+      <div className="nav">
         <Link to={`/products/${cat.url}`}>
           <p onClick={() => this.linkClicked(ind)}>
             {cat.name}

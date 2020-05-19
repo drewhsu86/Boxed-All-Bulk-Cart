@@ -16,3 +16,8 @@
 .main {
   width: 100%;
 }
+
+.subCat {
+  display: flex;
+  flex-wrap: wrap;
+}

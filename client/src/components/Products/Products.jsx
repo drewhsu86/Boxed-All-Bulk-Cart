@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import SideBar from '../SideBar/SideBar'
 import './Products.css'
-import Carousel from '../Carousel/Carousel'
 import ProductThumb from '../Carousel/ProductThumb'
+import AllBulk from './AllBulk'
 import Cat from './Cat'
 import SubCat from './SubCat'
 import Banner from './Banner'
@@ -164,12 +164,6 @@ class Products extends Component {
 
 
   render() {
-    // console.log(this.state.typeOfProductFilter)
-    // console.log(this.state.valuesFilter)
-    // console.log(this.state.brandsFilter)
-    //console.log(this.state.products, this.state.filteredProducts)
-
-    console.log(this.props.match.params.subcategory)
 
     return (
 
@@ -194,17 +188,12 @@ class Products extends Component {
             />
             <Switch>
               <Route exact path='/products'>
-                {this.state.filteredProducts.map(product => (
-                  <ProductThumb
-                    product={product}
-                  />
-                ))}
+                <AllBulk
+                  setProducts={this.setProducts}
+                  filteredProducts={this.state.filteredProducts}
+                />
               </Route>
               <Route exact path='/products/:category'>
-                {/* <Carousel
-                products={this.state.filteredProducts}
-              /> */}
-
                 <Cat
                   setCats={this.setCats}
                   setProducts={this.setProducts}
@@ -228,7 +217,5 @@ class Products extends Component {
     )
   }
 }
-
-
 
 export default withRouter(Products)

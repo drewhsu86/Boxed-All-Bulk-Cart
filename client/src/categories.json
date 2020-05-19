@@ -1,7 +1,7 @@
 [
   {
     "name": "All Bulk",
-    "url": "all-bulk",
+    "url": "",
     "subcat": []
   },
   {
@@ -10,7 +10,7 @@
     "subcat": [
       {
         "name": "All Snacks",
-        "url": "all snacks"
+        "url": ""
       },
       {
         "name": "Salty Snacks",
@@ -52,7 +52,7 @@
     "subcat": [
       {
         "name": "All Beverages",
-        "url": "all beverages"
+        "url": ""
       },
       {
         "name": "Coffee",
@@ -106,7 +106,7 @@
     "subcat": [
       {
         "name": "All Grocery",
-        "url": "all grocery"
+        "url": ""
       },
       {
         "name": "Cereals & breakfast",
@@ -174,7 +174,7 @@
     "subcat": [
       {
         "name": "All Personal Care",
-        "url": "all personal care"
+        "url": ""
       },
       {
         "name": "Skin Care & Body Wash",
@@ -212,7 +212,7 @@
     "subcat": [
       {
         "name": "All Health & Wellness",
-        "url": "all health & wellness"
+        "url": ""
       },
       {
         "name": "Dental & Eye",
@@ -242,7 +242,7 @@
     "subcat": [
       {
         "name": "All Baby",
-        "url": "all baby"
+        "url": ""
       },
       {
         "name": "Diapers",
@@ -268,7 +268,7 @@
   },
   {
     "name": "Home",
-    "url": "home",
+    "url": "",
     "subcat": [
       {
         "name": "All Home",
@@ -314,7 +314,7 @@
   },
   {
     "name": "School & Office",
-    "url": "school & office",
+    "url": "",
     "subcat": [
       {
         "name": "All School & Office",
@@ -348,7 +348,7 @@
     "subcat": [
       {
         "name": "All Pets",
-        "url": "all pets"
+        "url": ""
       },
       {
         "name": "Treats",
@@ -378,7 +378,7 @@
     "subcat": [
       {
         "name": "All Wine",
-        "url": "all wine"
+        "url": ""
       },
       {
         "name": "Wine",
