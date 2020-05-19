@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Products from './components/Products/Products'
+import { Switch, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import ProductDetails from './components/ProductDetails/ProductDetails';
+import Admin from './components/Admin'
+import Nav from './components/shared/Nav/Nav'
+class App extends Component {
+  // ============
+  // render
+  // ============
+  render() {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+      <div className="App">
+        <Nav />
+        <Switch>
+
+          <Route exact path="/" render={Home} />
+          <Route path="/products" render={(props) => <Products />} />
+          <Route path="/productdetails/:id"><ProductDetails /></Route>
+
+          {/* CRUD functions handled by admin with its own routes */}
+          <Route path="/admin" render={() => <Admin />} />
+
+        </Switch>
+      </div>
+    );
+
+  }
 }
 
 export default App;

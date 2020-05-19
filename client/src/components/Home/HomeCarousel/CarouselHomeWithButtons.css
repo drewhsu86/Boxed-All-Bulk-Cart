@@ -1,0 +1,124 @@
+@keyframes fade-in {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+.carousel-container {
+  font-family: 'Open Sans';
+  margin: auto;
+  width: 80%;
+  position: relative;
+}
+
+.carousel-info {
+  position: absolute;
+  top: 0;
+  padding: 30px;
+  font-size: 15px;
+  color: darkslateblue;
+}
+
+.carousel-info h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.carousel-shop {
+  background-color: darkslateblue;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+}
+
+.carousel-img {
+  width: 100%;
+}
+
+.carousel-fade {
+  pointer-events: none;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0%;
+  width: 100%;
+  height: 100%;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.carousel-buttons {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-button {
+  position: relative;
+  top: 50%;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
+.carousel-button:hover {
+  filter: brightness(70%);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: calc(50% - 25px);
+  background-color: black;
+  color: lightgrey;
+  opacity: 20%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.carousel-arrow.right {
+  right: 0;
+}
+
+.carousel-arrow:hover {
+  opacity: 50%;
+}
+
+@media (min-width: 1000px) {
+  .carousel-info {
+    top: 5%;
+    font-size: 20px;
+  }
+
+  .carousel-info h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .carousel-info {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .carousel-info h3 {
+    font-size: 16px;
+  }
+}

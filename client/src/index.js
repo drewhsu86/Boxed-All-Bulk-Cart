@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 
+
 ReactDOM.render(
+
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Router>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet" />
+      <App />
+    </Router>
+  </React.StrictMode>
+  ,
+
   document.getElementById('root')
 );
 

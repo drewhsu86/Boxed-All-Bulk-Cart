@@ -1,0 +1,26 @@
+.detail-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.prodColumn {
+  display: flex;
+  flex-direction: column;
+	justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+  height: stretch;
+}
+
+.topRow {
+  height: 450px;
+  overflow-y: auto;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

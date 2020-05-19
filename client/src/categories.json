@@ -1,0 +1,29 @@
+[
+  {
+    "name": "All Bulk",
+    "url": "all-bulk",
+    "subcat": []
+  },
+  {
+    "name": "Grocery",
+    "url": "grocery",
+    "subcat": [
+      {
+        "name": "Cereals & breakfast",
+        "url": "cereal & breakfast"
+      },
+      {
+        "name": "Meals & Canned Goods",
+        "url": "meals & canned goods"
+      },
+      {
+        "name": "Condiments & Spreads",
+        "url": "condiments & spreads"
+      },
+      {
+        "name": "Cooking & Baking",
+        "url": "cooking & baking"
+      }
+    ]
+  }
+]

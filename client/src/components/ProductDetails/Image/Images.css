@@ -1,0 +1,41 @@
+.imageChooser {
+  position: relative;
+  display: flex;
+  width: 500px;
+  height: 400px;
+  margin: 0;
+}
+
+.imageColumn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.imageButton {
+  width: 50%;
+  max-height: 100px;
+}
+
+.imageMain {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  width: 400px;
+}
+
+.imageImg {
+  margin: 0 0 0 40px;
+  max-width: 80%;
+  max-height: 100%;
+}
+
+.image-container {
+  /* display: inline-block; */
+  margin: 0;
+  width: 500px;
+}

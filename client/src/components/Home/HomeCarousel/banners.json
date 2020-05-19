@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Don't Run Out",
+    "description": "Stock up on snacks, supplies, and more in bulk.",
+    "imgURL": "https://i.imgur.com/BHUrVZ1.jpg",
+    "txtLeft": "5%",
+    "txtWidth": "40%",
+    "txtColor": "darkslateblue",
+    "link": "/products/grocery"
+  },
+  {
+    "title": "Big Sizes, Big Savings",
+    "description": "Stock up on all the essentials you need from all your favorite brands.",
+    "imgURL": "https://i.imgur.com/HliC00g.jpg",
+    "txtLeft": "30%",
+    "txtWidth": "40%",
+    "txtColor": "white",
+    "link": "/products"
+  },
+  {
+    "title": "Free Hand Soap",
+    "description": "Get this freebie with your order $100+ order. Use code: FREESOAP",
+    "imgURL": "https://i.imgur.com/NRUtCWB.jpg",
+    "txtLeft": "50%",
+    "txtWidth": "40%",
+    "txtColor": "lightblue",
+    "link": "/products"
+  },
+  {
+    "title": "Sip, Sip Hooray",
+    "description": "Waters, sodas, juices and more that are just from first sip to last drop.",
+    "imgURL": "https://i.imgur.com/D8xDFgu.jpg",
+    "txtLeft": "10%",
+    "txtWidth": "40%",
+    "txtColor": "darkslateblue",
+    "link": "/products/grocery"
+  }
+]
