@@ -36,13 +36,13 @@ class ProductDetails extends Component {
     } else {
       return (
         <div className="detail-container">
-          <div className="prodColumn">
+          <div className="prodColumnLeft">
             <div className="topRow">
               <Images images={this.state.product.images} altText={this.state.product.name} />
             </div>
             <Reviews />
           </div>
-          <div className="prodColumn">
+          <div className="prodColumnRight">
             <div className="topRow">
               <Info product={this.state.product} />
             </div>

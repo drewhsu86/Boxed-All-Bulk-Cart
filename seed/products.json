@@ -245,7 +245,7 @@
     "rating": "3",
     "stock": "25",
     "categories": "grocery",
-    "subcategories": "Condiments & Spreads",
+    "subcategories": "condiments & spreads",
     "typeOfProduct": "Syrup",
     "values": "",
     "brands": "Aunt Jemima"
@@ -263,7 +263,7 @@
     "rating": "3",
     "stock": "25",
     "categories": "grocery",
-    "subcategories": "Condiments & Spreads",
+    "subcategories": "condiments & spreads",
     "typeOfProduct": "Cheese",
     "values": "",
     "brands": "Kraft"
@@ -281,7 +281,7 @@
     "rating": "5",
     "stock": "25",
     "categories": "grocery",
-    "subcategories": "Condiments & Spreads",
+    "subcategories": "condiments & spreads",
     "typeOfProduct": "Peanut Butter",
     "values": "Organic",
     "brands": "Prince & Spring"

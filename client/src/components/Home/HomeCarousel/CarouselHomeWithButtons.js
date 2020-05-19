@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './CarouselHomeWithButtons.css'
+import { Link } from 'react-router-dom'
 
 export default class CarouselHomeWithButtons extends Component {
   constructor(props) {
@@ -59,6 +60,11 @@ export default class CarouselHomeWithButtons extends Component {
         >
           <h3>{banner.title}</h3>
           <p>{banner.description}</p>
+          <Link to={banner.link || "/products/grocery"}>
+            <button className="carousel-shop">
+              Shop Now
+            </button>
+          </Link>
         </div>
 
         <div className="carousel-fade"

@@ -1,15 +1,15 @@
 import React from 'react'
 import './Home.css'
-import Layout from '../shared/Layout/Layout'
-import Carousel from 'react-bootstrap/Carousel/'
 import 'bootstrap/dist/css/bootstrap.min.css';    
 import CarouselHomeWithButtons from './HomeCarousel/CarouselHomeWithButtons'
+import HomeModal from './HomeModal/HomeModal'
 
 
 const Home = (props) => {
   return (
     // <Layout>
-      <div className="home">
+    <div className="home">
+      <HomeModal />
 
         <CarouselHomeWithButtons />
 

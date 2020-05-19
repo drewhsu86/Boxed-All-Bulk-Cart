@@ -204,22 +204,23 @@ class Products extends Component {
                 {/* <Carousel
                 products={this.state.filteredProducts}
               /> */}
-                <Cat
-                  setCats={this.setCats}
-                  setProducts={this.setProducts}
-                  filteredProducts={this.state.filteredProducts}
-                />
-              </Route>
-              <Route path='/products/:category/:subcategory'>
-                <SubCat
-                  setProducts={this.setProducts}
-                  filteredProducts={this.state.filteredProducts}
-                />
-              </Route>
-            </Switch>
 
-            <button>LOAD MORE</button>
-          </div>
+              <Cat
+                setCats={this.setCats}
+                setProducts={this.setProducts}
+                filteredProducts={this.state.filteredProducts}
+              />
+            </Route>
+            <Route path='/products/:category/:subcategory'>
+              <SubCat
+                setProducts={this.setProducts}
+                filteredProducts={this.state.filteredProducts}
+              />
+            </Route>
+          </Switch>
+
+          <button className="load-more">LOAD MORE</button>
+
         </div>
       </div>
 

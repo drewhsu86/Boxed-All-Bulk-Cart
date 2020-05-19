@@ -90,7 +90,12 @@ export default class Signup extends Component {
   // render
   // ============
   render() {
-    if (this.state.creationSuccess) {
+    if (localStorage.getItem('token')) {
+      return (<div>
+        <h3>Create an Account</h3>
+        <h1>You are logged in.</h1>
+      </div>)
+    } else if (this.state.creationSuccess) {
       return (<div>
         <h1>Thank you for signing up!</h1>
       </div>)
@@ -117,11 +122,11 @@ export default class Signup extends Component {
             />
 
             <label>Password</label>
-            <input type="text" value={this.state.inputPassword}
+            <input type="password" value={this.state.inputPassword}
               onChange={e => this.handleChange(e, 'inputPassword')}
             />
 
-            <button disable={!this.state.canSubmit}>Submit</button>
+            <button disabled={!this.state.canSubmit}>Submit</button>
           </form>
         </div>
       )

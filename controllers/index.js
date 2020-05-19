@@ -36,7 +36,6 @@ async function getProduct(req, res) {
 //Create a product
 async function createProduct(req, res) {
   try {
-    console.log(res.locals.user)
     const product = await new Product(req.body)
     await product.save()
 
@@ -231,7 +230,7 @@ async function searchBar(req, res) {
 
     // multiple search terms are separated by spaces
     // we want to search multiple fields (commented above)
-    const relevantFields = ["name", "categories", "subcategories", "typeOfProduct", "values", "brands"]
+    const relevantFields = ["name", "description", "categories", "subcategories", "typeOfProduct", "values", "brands"]
 
     // for each field we check if there are matches
     // then add them to an array 
@@ -249,20 +248,22 @@ async function searchBar(req, res) {
 
       const matchedProducts = await Product.find(findArg)
 
-      foundMatches = [...foundMatches, ...matchedProducts]
-    }
+      // filter out repeated products (same id)
+      // make a hash table of seen ids in O(n) time and check against it in O(m) time (n and m are the lengths of the 2 arrays)
+      let seenIDs = {}
 
-    // filter out repeated products (same id)
-    let seenIDs = {}
-    foundMatches.filter(product => {
-      // console.log(seenIDs)
-      if (!seenIDs[product['_id']]) {
-        seenIDs[product['_id']] = true
-        return true
-      } else {
-        return false
+      for (let prod of foundMatches) {
+        seenIDs[prod['_id']] = true
       }
-    })
+
+      for (let mProd of matchedProducts) {
+        if (!seenIDs[mProd['_id']]) {
+          // console.log(matchedProducts)
+          seenIDs[mProd['_id']] = true
+          foundMatches.push(mProd)
+        }
+      }
+    }
 
     res.json(foundMatches)
   } catch (error) {
