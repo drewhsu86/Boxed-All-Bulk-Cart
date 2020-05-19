@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "Kellogg's Frosted Flakes",
+    "images": [
+      "http://dcmzfk78s4reh.cloudfront.net/1520016712586.jpg"
+    ],
+    "price": "9.99",
+    "rating": "4",
+    "size": "61 oz"
+  },
+  {
+    "id": "2",
+    "name": "Aunt Jemima Pancake & Waffle Mix",
+    "images": [
+      "http://dcmzfk78s4reh.cloudfront.net/1462848501442.jpg"
+    ],
+    "price": "5.29",
+    "rating": "3",
+    "size": "80 oz"
+  },
+  {
+    "id": "3",
+    "name": "King Arthur Flour Gluten Free Pancake Mix",
+    "images": [
+      "http://dcmzfk78s4reh.cloudfront.net/1588180150439.jpg"
+    ],
+    "price": "5.99",
+    "rating": "2",
+    "size": "Gluten Free 15 oz"
+  }
+]
