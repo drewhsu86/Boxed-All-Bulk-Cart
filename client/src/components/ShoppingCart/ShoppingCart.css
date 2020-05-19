@@ -1,0 +1,95 @@
+.shoppingCart {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  background-color: white;
+}
+
+.shopHeader {
+  background-color: darkslateblue;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.shopHide {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+.carts {
+  display: flex;
+}
+
+.cart h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cart h4 {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+.cartTitle {
+  background-color: lightblue;
+  padding: 5px;
+}
+
+.cartItems {
+  position: relative;
+  height: 70vh;
+  border: 1px solid lightgrey;
+  margin: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.cartItem {
+  position: relative;
+  height: 120px;
+  display: flex;
+}
+
+.cartItem img {
+  height: 90%;
+}
+
+.cartItem h5 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.itemOptions {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemCounter {
+  border: 1px solid darkslateblue;
+}
+
+.itemCounter span {
+  display: inline-block;
+  width: 40px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.itemRemove a {
+  color: darkslateblue;
+  text-decoration: underline;
+}
+
+.itemRemove a:hover {
+  color: black;
+  text-decoration: underline;
+}

@@ -3,22 +3,41 @@ import ProductThumb from '../Carousel/ProductThumb'
 import Carousel from '../Carousel/Carousel'
 import api from '../../services/apiConfig'
 import { withRouter } from 'react-router-dom'
+import DisplayNav from './DisplayNav'
 
 class Cat extends Component {
   constructor(props) {
     super(props)
+
+
+    this.state = {
+      category: ''
+    }
   }
 
   async componentDidMount() {
-    const category = this.props.match.params.category
-    // console.log(category)
-    const res = await api.get(`/categories/${category}`)
-    // console.log(res)
-    this.props.setProducts(res.data)
+    this.apiCall()
   }
 
+
+  async apiCall() {
+    const category = this.props.match.params.category
+    const res = await api.get(`/categories/${category}`)
+    this.props.setProducts(res.data)
+
+    this.setState({
+      category: category
+    })
+  }
+
+
   render() {
-    //console.log(this.props.filteredProducts)
+
+    const category = this.props.match.params.category
+    if (category !== this.state.category) {
+      this.apiCall()
+    }
+
     return (
       <div>
         <Carousel
