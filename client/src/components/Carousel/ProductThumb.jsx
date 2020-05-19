@@ -33,7 +33,9 @@ class ProductThumb extends Component {
         <StarRating rating={product.rating} />
         <h3>${product.price}</h3>
         <p>Save 12% vs retail</p>
-        <button onClick={() => { this.handleClick(product['_id']) }}>Add to cart</button>
+        {
+          product.stock > 0 ? <button onClick={() => { this.handleClick(product['_id']) }}>Add to cart</button> : <button disabled>Out of stock</button>
+        }
       </div>
     )
   }
