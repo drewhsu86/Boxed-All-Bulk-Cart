@@ -42,6 +42,7 @@ class SearchTerms extends Component {
           {this.props.filteredProducts.map(product => (
             <ProductThumb
               product={product}
+              cartMethods={this.props.cartMethods}
             />
           ))}
         </div>

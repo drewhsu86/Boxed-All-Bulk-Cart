@@ -20,7 +20,6 @@ class Carousel extends Component {
     }
   }
 
-
   // ============
   // methods
   // ============
@@ -82,7 +81,10 @@ class Carousel extends Component {
 
             {displayIndices.map((displayIndex) => {
               // for each display index, show the thumbnail
-              return <ProductThumb product={products[displayIndex]} />
+              return <ProductThumb
+                product={products[displayIndex]}
+                cartMethods={this.props.cartMethods}
+              />
             })}
 
             <button className="carousel-move right"

@@ -6,9 +6,12 @@ import StarRating from '../StarRating'
 class ProductThumb extends Component {
 
   handleClick = (prodID) => {
-    const addToCart = this.props.addToCart || function (id) { console.log('add to cart: ' + id) }
+    console.log('add to cart: ' + prodID)
 
-    addToCart(prodID)
+    // method passed from App.js to add something to the cart
+    // which is stored in localStorage 
+    this.props.cartMethods.cartPush(this.props.product)
+    this.props.cartMethods.toggleCart(true)
   }
 
   render() {

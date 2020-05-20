@@ -13,19 +13,6 @@ export default class Index extends Component {
   constructor(props) {
     super(props)
 
-    // first 3 products used as demo for shopping cart 
-    const products3 = products.slice(0, 3)
-    const items3 = products3.map(prod => {
-      return {
-        product: prod,
-        quantity: 1
-      }
-    })
-
-    if (!localStorage.getItem('cartContents')) {
-      localStorage.setItem('cartContents', JSON.stringify(items3))
-    }
-
     // STATE HERE 
     this.state = {
       show: false,
@@ -49,10 +36,10 @@ export default class Index extends Component {
   }
 
   // toggle cart 
-  toggleCart = () => {
-    const show = !this.state.show
+  toggleCart = (val) => {
+    const newShow = !this.state.show
     this.setState({
-      show
+      show: val || newShow
     })
   }
 
@@ -135,7 +122,7 @@ export default class Index extends Component {
         <div className="shopHeader">
           <button
             className="shopHide"
-            onClick={this.toggleCart}
+            onClick={() => { this.toggleCart() }}
           >x</button>
         </div>
 
@@ -160,6 +147,11 @@ export default class Index extends Component {
               cartQuantity: this.cartQuantity,
               cartRemove: this.cartRemove
             }}
+            addStyle={{
+              filter: 'saturation(50%)',
+              backgroundColor: '#eeeeee'
+            }
+            }
           />
         </div>
 

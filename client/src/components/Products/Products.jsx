@@ -10,7 +10,7 @@ import DisplayNav from './DisplayNav'
 
 import Sort from '../Sort/Sort'
 import { AZ, ZA, lowestFirst, highestFirst, rating } from "../Sort/Sort"
-import { Link, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import productsData from '../../products.json'
 import { withRouter } from 'react-router-dom'
 
@@ -69,7 +69,6 @@ class Products extends Component {
       this.setState({ [dest + 'Filter']: arr })
     }
     this.threeFilter()
-    //this.filterbrandsOnClick(arr, newFilteredProducts)
   }
 
   threeFilter = () => {
@@ -78,7 +77,6 @@ class Products extends Component {
     let productsArray = this.state.products
     filterNames.forEach(filterName => {
       productsArray = this.filterOnClick(this.state[filterName + 'Filter'], productsArray, filterName)
-      //console.log(filterName, productsArray)
     })
     this.setState({
       filteredProducts: productsArray
@@ -86,7 +84,6 @@ class Products extends Component {
   }
 
   filterOnClick = (arr, prodsArray, dest) => {
-    //console.log('the filtered arr is', arr)
     let newArr = prodsArray.filter((prod) => {
       return arr.includes(prod[dest]) || arr.length === 0
     })
@@ -105,7 +102,6 @@ class Products extends Component {
     this.populateFilter(arr, 'brands')
     this.forceUpdate()
   }
-
 
   handleSortChange = event => {
     this.setState({ selectedValue: event.target.value });
@@ -178,6 +174,7 @@ class Products extends Component {
                 <AllBulk
                   setProducts={this.setProducts}
                   filteredProducts={this.state.filteredProducts}
+                  cartMethods={this.props.cartMethods}
                 />
               </Route>
               <Route exact path='/products/:category'>
@@ -185,18 +182,21 @@ class Products extends Component {
                   setCats={this.setCats}
                   setProducts={this.setProducts}
                   filteredProducts={this.state.filteredProducts}
+                  cartMethods={this.props.cartMethods}
                 />
               </Route>
               <Route path='/products/:category/:subcategory'>
                 <SubCat
                   setProducts={this.setProducts}
                   filteredProducts={this.state.filteredProducts}
+                  cartMethods={this.props.cartMethods}
                 />
               </Route>
               <Route exact path='/productsearch/:terms'>
                 <SearchTerms
                   setProducts={this.setProducts}
                   filteredProducts={this.state.filteredProducts}
+                  cartMethods={this.props.cartMethods}
                 />
               </Route>
             </Switch>

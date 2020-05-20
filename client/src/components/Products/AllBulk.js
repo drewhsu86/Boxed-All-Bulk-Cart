@@ -58,6 +58,7 @@ class AllBulk extends Component {
               <h3>{cat[0].toUpperCase() + cat.slice(1)}</h3>
               <Carousel
                 products={catCount[cat]}
+                cartMethods={this.props.cartMethods}
               />
             </div>)
           })

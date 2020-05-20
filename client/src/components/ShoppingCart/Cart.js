@@ -4,6 +4,13 @@ import CartItem from './CartItem'
 export default function Cart(props) {
 
   const items = props.items
+  const total = items.reduce((accum, item) => {
+    if (!isNaN(Number(item.product.price))) {
+      return accum + (Number(item.product.price) * item.quantity)
+    } else {
+      return accum
+    }
+  }, 0)
 
   return (
     <div className="cart" style={props.addStyle}>
@@ -11,15 +18,18 @@ export default function Cart(props) {
         <h3>{props.title}</h3>
         <h4>{props.subtitle}</h4>
       </div>
-      <p>Your {props.cartType} Cart</p>
+      <p className="cartType">Your {props.cartType} Cart</p>
       <div className="cartItems">
         {
-          items.map((item, ind) => {
+          items.length > 0 ? items.map((item, ind) => {
             return <CartItem item={item} itemFuncs={props.itemFuncs}
               ind={ind}
               key={ind} />
-          })
+          }) : <h3>This cart is empty.</h3>
         }
+      </div>
+      <div className="cartTotal">
+        <p>CHECKOUT - ${total}</p>
       </div>
     </div>
   )

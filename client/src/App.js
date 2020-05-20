@@ -36,19 +36,18 @@ class App extends Component {
   // render
   // ============
   render() {
-
+    // passing down methods that let other components affect the cart 
+    const cartMethods = this.state.cartMethods
     return (
       <div className="App">
-        <Nav toggleCart={this.state.cartMethods.toggleCart || null} />
+        <Nav toggleCart={cartMethods.toggleCart || null} />
         <ShoppingCart initAppMethods={this.initState} />
 
         <Switch>
           <Route exact path="/" render={Home} />
-          <Route exact path="/products" render={(props) => <Products />} />
-          <Route exact path="/products/:category" render={(props) => <Products />} />
-          <Route exact path="/products/:category/:subcategory" render={(props) => <Products />} />
-          <Route exact path="/productsearch/:terms" render={(props) => <Products />} />
-          <Route path="/productdetails/:id"><ProductDetails /></Route>
+          <Route path="/products" render={(props) => <Products cartMethods={cartMethods} />} />
+          <Route exact path="/productsearch/:terms" render={(props) => <Products cartPush={cartMethods.cartPush} />} />
+          <Route path="/productdetails/:id"><ProductDetails cartMethods={cartMethods} /></Route>
           {/* CRUD functions handled by admin with its own routes */}
           <Route path="/admin" render={() => <Admin />} />
           <Route path="/login" render={() => <Login />} />

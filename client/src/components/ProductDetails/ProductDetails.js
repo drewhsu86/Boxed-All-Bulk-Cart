@@ -24,9 +24,16 @@ class ProductDetails extends Component {
     let id = this.props.match.params.id
     const product = await getProduct(id)
     this.setState({ product })
-
   }
 
+  handleAddToCart = () => {
+    const cartMethods = this.props.cartMethods
+
+    // method passed from App.js to add something to the cart
+    // which is stored in localStorage 
+    this.props.cartMethods.cartPush(this.state.product)
+    this.props.cartMethods.toggleCart(true)
+  }
 
   render() {
     const { product } = this.state
@@ -44,7 +51,10 @@ class ProductDetails extends Component {
           </div>
           <div className="prodColumnRight">
             <div className="topRow">
-              <Info product={this.state.product} />
+              <Info
+                product={this.state.product}
+                handleAddToCart={this.handleAddToCart}
+              />
             </div>
             <RelatedItems items={this.state.product} />
           </div>

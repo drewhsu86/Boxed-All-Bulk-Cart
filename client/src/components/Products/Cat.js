@@ -73,6 +73,7 @@ class Cat extends Component {
               <h3>{subCat[0].toUpperCase() + subCat.slice(1)}</h3>
               <Carousel
                 products={subCount[subCat]}
+                cartMethods={this.props.cartMethods}
               />
             </div>)
           })
