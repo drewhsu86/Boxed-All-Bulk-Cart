@@ -4,6 +4,7 @@ import Info from './Info/Info'
 import Images from './Image/Images'
 import RelatedItems from './RelatedItems/RelatedItems'
 import './ProductDetails.css'
+import DisplayNav from '../Products/DisplayNav'
 
 import { getProduct, deleteProduct } from '../../services/products'
 import { withRouter, Link } from 'react-router-dom'
@@ -53,6 +54,7 @@ class ProductDetails extends Component {
       return null
     } else {
       return (
+
         <div className="detail-container">
           <CheckoutModal setModal={this.setModal} handleAddToCart={this.handleAddToCart} />
           <div className="prodColumnLeft">
@@ -67,8 +69,8 @@ class ProductDetails extends Component {
                 openModal={this.state.openModal}
                 product={this.state.product}
               />
+
             </div>
-            <RelatedItems items={this.state.product} />
           </div>
         </div>
       )
