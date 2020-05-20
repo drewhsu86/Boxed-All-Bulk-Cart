@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import SideBar from '../SideBar/SideBar'
 import './Products.css'
-import ProductThumb from '../Carousel/ProductThumb'
+import SearchTerms from './SearchTerms'
 import AllBulk from './AllBulk'
 import Cat from './Cat'
 import SubCat from './SubCat'
@@ -10,14 +10,9 @@ import DisplayNav from './DisplayNav'
 
 import Sort from '../Sort/Sort'
 import { AZ, ZA, lowestFirst, highestFirst, rating } from "../Sort/Sort"
-
 import { Link, Route, Switch } from 'react-router-dom'
 import productsData from '../../products.json'
 import { withRouter } from 'react-router-dom'
-
-
-
-
 
 class Products extends Component {
   constructor() {
@@ -36,7 +31,6 @@ class Products extends Component {
       selectedValue: 'Featured'
     }
   }
-
 
   componentDidMount() {
 
@@ -77,8 +71,6 @@ class Products extends Component {
     this.threeFilter()
     //this.filterbrandsOnClick(arr, newFilteredProducts)
   }
-
-
 
   threeFilter = () => {
 
@@ -160,13 +152,8 @@ class Products extends Component {
     }
   }
 
-
-
-
   render() {
-
     return (
-
       <div>
         <DisplayNav
           category={this.props.match.params.category}
@@ -202,6 +189,12 @@ class Products extends Component {
               </Route>
               <Route path='/products/:category/:subcategory'>
                 <SubCat
+                  setProducts={this.setProducts}
+                  filteredProducts={this.state.filteredProducts}
+                />
+              </Route>
+              <Route exact path='/productsearch/:terms'>
+                <SearchTerms
                   setProducts={this.setProducts}
                   filteredProducts={this.state.filteredProducts}
                 />

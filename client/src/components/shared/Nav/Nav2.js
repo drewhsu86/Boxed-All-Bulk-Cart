@@ -1,72 +1,117 @@
 import React from 'react'
 import './Nav2.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Redirect } from 'react-router-dom'
 
 
-const Nav = ({ user, toggleCart }) => {
-  return (
-    <nav>
-      <div className="nav2-container">
-        <NavLink
-          to="/">
-          <img
-            className="logo"
-            src="https://i.imgur.com/xWUha06.png"
-            alt="boxed-logo"
-          />
-        </NavLink>
+class Nav2 extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      inputSearch: '',
+      redirect: null
+    }
+  }
 
-        <form className="search-form">
-          <input
-            className="search-input"
-            name="search"
-            placeholder="Search for your favorites in bulk"
-            type="text"
-          />
-        </form>
+  // ===========
+  // methods
+  // ===========
+  handleChange = (e) => {
+    this.setState({
+      inputSearch: e.target.value
+    })
+  }
 
-        <NavLink
-          to="/">
-          <img
-            className="freeShippingLogo"
-            src="https://i.imgur.com/rlnhOR6.png"
-            alt="free-shipping-logo"
-          />
-        </NavLink>
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('handle submit')
+    // go to a different page  
+    this.setState({
+      inputSearch: '',
+      redirect: <Redirect to={`/productsearch/${this.state.inputSearch}`} />
+    })
+  }
 
-        <div className="rightLink2">
-          <NavLink
-            to="#">
-            <img
-              className="ellipse"
-              src="https://i.imgur.com/bLXjQTs.png"
-              alt="ellipse" />
-          </NavLink>
+  // ===========
+  // render
+  // ===========
+  render() {
+    const toggleCart = this.props.toggleCart
 
-          <a
-            href="#"
-            className="zipcode">10019</a>
+    if (this.state.redirect) {
+      const redirect = this.state.redirect
+      this.setState({
+        redirect: null
+      })
+      return redirect
+    } else {
+      return (
+        <nav>
+          <div className="nav2-container">
+            <NavLink
+              to="/">
+              <img
+                className="logo"
+                src="https://i.imgur.com/xWUha06.png"
+                alt="boxed-logo"
+              />
+            </NavLink>
 
-          <NavLink
-            className="login"
-            to="admin/signin">Login</NavLink>
+            <form className="search-form" onSubmit={this.handleSubmit}>
+              <input
+                className="search-input"
+                name="search"
+                placeholder="Search for your favorites in bulk"
+                type="text"
+                value={this.state.inputSearch}
+                onChange={this.handleChange}
+              />
+              <button>Search</button>
+            </form>
 
-          <NavLink
-            className="createAccount"
-            to="admin/signup">Create Account</NavLink>
+            <NavLink
+              to="/">
+              <img
+                className="freeShippingLogo"
+                src="https://i.imgur.com/rlnhOR6.png"
+                alt="free-shipping-logo"
+              />
+            </NavLink>
 
-          <a
-            href="#" onClick={toggleCart}>
-            <img
-              className="cartImage"
-              src="https://i.imgur.com/3LYIYEJ.png"
-              alt="cart image"
-            />
-          </a>
-        </div>
-      </div>
-    </nav>
-  )
+            <div className="rightLink2">
+              <NavLink
+                to="#">
+                <img
+                  className="ellipse"
+                  src="https://i.imgur.com/bLXjQTs.png"
+                  alt="ellipse" />
+              </NavLink>
+
+              <a
+                href="#"
+                className="zipcode">10019</a>
+
+              <NavLink
+                className="login"
+                to="admin/signin">Login</NavLink>
+
+              <NavLink
+                className="createAccount"
+                to="admin/signup">Create Account</NavLink>
+
+              <a
+                href="#" onClick={toggleCart}>
+                <img
+                  className="cartImage"
+                  src="https://i.imgur.com/3LYIYEJ.png"
+                  alt="cart image"
+                />
+              </a>
+            </div>
+          </div>
+        </nav>
+      )
+    }
+  }
 }
 
-export default Nav
+export default Nav2

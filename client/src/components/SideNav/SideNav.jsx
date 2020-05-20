@@ -24,13 +24,13 @@ class SideNav extends Component {
     const CATEGORIES = categories.map((cat, ind) => (
       <div className="nav">
         <Link to={`/products/${cat.url}`}>
-          <p onClick={() => this.linkClicked(ind)}>
+          <p onClick={() => this.linkClicked(ind)} className="navCat">
             {cat.name}
           </p>
         </Link>
         {this.state.catIndex === ind ?
           cat.subcat.map((sc) => (
-            <Link to={`/products/${cat.url}/${sc.url}`}>
+            <Link to={`/products/${cat.url}/${sc.url}`} className="navSubCat">
               {sc.name}
             </Link>
           ))

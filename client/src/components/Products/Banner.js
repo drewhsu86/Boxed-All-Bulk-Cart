@@ -12,7 +12,7 @@ export default function Banner() {
 
 const styler = {
   padding: '2.5%',
-  margin: '1.5% 7.5%',
+  margin: '0 7.5% 50px 7.5%',
   display: "flex",
   flexDirection: "column",
   alignItems: 'center',

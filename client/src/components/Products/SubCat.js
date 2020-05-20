@@ -42,12 +42,15 @@ class SubCat extends Component {
     }
 
     return (
-      <div className="subCat">
-        {this.props.filteredProducts.map(product => (
-          <ProductThumb
-            product={product}
-          />
-        ))}
+      <div>
+        <h3>{subCategory[0].toUpperCase() + subCategory.slice(1)}</h3>
+        <div className="subCat">
+          {this.props.filteredProducts.map(product => (
+            <ProductThumb
+              product={product}
+            />
+          ))}
+        </div>
       </div>
     )
   }

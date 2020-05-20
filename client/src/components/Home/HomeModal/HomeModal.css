@@ -14,10 +14,11 @@
   top: 0;
   right: 0;
   border: 1px solid lightgrey;
-  margin: 8px 5px;
-  padding: 1px 5px;
+  margin: 5px 5px;
+  padding: 0px 5px;
   color: lightgrey;
   background-color: transparent;
+  font-weight: bold;
 }
 
 .description-left {

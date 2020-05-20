@@ -70,7 +70,7 @@ class Cat extends Component {
         {
           subcatSelection.map(subCat => {
             return (<div>
-              <h3>{subCat}</h3>
+              <h3>{subCat[0].toUpperCase() + subCat.slice(1)}</h3>
               <Carousel
                 products={subCount[subCat]}
               />

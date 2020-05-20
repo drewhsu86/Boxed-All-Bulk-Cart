@@ -46,6 +46,7 @@ class App extends Component {
           <Route exact path="/products" render={(props) => <Products />} />
           <Route exact path="/products/:category" render={(props) => <Products />} />
           <Route exact path="/products/:category/:subcategory" render={(props) => <Products />} />
+          <Route exact path="/productsearch/:terms" render={(props) => <Products />} />
           <Route path="/productdetails/:id"><ProductDetails /></Route>
           {/* CRUD functions handled by admin with its own routes */}
           <Route path="/admin" render={() => <Admin />} />

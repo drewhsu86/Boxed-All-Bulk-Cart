@@ -51,6 +51,7 @@ class AllBulk extends Component {
     // RETURN 
     return (
       <div>
+        <h2>All-Bulk</h2>
         {
           catSelection.map(cat => {
             return (<div>
