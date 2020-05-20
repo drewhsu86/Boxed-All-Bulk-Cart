@@ -219,6 +219,7 @@ class Products extends Component {
               </Route>
             </Switch>
 
+
             <button className="load-more">LOAD MORE</button>
 
           </div>
