@@ -268,11 +268,11 @@
   },
   {
     "name": "Home",
-    "url": "",
+    "url": "home",
     "subcat": [
       {
         "name": "All Home",
-        "url": "all home"
+        "url": ""
       },
       {
         "name": "Bed & Bath",
