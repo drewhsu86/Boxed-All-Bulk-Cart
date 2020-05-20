@@ -122,7 +122,8 @@ const signIn = async (req, res) => {
 async function signUp(req, res) {
   console.log('in sign up')
   try {
-    const { username, email, password } = req.body
+    const { username, email, password, invite_code } = req.body
+    if (invite_code !== process.env.INVITE_CODE) throw { message: "Invalid invite code" }
     const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
     const user = await new User({
       username,
