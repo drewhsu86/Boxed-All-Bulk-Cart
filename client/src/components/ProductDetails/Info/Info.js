@@ -3,7 +3,10 @@ import './Info.css'
 import { withRouter } from 'react-router-dom'
 import StarRating from '../../StarRating'
 
-const Info = ({ product, handleAddToCart }) => {
+const Info = ({ product, openModal }) => {
+
+
+
   const item = product
   if (!item) {
     return null
@@ -20,7 +23,7 @@ const Info = ({ product, handleAddToCart }) => {
         <p className="expiration">Experiation date: {item.expirationDate}</p>
         <p className="order-free">Orders over $49.00 ship free</p>
         <p className="delivery-zip">On-demand delivery to 10019</p>
-        {item.stock > 0 ? <button className="cart-button" onClick={() => { handleAddToCart(item) }}>Add to BULK Cart</button> : <button className="cart-button" disabled>Out of Stock</button>}
+        {item.stock > 0 ? <button className="cart-button" onClick={ openModal }>Add to BULK Cart</button> : <button className="cart-button" disabled>Out of Stock</button>}
 
       </div>
     )

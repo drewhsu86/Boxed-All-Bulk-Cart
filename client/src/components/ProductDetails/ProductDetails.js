@@ -8,6 +8,7 @@ import DisplayNav from '../Products/DisplayNav'
 
 import { getProduct, deleteProduct } from '../../services/products'
 import { withRouter, Link } from 'react-router-dom'
+import CheckoutModal from './CheckoutModal/CheckoutModal'
 
 // const data = require('../../products.json')
 
@@ -18,6 +19,7 @@ class ProductDetails extends Component {
     this.state = {
       product: null,
       items: [],
+      openModal: null,
     }
   }
 
@@ -30,39 +32,44 @@ class ProductDetails extends Component {
   handleAddToCart = () => {
     const cartMethods = this.props.cartMethods
 
+
     // method passed from App.js to add something to the cart
     // which is stored in localStorage 
     this.props.cartMethods.cartPush(this.state.product)
     this.props.cartMethods.toggleCart(true)
+    console.log('cartMethods')
+  }
+
+  setModal = (func) => {
+    this.setState({
+      openModal: func
+    })
   }
 
   render() {
+    console.log(this.state.openModal)
     const { product } = this.state
     console.log(this.state)
     if (!product) {
       return null
     } else {
       return (
-        <div className="product-details">
-          <DisplayNav
-            category={product.categories || ''}
-            subcategory={product.subcategories || ''}
-          />
-          <div className="detail-container">
-            <div className="prodColumnLeft">
-              <div className="topRow">
-                <Images images={this.state.product.images} altText={this.state.product.name} />
-              </div>
-              <Reviews />
+
+        <div className="detail-container">
+          <CheckoutModal setModal={this.setModal} handleAddToCart={this.handleAddToCart} />
+          <div className="prodColumnLeft">
+            <div className="topRow">
+              <Images images={this.state.product.images} altText={this.state.product.name} />
             </div>
-            <div className="prodColumnRight">
-              <div className="topRow">
-                <Info
-                  product={this.state.product}
-                  handleAddToCart={this.handleAddToCart}
-                />
-              </div>
-              <RelatedItems items={this.state.product} />
+            <Reviews />
+          </div>
+          <div className="prodColumnRight">
+            <div className="topRow">
+              <Info
+                openModal={this.state.openModal}
+                product={this.state.product}
+              />
+
             </div>
           </div>
         </div>
