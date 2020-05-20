@@ -31,13 +31,14 @@ export default class NavCatMenu extends Component {
 
   handleClickCat = (cat, subcatArr) => {
     // when the category is clicked
-    // the subcat menu is toggled
+    // the subcat menu is toggled if you click the same cat 
     // and the subcatArr is used to fill in the subcat array 
     const subcatOpen = !this.state.subcatOpen
+    const prevCat = this.state.cat
     this.setState({
       cat,
       subcats: subcatArr,
-      subcatOpen
+      subcatOpen: prevCat !== cat
     })
   }
 
