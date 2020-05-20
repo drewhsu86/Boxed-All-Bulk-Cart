@@ -1,3 +1,56 @@
-.navCatTextbox {
-  padding: 5px 10px;
+.navCatMenu {
+  position: relative;
 }
+
+.navCatTextbox {
+  color: #273645;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.navCatTextbox:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.navCatTextbox.option {
+  margin: 0;
+  padding: 10px 20px 10px 15px;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navCatTextbox.option span {
+  text-decoration: none;
+}
+
+.navCatTextbox.option:hover {
+  background-color: lightblue;
+}
+
+.navCatHolder {
+  position: absolute;
+  height: 0;
+}
+
+.navCatDropdown {
+  z-index: 1000;
+  position: absolute;
+  top: calc(100% + 10px); /* equal to padding of bottom of Categories */
+  background-color: white;
+  border: 1px solid lightgrey;
+  display: flex;
+}
+
+.navCatVertical {
+  height: 100%;
+}
+
+.navCatHorizontal {
+  height: 100%;
+}
+
