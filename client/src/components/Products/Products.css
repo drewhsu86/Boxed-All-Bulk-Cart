@@ -41,10 +41,12 @@
 
 .displayNav p {
   color: darkslateblue;
+  font-size: 12px;
   margin: 0 3px;
 }
 
 .displayNav a {
   color: darkslateblue;
+  font-size: 12px;
   margin: 0 3px;
 }
