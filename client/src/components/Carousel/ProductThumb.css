@@ -32,10 +32,18 @@
   font-size: 14px;
 }
 
-.productThumb img {
+.productThumbImgHolder {
   max-width: 90%;
   height: 200px;
   margin: 0 auto;
   align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productThumb img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
