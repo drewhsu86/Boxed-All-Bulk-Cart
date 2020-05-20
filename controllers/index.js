@@ -7,7 +7,6 @@ require("dotenv").config()
 
 const SALT_ROUNDS = 11
 const TOKEN_KEY = process.env.TOKEN_KEY
-console.log('env', process.env)
 
 db.on("error", console.error.bind(console, "MongoDB Connection Error:"))
 
