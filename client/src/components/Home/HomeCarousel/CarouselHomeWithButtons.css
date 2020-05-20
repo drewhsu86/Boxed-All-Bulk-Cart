@@ -110,7 +110,7 @@
 }
 
 .carousel-arrow:hover {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 @media (min-width: 1200px) {
