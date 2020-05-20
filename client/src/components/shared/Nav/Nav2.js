@@ -92,11 +92,11 @@ class Nav2 extends React.Component {
 
               <NavLink
                 className="login"
-                to="admin/signin">Login</NavLink>
+                to="/login">Login</NavLink>
 
               <NavLink
                 className="createAccount"
-                to="admin/signup">Create Account</NavLink>
+                to="/login">Create Account</NavLink>
 
               <a
                 href="#" onClick={toggleCart}>

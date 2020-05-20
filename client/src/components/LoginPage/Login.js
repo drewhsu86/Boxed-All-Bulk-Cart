@@ -4,7 +4,7 @@ import './Login.css'
 export default class Login extends Component {
   render() {
     return (
-      <>
+      <div className="login-page">
         <div className="already-a-customer">
           <h1 className="login-title">Already a Customer</h1>
           <div className="form-container">
@@ -41,12 +41,11 @@ export default class Login extends Component {
           </div>
         </div>
 
-
         <div className="create-an-account">
           <h1 className="login-title">Create An Account</h1>
           <button className="create-button">CREATE ACCOUNT</button>
         </div>
-      </>
+      </div>
     )
   }
 }

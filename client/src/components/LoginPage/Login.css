@@ -1,13 +1,11 @@
-.already-a-customer {
-  display: inline-block;
-  margin: 60px 0 0 300px;
-  width: 400px;
+.login-page {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.create-an-account {
-  display: block;
-  float: right;
-  margin: 60px 300px 0 0;
+.already-a-customer, .create-an-account {
+  width: 400px;
+  margin: 30px;
 }
 
 .create-button {
