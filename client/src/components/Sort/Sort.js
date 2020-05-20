@@ -21,18 +21,9 @@ export const lowestFirst = arr => arr.sort((a, b) => parseInt(a.price) - parseIn
 export const highestFirst = arr => arr.sort((a, b) => parseInt(b.price) - parseInt(a.price))
 export const rating = arr => arr.sort((a, b) => parseInt(b.rating) - parseInt(a.rating))
 
-
-
-
-
-
 class Sort extends Component {
 
-
-
-
   handleSubmit = event => event.preventDefault()
-
 
   render() {
     return (
