@@ -4,13 +4,13 @@ import CartItem from './CartItem'
 export default function Cart(props) {
 
   const items = props.items
-  const total = items.reduce((accum, item) => {
+  const total = items ? items.reduce((accum, item) => {
     if (!isNaN(Number(item.product.price))) {
       return accum + (Number(item.product.price) * item.quantity)
     } else {
       return accum
     }
-  }, 0)
+  }, 0) : 0
 
   return (
     <div className="cart" style={props.addStyle}>
