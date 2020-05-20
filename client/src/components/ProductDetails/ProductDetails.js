@@ -4,6 +4,7 @@ import Info from './Info/Info'
 import Images from './Image/Images'
 import RelatedItems from './RelatedItems/RelatedItems'
 import './ProductDetails.css'
+import DisplayNav from '../Products/DisplayNav'
 
 import { getProduct, deleteProduct } from '../../services/products'
 import { withRouter, Link } from 'react-router-dom'
@@ -42,21 +43,27 @@ class ProductDetails extends Component {
       return null
     } else {
       return (
-        <div className="detail-container">
-          <div className="prodColumnLeft">
-            <div className="topRow">
-              <Images images={this.state.product.images} altText={this.state.product.name} />
+        <div className="product-details">
+          <DisplayNav
+            category={product.categories || ''}
+            subcategory={product.subcategories || ''}
+          />
+          <div className="detail-container">
+            <div className="prodColumnLeft">
+              <div className="topRow">
+                <Images images={this.state.product.images} altText={this.state.product.name} />
+              </div>
+              <Reviews />
             </div>
-            <Reviews />
-          </div>
-          <div className="prodColumnRight">
-            <div className="topRow">
-              <Info
-                product={this.state.product}
-                handleAddToCart={this.handleAddToCart}
-              />
+            <div className="prodColumnRight">
+              <div className="topRow">
+                <Info
+                  product={this.state.product}
+                  handleAddToCart={this.handleAddToCart}
+                />
+              </div>
+              <RelatedItems items={this.state.product} />
             </div>
-            <RelatedItems items={this.state.product} />
           </div>
         </div>
       )
