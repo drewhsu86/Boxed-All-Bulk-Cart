@@ -29,7 +29,7 @@ export default function Cart(props) {
         }
       </div>
       <div className="cartTotal">
-        <p>CHECKOUT - ${total}</p>
+        <p>CHECKOUT - ${total.toFixed(2)}</p>
       </div>
     </div>
   )
