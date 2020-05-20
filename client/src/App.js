@@ -46,7 +46,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" render={Home} />
           <Route path="/products" render={(props) => <Products cartMethods={cartMethods} />} />
-          <Route exact path="/productsearch/:terms" render={(props) => <Products cartPush={cartMethods.cartPush} />} />
+          <Route exact path="/productsearch/:terms" render={(props) => <Products cartMethods={cartMethods} />} />
           <Route path="/productdetails/:id"><ProductDetails cartMethods={cartMethods} /></Route>
           {/* CRUD functions handled by admin with its own routes */}
           <Route path="/admin" render={() => <Admin />} />
