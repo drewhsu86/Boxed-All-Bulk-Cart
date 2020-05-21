@@ -3,8 +3,8 @@ import React from 'react'
 export default function Banner() {
   return (
     <div style={styler}>
-      <h3 style={{ fontSize: '1.3rem' }}><strong>$20 Order Minimum on Bulk Items</strong></h3>
-      <p>Orders over $49 ship free!</p>
+      <h3 style={{ fontSize: "30px" }}><strong>$20 Order Minimum on Bulk Items</strong></h3>
+      <p style={{ fontSize: "20px" }}>Orders over $49 ship free!</p>
     </div>
   )
 }
@@ -18,6 +18,5 @@ const styler = {
   alignItems: 'center',
   fontFamily: 'Open Sans',
   background: 'linear-gradient(to right, #C5F4EF 15%, #8DAFC4)',
-  fontSize: "0.8rem",
   fontWeight: 'bold'
 }
