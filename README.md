@@ -23,10 +23,13 @@ Built using MERN stack: MongoDB, Express, React, Nodejs
 
 # App Design 
 
-## MVP Features 
-Our main MVP features revolve around the following two goals: (1) creating a functional full-stack app that allows users to browse products in the store, which are served from the database, and (2) employing the features designed by the UX team in their project to enhance the user experience of the Boxed.com site. 
+## Features 
+Our main app features revolve around the following two goals: (1) creating a functional full-stack app that allows users to browse products in the store, which are served from the database, and (2) employing the features designed by the UX team in their project to enhance the user experience of the Boxed.com site. 
 
 #### App MVP
+
+Our MVP was to create the storefront in React, and build an Express server and MongoDB database that serve as the backend. The backend would provide an API for the frontend to read all or one of the products in the store. Additionally, the backend would provide a system to sign up as a user, authenticate sign ins and provide CRUD functions to allow a store admin to add, edit or delete products from the database. A bare-bones (unstyled) adminstrator login page would allow the admin to do these things from the browser.
+
 * React frontend deployed to Surge
 * Express backend deployed to Heroku, with MongoDB Atlas database connection
 * Ability to read products from database via API endpoint
@@ -34,6 +37,21 @@ Our main MVP features revolve around the following two goals: (1) creating a fun
 * Hand-rolled JSON web token authentication system in Express backend
 * React components that route to different pages (products, productDetails, login) that have different API calls
 * Styling based on UX mockups and Boxed.com aesthetics
+
+#### App post-MVP
+
+Our post-MVP development involved including a number of quality of life and UX features. Almost all the UX features were post-MVP, being added after the main functionality (but before styling) of the app was done. 
+* Main UX Features: 3 informative popups
+  * Home popup
+  * Add to cart popup
+  * Bulk and Express shopping carts
+* Frontend:
+  * Search box in navigation bar functional
+  * Extensive filtering and sorting on products page
+* Backend: 
+  * API endpoint for search box that uses regular expressions to match terms with Schema fields
+  * API endpoint for returning only products that fall under certain categories or subcategories
+  * Additional environment variable for restricting account creation (acting as an invite code)
 
 #### UX Features
 The UX team provided a set of mockups, both detailing the components and styling for the Boxed.com site, as well as the new features they wanted to introduce.
@@ -55,9 +73,15 @@ In Boxed.com's current implementation, the shopping cart is one column and both 
 
 [Feature 3: Boxed Bulk and Express shopping carts](https://scene.zeplin.io/project/5ea47ccc58a80025db2899bb/screen/5ea47de033694a2667fbeae7)
 
+#### Post-MVP
+
 # Development
 
-## Trello Board
+## Project Timeframe
+
+Because this was our first time working together, and also our first time doing a group software development project, we ended up front loading a lot of work in the first few days of our schedule.
+
+#### Trello Board
 
 [Development Trello Board](https://trello.com/b/OVCriFYj/ga-sei-apollo-project-3-boxed)
 
