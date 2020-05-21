@@ -138,7 +138,9 @@ while i < len(prodThumbs):
     outFile.write('"subcategories":"' + subcategory + '"')
     outFile.write('\n')
 
-    outFile.write('},')
+    outFile.write('}')
+    if i < len(prodThumbs) - 1:
+        outFile.write(',')
     outFile.write('\n')
 
     # iterate
