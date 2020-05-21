@@ -83,8 +83,9 @@ Because this was our first time working together, and also our first time doing 
 ##### Rough Estimate of Feature Completeness Per Day Of Project
 * FE = Frontend Features, BE = Backend Features
 * For Post-MVP, percent is relative to amount completed between end of MVP and Project Due Date: Friday, May/22/2020
+
 | By End Of Day | MVP | FE | BE | Post-MVP | FE | BE | CSS |
-| --- | --- | -- | -- | -------- | -- | -- | --- |
+| ------------- | --- | -- | -- | -------- | -- | -- | --- |
 | Thu - 5/14 | | 10% | 50% | | | | |
 | Fri - 5/15 | | 40% | 100% | | | | |
 | Mon - 5/18 | | 80% | 100% | | | | |
