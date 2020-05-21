@@ -87,7 +87,25 @@ Because this was our first time working together, and also our first time doing 
 
 ## Code Examples And References
 
-#### Example for product schema and thumbnail
+#### Express/Mongoose: User Schema
+ 
+The User Schema only holds the following (all required) fields, which are required upon admin account creation:
+  * email: string
+  * username: string
+  * password_digest: string
+
+#### Express/Mongoose: Product Schema
+
+The Product Schema has many more keys than the User and many are used for categorization and filtering on the products page of the app.
+
+##### Product Schema Fields
+  | REQUIRED | name: string | images: array[strings] | description: string | price: string |
+  | REQUIRED | stock: number | rating: number (int 0-5) | categories: string | subcategories: string |
+  | NOT REQUIRED | typeOfProduct: string | values: string | brands: string |
+  
+If the app were to be refactored further, the front end would have its filter functions redesigned so that the last three fields (typeOfProduct, values, brands) could be arrays.
+
+#### Express/Mongoose: Example of product json object for seeding database based on Product Schema
 ```js
 {
     "name": "TriFun Cereal Box",
