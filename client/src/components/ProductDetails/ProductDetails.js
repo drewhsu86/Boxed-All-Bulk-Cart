@@ -28,9 +28,6 @@ class ProductDetails extends Component {
   }
 
   handleAddToCart = () => {
-    const cartMethods = this.props.cartMethods
-
-
     // method passed from App.js to add something to the cart
     // which is stored in localStorage 
     this.props.cartMethods.cartPush(this.state.product)
@@ -45,9 +42,8 @@ class ProductDetails extends Component {
   }
 
   render() {
-    console.log(this.state.openModal)
     const { product } = this.state
-    console.log(this.state)
+
     if (!product) {
       return null
     } else {
@@ -55,7 +51,7 @@ class ProductDetails extends Component {
         <div>
           <DisplayNav
             category={product.categories}
-            subcategory={product.subcategory}
+            subcategory={product.subcategories}
           />
 
           <div className="detail-container">
