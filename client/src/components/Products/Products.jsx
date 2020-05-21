@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import SideBar from '../SideBar/SideBar'
 import './Products.css'
-import Carousel from '../Carousel/Carousel'
-import ProductThumb from '../Carousel/ProductThumb'
+import SearchTerms from './SearchTerms'
+import AllBulk from './AllBulk'
 import Cat from './Cat'
 import SubCat from './SubCat'
 import Banner from './Banner'
@@ -10,14 +10,9 @@ import DisplayNav from './DisplayNav'
 
 import Sort from '../Sort/Sort'
 import { AZ, ZA, lowestFirst, highestFirst, rating } from "../Sort/Sort"
-
-import { Link, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import productsData from '../../products.json'
 import { withRouter } from 'react-router-dom'
-
-
-
-
 
 class Products extends Component {
   constructor() {
@@ -36,7 +31,6 @@ class Products extends Component {
       selectedValue: 'Featured'
     }
   }
-
 
   componentDidMount() {
 
@@ -75,10 +69,7 @@ class Products extends Component {
       this.setState({ [dest + 'Filter']: arr })
     }
     this.threeFilter()
-    //this.filterbrandsOnClick(arr, newFilteredProducts)
   }
-
-
 
   threeFilter = () => {
 
@@ -86,7 +77,6 @@ class Products extends Component {
     let productsArray = this.state.products
     filterNames.forEach(filterName => {
       productsArray = this.filterOnClick(this.state[filterName + 'Filter'], productsArray, filterName)
-      //console.log(filterName, productsArray)
     })
     this.setState({
       filteredProducts: productsArray
@@ -94,7 +84,6 @@ class Products extends Component {
   }
 
   filterOnClick = (arr, prodsArray, dest) => {
-    //console.log('the filtered arr is', arr)
     let newArr = prodsArray.filter((prod) => {
       return arr.includes(prod[dest]) || arr.length === 0
     })
@@ -113,7 +102,6 @@ class Products extends Component {
     this.populateFilter(arr, 'brands')
     this.forceUpdate()
   }
-
 
   handleSortChange = event => {
     this.setState({ selectedValue: event.target.value });
@@ -160,19 +148,8 @@ class Products extends Component {
     }
   }
 
-
-
-
   render() {
-    // console.log(this.state.typeOfProductFilter)
-    // console.log(this.state.valuesFilter)
-    // console.log(this.state.brandsFilter)
-    //console.log(this.state.products, this.state.filteredProducts)
-
-    console.log(this.props.match.params.subcategory)
-
     return (
-
       <div>
         <DisplayNav
           category={this.props.match.params.category}
@@ -194,27 +171,32 @@ class Products extends Component {
             />
             <Switch>
               <Route exact path='/products'>
-                {this.state.filteredProducts.map(product => (
-                  <ProductThumb
-                    product={product}
-                  />
-                ))}
+                <AllBulk
+                  setProducts={this.setProducts}
+                  filteredProducts={this.state.filteredProducts}
+                  cartMethods={this.props.cartMethods}
+                />
               </Route>
               <Route exact path='/products/:category'>
-                {/* <Carousel
-                products={this.state.filteredProducts}
-              /> */}
-
                 <Cat
                   setCats={this.setCats}
                   setProducts={this.setProducts}
                   filteredProducts={this.state.filteredProducts}
+                  cartMethods={this.props.cartMethods}
                 />
               </Route>
               <Route path='/products/:category/:subcategory'>
                 <SubCat
                   setProducts={this.setProducts}
                   filteredProducts={this.state.filteredProducts}
+                  cartMethods={this.props.cartMethods}
+                />
+              </Route>
+              <Route exact path='/productsearch/:terms'>
+                <SearchTerms
+                  setProducts={this.setProducts}
+                  filteredProducts={this.state.filteredProducts}
+                  cartMethods={this.props.cartMethods}
                 />
               </Route>
             </Switch>
@@ -230,7 +212,5 @@ class Products extends Component {
     )
   }
 }
-
-
 
 export default withRouter(Products)

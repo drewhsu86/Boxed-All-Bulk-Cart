@@ -5,19 +5,48 @@
   width: 100%;
 }
 
+.products h2 {
+  margin: 20px 0 0 0;
+  font-weight: bold;
+}
+
+.products h3 {
+  margin: 20px 0 0 0;
+  font-weight: bold;
+}
+
 .load-more {
   font-weight: bold;
   background-color: #304767;
   color: white;
-  width: 100%;
-  height: 8%;
+  width: 80%;
+  height: 80px;
+  margin: 30px 10%;
 }
 
 .main {
   width: 100%;
 }
 
-.sub {
+
+
+.subCat {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.displayNav {
+  margin: 10px;
+  display: flex;
+}
+
+.displayNav p {
+  color: darkslateblue;
+  margin: 0 3px;
+}
+
+.displayNav a {
+  color: darkslateblue;
+  margin: 0 3px;
 }

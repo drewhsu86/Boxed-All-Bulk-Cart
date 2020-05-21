@@ -4,14 +4,17 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 30px 10px 0px 10px;
 }
 
 .sidebar h3 {
   font-size: 14px;
   font-weight: bold;
-  flex-direction: column;
-  align-items: left;
-  justify-content: space-between;
-  padding: 10px;
+  margin: 10px;
 }

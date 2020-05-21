@@ -3,10 +3,10 @@ const jwt = require("jsonwebtoken")
 const User = require("../models/users")
 const db = require("../db")
 const Product = require("../models/products")
-
+require("dotenv").config()
 
 const SALT_ROUNDS = 11
-const TOKEN_KEY = "cap2crunch0mustache2pancake0party"
+const TOKEN_KEY = process.env.TOKEN_KEY
 
 db.on("error", console.error.bind(console, "MongoDB Connection Error:"))
 
@@ -106,7 +106,9 @@ const signIn = async (req, res) => {
         username: user.username,
         email: user.email
       }
+      console.log('about to sign')
       const token = jwt.sign(payload, TOKEN_KEY)
+      console.log('token')
       return res.status(201).json({ user, token })
     } else {
       res.status(401).send("Invalid Credentials")

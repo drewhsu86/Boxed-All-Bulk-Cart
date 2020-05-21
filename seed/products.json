@@ -1,289 +1,698 @@
 [
   {
-    "name": "TriFun Cereal Box",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140429902.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140428983.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140430817.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140433415.jpg"
     ],
+    "_id": "5ec409775d770300040b2728",
+    "name": "TriFun Cereal Box",
     "description": "Variety Pack. 58 oz. In stock",
     "price": "11.59",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "cereals",
     "values": "",
-    "brands": "Kellogg's"
+    "brands": "Kellogg's",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.447Z",
+    "updatedAt": "2020-05-19T16:29:43.447Z"
   },
   {
-    "name": "Frosted Mini Wheats",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564514844257.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564514844351.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564514844479.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564514844117.jpg"
     ],
+    "_id": "5ec409775d770300040b2729",
+    "name": "Frosted Mini Wheats",
     "description": "Original. 55 oz. In stock",
     "price": "8.39",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "cereals",
     "values": "",
-    "brands": "Kellogg's"
+    "brands": "Kellogg's",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.448Z",
+    "updatedAt": "2020-05-19T16:29:43.448Z"
   },
   {
-    "name": "Pancake & Waffle Mix",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462848498691.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462848502882.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462848501442.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462848505171.jpg"
     ],
+    "_id": "5ec409775d770300040b272a",
+    "name": "Pancake & Waffle Mix",
     "description": "Buttermilk Complete. 80 oz. In stock",
     "price": "5.29",
-    "rating": "3",
-    "stock": "25",
-    "categories": "Grocery",
+    "rating": 3,
+    "stock": 25,
+    "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "waffles & pancake mix",
     "values": "",
-    "brands": "Aunt Jemima"
+    "brands": "Aunt Jemima",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.448Z",
+    "updatedAt": "2020-05-20T00:01:35.636Z"
   },
   {
-    "name": "Honey Nut Cheerios",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1582146223847.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564156802278.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564156803151.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564156803291.jpg"
     ],
+    "_id": "5ec409775d770300040b272b",
+    "name": "Honey Nut Cheerios",
     "description": "55 oz. In stock",
     "price": "8.99",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "cereals",
     "values": "",
-    "brands": "General Mills"
+    "brands": "General Mills",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.449Z",
+    "updatedAt": "2020-05-19T16:29:43.449Z"
   },
   {
-    "name": "Cinnamon Toast Crunch",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1447261588295.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1459659383993.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1459659383037.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1459659458821.jpg"
     ],
+    "_id": "5ec409775d770300040b272c",
+    "name": "Cinnamon Toast Crunch",
     "description": "49.5 oz. In stock",
     "price": "8.39",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "cereals",
     "values": "",
-    "brands": "General Mills"
+    "brands": "General Mills",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.449Z",
+    "updatedAt": "2020-05-19T16:29:43.449Z"
   },
   {
-    "name": "Pop-Tarts Toaster Pastries",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1578670364088.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1578670363820.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1578670363765.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1578670365401.jpg"
     ],
+    "_id": "5ec409775d770300040b272d",
+    "name": "Pop-Tarts Toaster Pastries",
     "description": "Variety Pack. 48 Ct. In stock",
     "price": "11.09",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "pastries",
     "values": "",
-    "brands": "Kellogg's"
+    "brands": "Kellogg's",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.450Z",
+    "updatedAt": "2020-05-19T16:29:43.450Z"
   },
   {
-    "name": "Assortment Pack",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1462389697533.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458281139443.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458281143732.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458281135734.jpg"
     ],
+    "_id": "5ec409775d770300040b272e",
+    "name": "Assortment Pack",
     "description": "Variety Pack. 30 Count. In stock",
     "price": "14.69",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "cereals",
     "values": "",
-    "brands": "Kellogg's"
+    "brands": "Kellogg's",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.450Z",
+    "updatedAt": "2020-05-19T16:29:43.450Z"
   },
   {
-    "name": "Raisin Bran",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1447263037045.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458409646094.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458409649844.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1458409648636.jpg"
     ],
+    "_id": "5ec409775d770300040b272f",
+    "name": "Raisin Bran",
     "description": "2 Bags. 76.5 oz. In stock",
     "price": "10.49",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "cereals",
     "values": "gluten",
-    "brands": "Kellogg's"
+    "brands": "Kellogg's",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.451Z",
+    "updatedAt": "2020-05-19T16:29:43.451Z"
   },
   {
-    "name": "Pancake Cups",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564673913155.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564673914381.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564673912591.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1564673912664.jpg"
     ],
+    "_id": "5ec409775d770300040b2730",
+    "name": "Pancake Cups - Value Pack",
     "description": "Variety Pack. 12 Ct. In stock",
     "price": "15.79",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "waffles & pancake mix",
     "values": "keto",
-    "brands": "Aunt Jemima"
+    "brands": "Aunt Jemima",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.451Z",
+    "updatedAt": "2020-05-19T18:01:08.267Z"
   },
   {
-    "name": "Pop-Tarts Toaster Pastries",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1493147459921.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576784498894.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576784498983.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576784498635.jpg"
     ],
+    "_id": "5ec409775d770300040b2731",
+    "name": "Pop-Tarts Toaster Pastries",
     "description": "Brown Sugar. 36 Ct. In stock",
     "price": "9.49",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "cereal & breakfast",
     "typeOfProduct": "pastries",
     "values": "",
-    "brands": "Kellogg's"
+    "brands": "Kellogg's",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.451Z",
+    "updatedAt": "2020-05-19T16:29:43.451Z"
   },
   {
-    "name": "Stir-Fry Rice Noodles",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1588626439126.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1588626439150.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1588626438625.jpg"
     ],
+    "_id": "5ec409775d770300040b2732",
+    "name": "Stir-Fry Rice Noodles",
     "description": "2 x 14 oz. In stock",
     "price": "6.99",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "meals & canned goods",
     "typeOfProduct": "noodles",
     "values": "",
-    "brands": "Thai Kitchen"
+    "brands": "Thai Kitchen",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.452Z",
+    "updatedAt": "2020-05-19T16:29:43.452Z"
   },
   {
-    "name": "Macaroni & Cheese Dinner",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1473700474191.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1486347303375.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1486347300923.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1486347300651.jpg"
     ],
+    "_id": "5ec409775d770300040b2733",
+    "name": "Macaroni & Cheese Dinner",
     "description": "Original. 12 x 2.05 oz. In stock",
     "price": "9.99",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "meals & canned goods",
     "typeOfProduct": "macaroni",
     "values": "",
-    "brands": "Kraft"
+    "brands": "Kraft",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.452Z",
+    "updatedAt": "2020-05-19T16:29:43.452Z"
   },
   {
-    "name": "White Chicken Breast",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1487559723039.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1487559722800.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1487559722328.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1487559722890.jpg"
     ],
+    "_id": "5ec409775d770300040b2734",
+    "name": "White Chicken Breast",
     "description": "Premium Chunk. 2 x 12.5 oz. In stock",
     "price": "5.79",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "meals & canned goods",
     "typeOfProduct": "chicken",
     "values": "",
-    "brands": "Swanson"
+    "brands": "Swanson",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.453Z",
+    "updatedAt": "2020-05-19T16:29:43.453Z"
   },
   {
-    "name": "Original Syrup",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1468599025319.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1468599025339.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1468599025458.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1468598982639.jpg"
     ],
+    "_id": "5ec409775d770300040b2735",
+    "name": "Original Syrup",
     "description": "36 oz .In stock",
     "price": "4.79",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "condiments & spreads",
     "typeOfProduct": "Syrup",
     "values": "",
-    "brands": "Aunt Jemima"
+    "brands": "Aunt Jemima",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.453Z",
+    "updatedAt": "2020-05-19T16:29:43.453Z"
   },
   {
-    "name": "Grated Parmesan Cheese",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576773402439.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576773402436.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576773402771.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1576773402511.jpg"
     ],
+    "_id": "5ec409775d770300040b2736",
+    "name": "Grated Parmesan Cheese",
     "description": "24 oz. In stock",
     "price": "9.49",
-    "rating": "3",
-    "stock": "25",
+    "rating": 3,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "condiments & spreads",
     "typeOfProduct": "Cheese",
     "values": "",
-    "brands": "Kraft"
+    "brands": "Kraft",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.454Z",
+    "updatedAt": "2020-05-19T16:29:43.454Z"
   },
   {
-    "name": "Organic Peanut Butter",
     "images": [
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1569610084683.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1569610084906.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1569610084761.jpg",
       "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1575000603657.jpg"
     ],
+    "_id": "5ec409775d770300040b2737",
+    "name": "Organic Peanut Butter",
     "description": "Creamy. 28 oz. In stock",
     "price": "7.59",
-    "rating": "5",
-    "stock": "25",
+    "rating": 5,
+    "stock": 25,
     "categories": "grocery",
     "subcategories": "condiments & spreads",
     "typeOfProduct": "Peanut Butter",
     "values": "Organic",
-    "brands": "Prince & Spring"
+    "brands": "Prince & Spring",
+    "__v": 0,
+    "createdAt": "2020-05-19T16:29:43.454Z",
+    "updatedAt": "2020-05-19T16:29:43.454Z"
+  },
+  {
+    "images": [
+      "https://mobileimages.lowes.com/product/converted/054000/054000133428xl.jpg"
+    ],
+    "_id": "5ec450ce4682c30017084e29",
+    "name": "Scott 27 Pack of Toilet Paper",
+    "description": "27 Rolls - Value Pack",
+    "price": "26.99",
+    "rating": 4,
+    "stock": 222,
+    "categories": "household essentials",
+    "subcategories": "paper",
+    "typeOfProduct": "toilet paper",
+    "values": "value pack",
+    "brands": "scott",
+    "createdAt": "2020-05-19T21:34:06.601Z",
+    "updatedAt": "2020-05-19T21:34:06.601Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcST6mnNN7P4onwk-_Ns5AG9ciFh6mX-PYUaqtUefse2XEDa-VzY&usqp=CAU"
+    ],
+    "_id": "5ec451ae4682c30017084e2a",
+    "name": "A private citizen's toilet paper stash",
+    "description": "9 at a time",
+    "price": "50.00",
+    "rating": 1,
+    "stock": 18,
+    "categories": "household essentials",
+    "subcategories": "paper",
+    "typeOfProduct": "toilet paper",
+    "values": "pre-owned",
+    "brands": "",
+    "createdAt": "2020-05-19T21:37:50.444Z",
+    "updatedAt": "2020-05-19T21:38:22.462Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://thenypost.files.wordpress.com/2020/03/why-people-are-buying-so-much-toilet-paper-amid-coronavirus-outbreak.jpg?quality=90&strip=all"
+    ],
+    "_id": "5ec453984682c30017084e2b",
+    "name": "TP stockpile at Fort Knox",
+    "description": "Limited time availability",
+    "price": "42.00",
+    "rating": 3,
+    "stock": 99,
+    "categories": "household essentials",
+    "subcategories": "paper",
+    "typeOfProduct": "toilet paper",
+    "values": "military",
+    "brands": "USA",
+    "createdAt": "2020-05-19T21:46:00.618Z",
+    "updatedAt": "2020-05-19T21:52:48.903Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://images-na.ssl-images-amazon.com/images/I/810nnnkDYvL._AC_SL1500_.jpg"
+    ],
+    "_id": "5ec456f24682c30017084e2c",
+    "name": "Renova 3 Ply Soft Black Toilet Paper",
+    "description": "1 Pack ",
+    "price": "29.99",
+    "rating": 5,
+    "stock": 9,
+    "categories": "household essentials",
+    "subcategories": "paper",
+    "typeOfProduct": "toilet paper",
+    "values": "luxury",
+    "brands": "renova",
+    "createdAt": "2020-05-19T22:00:18.392Z",
+    "updatedAt": "2020-05-19T22:00:18.392Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://pics.drugstore.com/prodimg/307667/900.jpg"
+    ],
+    "_id": "5ec4576c4682c30017084e2d",
+    "name": "Scott 4 Pack - 1000 Sheets",
+    "description": "4 Pack",
+    "price": "16.99",
+    "rating": 4,
+    "stock": 1352,
+    "categories": "household essentials",
+    "subcategories": "paper",
+    "typeOfProduct": "toilet paper",
+    "values": "value pack",
+    "brands": "scott",
+    "createdAt": "2020-05-19T22:02:20.831Z",
+    "updatedAt": "2020-05-19T22:02:20.831Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://images.heb.com/is/image/HEBGrocery/001397056",
+      "https://www.worldofcoca-cola.com/wp-content/uploads/sites/3/2020/03/logo-round_550x330.png"
+    ],
+    "_id": "5ec4745d3a6b950017ef0ba4",
+    "name": "Classic Coca-Cola, 2 Liter Bottle",
+    "description": "2 Liter Bottle",
+    "price": "1.99",
+    "rating": 5,
+    "stock": 1000,
+    "categories": "Beverages",
+    "subcategories": "Soda & Pop",
+    "typeOfProduct": "soda",
+    "values": "",
+    "brands": "coca cola",
+    "createdAt": "2020-05-20T00:05:49.119Z",
+    "updatedAt": "2020-05-20T00:05:49.119Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://www.meijer.com/content/dam/meijer/product/0004/90/0006/10/0004900006101_1_A1C1_0600.png",
+      "https://ei.marketwatch.com/Multimedia/2020/01/03/Photos/ZQ/MW-HX764_coke_c_20200103171249_ZQ.jpg?uuid=2d8a2182-2e76-11ea-b54f-9c8e992d421e",
+      "https://i2.wp.com/asiatimes.com/wp-content/uploads/2020/03/File-photo-3.png?fit=1020%2C629&ssl=1"
+    ],
+    "_id": "5ec474e33a6b950017ef0ba5",
+    "name": "Coca-Cola 12 Oz - 6 Pack",
+    "description": "12 Oz Cans, 6 Pack",
+    "price": "3.99",
+    "rating": 4,
+    "stock": 9000,
+    "categories": "Beverages",
+    "subcategories": "Soda & Pop",
+    "typeOfProduct": "soda",
+    "values": "",
+    "brands": "coca cola",
+    "createdAt": "2020-05-20T00:08:03.613Z",
+    "updatedAt": "2020-05-20T00:08:03.613Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://www.dasani.com/content/dam/dasani/home/dasani-hp-story_mobile.jpg",
+      "https://www.kroger.com/product/images/medium/front/0004900002656",
+      "https://images2.minutemediacdn.com/image/fetch/w_736",
+      "h_485",
+      "c_fill",
+      "g_auto",
+      "f_auto/https%3A%2F%2Fguiltyeats.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2016%2F04%2F143013800-850x560.jpeg"
+    ],
+    "_id": "5ec475623a6b950017ef0ba6",
+    "name": "Dasani 20 Oz Bottles - 24 Pack",
+    "description": "20 Oz - 24 Pack",
+    "price": "8.99",
+    "rating": 4,
+    "stock": 300,
+    "categories": "Beverages",
+    "subcategories": "Water",
+    "typeOfProduct": "water",
+    "values": "",
+    "brands": "dasani",
+    "createdAt": "2020-05-20T00:10:10.214Z",
+    "updatedAt": "2020-05-20T00:10:10.214Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00049000007640/1b1dd22c76db2c089bff66599fdd7271_large.png&width=512&type=webp&quality=40",
+      "https://images-na.ssl-images-amazon.com/images/I/41e3hIDKpQL.jpg"
+    ],
+    "_id": "5ec475d43a6b950017ef0ba7",
+    "name": "Sprite 20 Oz Bottles",
+    "description": "20 Oz Bottles - 6 or 24 Pack",
+    "price": "5.99",
+    "rating": 4,
+    "stock": 900,
+    "categories": "Beverages",
+    "subcategories": "Soda & Pop",
+    "typeOfProduct": "soda",
+    "values": "",
+    "brands": "coca cola",
+    "createdAt": "2020-05-20T00:12:04.664Z",
+    "updatedAt": "2020-05-20T00:12:04.664Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://www.readyrefresh.com/medias/sys_master/images/images/h6b/hb7/h00/8797695606814/1344-main-poland-spring-0.5-l-24-pack-package-top-view.png",
+      "https://www.nestle-waters.com/sites/g/files/pydnoa611/files/asset-library/publishingimages/newfolder/poland_spring_lq.jpg"
+    ],
+    "_id": "5ec476273a6b950017ef0ba8",
+    "name": "Poland Spring 20 Oz - 24 Pack",
+    "description": "20 Oz - 24 Pack",
+    "price": "3.99",
+    "rating": 3,
+    "stock": 999,
+    "categories": "Beverages",
+    "subcategories": "Water",
+    "typeOfProduct": "water",
+    "values": "",
+    "brands": "poland spring",
+    "createdAt": "2020-05-20T00:13:27.332Z",
+    "updatedAt": "2020-05-20T00:13:27.332Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://mountainmerchantvt.com/wp-content/uploads/2019/06/polandgal.png"
+    ],
+    "_id": "5ec476bf3a6b950017ef0ba9",
+    "name": "Poland Spring - Gallon Jug",
+    "description": "1 Gallon Bottle",
+    "price": "0.99",
+    "rating": 3,
+    "stock": 0,
+    "categories": "Beverages",
+    "subcategories": "Water",
+    "typeOfProduct": "water",
+    "values": "",
+    "brands": "poland spring",
+    "createdAt": "2020-05-20T00:15:59.432Z",
+    "updatedAt": "2020-05-20T00:15:59.432Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcToN_yBQrBrVegbheRk5G6PLGmNzgjnMkAsac7cnOmHTFFHsg9z&usqp=CAU"
+    ],
+    "_id": "5ec4778d3a6b950017ef0baa",
+    "name": "Dasani - Purified Water - 16 Oz - Metal Container ",
+    "description": "16 Oz - Metal Container",
+    "price": "2.99",
+    "rating": 5,
+    "stock": 0,
+    "categories": "Beverages",
+    "subcategories": "Water",
+    "typeOfProduct": "water",
+    "values": "",
+    "brands": "dasani",
+    "createdAt": "2020-05-20T00:19:25.288Z",
+    "updatedAt": "2020-05-20T00:20:28.134Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://www.kroger.com/product/images/xlarge/front/0001200000017",
+      "https://www.pepsi.com/en-us/uploads/images/social-share.jpg?mtime=20180110134930",
+      "https://static.seekingalpha.com/uploads/2020/4/1/saupload_Pepsi-Indonesia-cover-960x540.jpg"
+    ],
+    "_id": "5ec4787f3a6b950017ef0bab",
+    "name": "Pepsi Cans 12 Oz - 24 Pack",
+    "description": "12 Oz - 24 Pack",
+    "price": "8.99",
+    "rating": 4,
+    "stock": 500,
+    "categories": "Beverages",
+    "subcategories": "Soda & Pop",
+    "typeOfProduct": "soda",
+    "values": "",
+    "brands": "pepsi cola",
+    "createdAt": "2020-05-20T00:23:27.929Z",
+    "updatedAt": "2020-05-20T00:23:27.929Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://scene7.samsclub.com/is/image/samsclub/0001200010049_A?wid=280&hei=280",
+      "https://media.officedepot.com/image/upload/b_rgb:FFFFFF",
+      "c_pad",
+      "dpr_1.0",
+      "f_auto",
+      "h_666",
+      "q_auto",
+      "w_500/c_pad",
+      "h_666",
+      "w_500/v1/products/122250?pgw=1"
+    ],
+    "_id": "5ec478e53a6b950017ef0bac",
+    "name": "Mountain Dew Cans - 12 Oz - 36 Pack",
+    "description": "12 Oz - 36 Pack",
+    "price": "11.99",
+    "rating": 3,
+    "stock": 1200,
+    "categories": "Beverages",
+    "subcategories": "Soda & Pop",
+    "typeOfProduct": "soda",
+    "values": "",
+    "brands": "pepsi cola",
+    "createdAt": "2020-05-20T00:25:09.575Z",
+    "updatedAt": "2020-05-20T00:25:09.575Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://cdn.shoplightspeed.com/shops/604817/files/538587/300x250x2/frito-lay-large-single-serve-doritos-nacho-cheese.jpg"
+    ],
+    "_id": "5ec47a743a6b950017ef0bad",
+    "name": "Doritos Nacho Cheese",
+    "description": "It's nacho cheese, it's my cheese - 1.75 Oz",
+    "price": "0.99",
+    "rating": 5,
+    "stock": 333,
+    "categories": "Snacks",
+    "subcategories": "Salty Snacks",
+    "typeOfProduct": "chips",
+    "values": "",
+    "brands": "doritos",
+    "createdAt": "2020-05-20T00:31:48.844Z",
+    "updatedAt": "2020-05-20T00:34:12.159Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://images-na.ssl-images-amazon.com/images/I/91dNBh6QeEL._SL1500_.jpg"
+    ],
+    "_id": "5ec47abf3a6b950017ef0bae",
+    "name": "Doritos Cool Ranch",
+    "description": "Cool Ranch - 1.75 Oz",
+    "price": "0.99",
+    "rating": 3,
+    "stock": 492,
+    "categories": "Snacks",
+    "subcategories": "Salty Snacks",
+    "typeOfProduct": "chips",
+    "values": "",
+    "brands": "doritos",
+    "createdAt": "2020-05-20T00:33:03.811Z",
+    "updatedAt": "2020-05-20T00:33:03.811Z",
+    "__v": 0
+  },
+  {
+    "images": [
+      "https://images-na.ssl-images-amazon.com/images/I/81HqfpMuDQL._SL1500_.jpg"
+    ],
+    "_id": "5ec47b533a6b950017ef0baf",
+    "name": "Doritos Variety Pack (40 Count)",
+    "description": "1.75 Oz - 40 Pack",
+    "price": "26.99",
+    "rating": 4,
+    "stock": 124,
+    "categories": "Snacks",
+    "subcategories": "Salty Snacks",
+    "typeOfProduct": "chips",
+    "values": "",
+    "brands": "doritos",
+    "createdAt": "2020-05-20T00:35:31.592Z",
+    "updatedAt": "2020-05-20T00:35:31.592Z",
+    "__v": 0
   }
 ]

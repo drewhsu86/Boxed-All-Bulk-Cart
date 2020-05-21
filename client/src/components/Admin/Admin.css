@@ -1,3 +1,7 @@
+.admin {
+  margin: 30px;
+}
+
 .error {
   color: darkred;
   font-size: 30px;

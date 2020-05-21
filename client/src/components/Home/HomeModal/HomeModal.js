@@ -65,7 +65,7 @@ const Modal = ({ handleClose, show, children }) => {
         <button className="button-close"
           onClick={handleClose}
         >
-          X
+          x
         </button>
 
       </section>

@@ -2,15 +2,13 @@ import React, { Component } from 'react'
 import ProductThumb from '../Carousel/ProductThumb'
 import api from '../../services/apiConfig'
 import { withRouter } from 'react-router-dom'
-import './Products.css'
 
-class SubCat extends Component {
+class SearchTerms extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      category: '',
-      subcategory: ''
+      terms: ''
     }
   }
 
@@ -19,32 +17,27 @@ class SubCat extends Component {
   }
 
   async apiCall() {
-    const category = this.props.match.params.category
-    const subCategory = this.props.match.params.subcategory
-    //console.log(category, subCategory)
-    const res = await api.get(`/categories/${category}/${subCategory}`)
-    //console.log(res)
+    const terms = this.props.match.params.terms
+    console.log(terms)
+    const res = await api.get(`/search/${terms}`)
     this.props.setProducts(res.data)
 
     this.setState({
-      category: category,
-      subcategory: subCategory
+      terms
     })
   }
 
 
 
   render() {
-    const category = this.props.match.params.category
-    const subCategory = this.props.match.params.subcategory
-    if (category !== this.state.category || subCategory !== this.state.subcategory) {
+    const terms = this.props.match.params.terms
+    if (terms !== this.state.terms) {
       this.apiCall()
     }
 
     return (
-
       <div>
-        <h3>{subCategory[0].toUpperCase() + subCategory.slice(1)}</h3>
+        <h3>"{terms}"</h3>
         <div className="subCat">
           {this.props.filteredProducts.map(product => (
             <ProductThumb
@@ -58,4 +51,4 @@ class SubCat extends Component {
   }
 }
 
-export default withRouter(SubCat)
+export default withRouter(SearchTerms)

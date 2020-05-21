@@ -8,6 +8,7 @@ import Admin from './components/Admin'
 import Nav from './components/shared/Nav/Nav'
 import DisplayNav from './components/Products/DisplayNav'
 import ShoppingCart from './components/ShoppingCart'
+import Login from './components/LoginPage/Login'
 
 
 class App extends Component {
@@ -35,21 +36,25 @@ class App extends Component {
   // render
   // ============
   render() {
-
+    // passing down methods that let other components affect the cart 
+    const cartMethods = this.state.cartMethods
     return (
       <div className="App">
 
-        <Nav toggleCart={this.state.cartMethods.toggleCart || null} />
+        <Nav toggleCart={cartMethods.toggleCart || null} />
         <ShoppingCart initAppMethods={this.initState} />
 
         <Switch>
           <Route exact path="/" render={Home} />
-          <Route exact path="/products" render={(props) => <Products />} />
-          <Route exact path="/products/:category" render={(props) => <Products />} />
-          <Route exact path="/products/:category/:subcategory" render={(props) => <Products />} />
-          <Route path="/productdetails/:id"><ProductDetails /></Route>
+          <Route path="/products" render={(props) => <Products cartMethods={cartMethods} />} />
+          <Route exact path="/productsearch/:terms" render={(props) => <Products cartPush={cartMethods.cartPush} />} />
+          <Route path="/productdetails/:id"><ProductDetails cartMethods={cartMethods} /></Route>
           {/* CRUD functions handled by admin with its own routes */}
           <Route path="/admin" render={() => <Admin />} />
+
+          <Route path="/login" render={() => <Login />} />
+
+
         </Switch>
 
       </div>

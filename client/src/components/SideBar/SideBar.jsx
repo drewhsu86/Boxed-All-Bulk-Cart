@@ -11,7 +11,7 @@ class SideBar extends Component {
           <SideNav />
         </div>
         <div>
-          <h3>Filter</h3>
+          <h2>Filters</h2>
           <SideFilter
             title={"Product"}
             choices={this.props.typeOfChoices}
