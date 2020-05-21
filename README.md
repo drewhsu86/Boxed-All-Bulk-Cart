@@ -43,7 +43,7 @@ The UX team provided a set of mockups, both detailing the components and styling
 ##### Feature 1: Home popup
 The purpose of this mockup is to distinguish the two different stores or services of Boxed.come. The first is All-Bulk, which is bulk purchasing which is shipped from their warehouses. The second is Express, which is a shopping or grocery service where a local affiliate purchases the items and delivers them to the customer's home.
 
-[Feature 1: Boxed homepage popup](https://scene.zeplin.io/project/5ea47ccc58a80025db2899bb/screen/5ea47de08b7dc7272d15114d)
+[Feature 1: Boxed homepage popup](https://scene.zeplin.io/project/5ea47ccc58a80025db2899bb/screen/5ea47ddf33694a2667fbea64)
 
 ##### Feature 2: Add to cart popup
 When a customer wants to order an item, it may be out of stock or undeliverable in the period between ordering and shipping. This feature was designed to ask if the customer would like a replacement to be shipped if the original were not available (and to be charged/refunded appropriately and automatically) after clicking the "Add to cart" button on the product details page.
