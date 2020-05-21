@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function DisplayNav(props) {
   return (
     <div className="displayNav">
-      <Link to="/products">Home</Link>
+      <Link to="/products">All Bulk</Link>
       {props.category ? <p>></p> : null}
       <Link to={`/products/${props.category}`}>{props.category ? props.category[0].toUpperCase() + props.category.slice(1) : null}</Link>
       {props.subcategory ? <p>></p> : null}
