@@ -17,8 +17,9 @@
 }
 
 .imageButton {
-  width: 50%;
+  width: 90%;
   max-height: 100px;
+  margin: 10px;
 }
 
 .imageMain {
