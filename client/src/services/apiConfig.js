@@ -13,7 +13,7 @@ let apiUrl
 
 const apiUrls = {
 
-  production: 'https://ah-ao-tm-blog-authentication.herokuapp.com/api',
+  production: 'https://boxed-ux-sei-p3.herokuapp.com/api/',
   development: 'http://localhost:3000/api'
 }
 

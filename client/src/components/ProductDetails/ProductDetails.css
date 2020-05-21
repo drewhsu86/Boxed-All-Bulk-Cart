@@ -1,16 +1,22 @@
 .detail-container {
   position: relative;
   display: flex;
-  width: 100%;
+  margin-left: 100px;
+  width: 60%;
 }
 
-.prodColumn {
+.prodColumnLeft {
   display: flex;
   flex-direction: column;
 	justify-content: space-around;
   align-items: flex-start;
-  width: 50%;
+  width: 70%;
   height: stretch;
+  margin: auto;
+}
+
+.prodColumnRight {
+  margin-left: 200px;
 }
 
 .topRow {

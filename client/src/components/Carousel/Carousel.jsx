@@ -20,7 +20,6 @@ class Carousel extends Component {
     }
   }
 
-
   // ============
   // methods
   // ============
@@ -57,37 +56,54 @@ class Carousel extends Component {
     const displayIndex = this.state.currIndex < products.length - 1 ? this.state.currIndex : 0
 
     // calculate the next 2 after displayIndex, taking into account overflowing the array 
-    const displayIndices = [displayIndex, (displayIndex + 1) % products.length, (displayIndex + 2) % products.length]
+    const displayIndices = [displayIndex]
+    const nextNum = (displayIndex + 1) % products.length
+    const nextNextNum = (displayIndex + 2) % products.length
+    // push the next one if its not a repeat 
+    if (!displayIndices.includes(nextNum)) {
+      displayIndices.push(nextNum)
+    }
+    // push the next next one if its not a repeat 
+    if (!displayIndices.includes(nextNextNum)) {
+      displayIndices.push(nextNextNum)
+    }
 
     if (products) {
-      return (
-        <div className="carousel">
-          <button className="carousel-move left"
-            onClick={() => { this.handleLeftRight(-1, products.length) }} >
+      if (products.length > 0) {
+        return (
+          <div className="carousel">
+            <button className="carousel-move left"
+              onClick={() => { this.handleLeftRight(-1, products.length) }} >
 
-            {`<`}
+              {`<`}
 
-          </button>
+            </button>
 
-          {displayIndices.map((displayIndex) => {
-            // for each display index, show the thumbnail
-            return <ProductThumb product={products[displayIndex]} />
-          })}
+            {displayIndices.map((displayIndex) => {
+              // for each display index, show the thumbnail
+              return <ProductThumb
+                product={products[displayIndex]}
+                cartMethods={this.props.cartMethods}
+              />
+            })}
 
-          <button className="carousel-move right"
-            onClick={() => { this.handleLeftRight(1, products.length) }} >
+            <button className="carousel-move right"
+              onClick={() => { this.handleLeftRight(1, products.length) }} >
 
-            {`>`}
+              {`>`}
 
-          </button>
-        </div>
-      )
+            </button>
+          </div>
+        )
+      } else {
+        return (
+          <div className="carousel">
+            Nothing to display in carousel
+          </div>
+        )
+      }
     } else {
-      return (
-        <div className="carousel">
-          Nothing to display in carousel
-        </div>
-      )
+      return null
     }
   }
 }

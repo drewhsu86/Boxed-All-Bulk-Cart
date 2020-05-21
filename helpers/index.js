@@ -2,7 +2,7 @@ module.exports = (req, res, next) => {
   const jwt = require("jsonwebtoken")
   require("dotenv").config()
   
-  const TOKEN_KEY = "cap2crunch0mustache2pancake0party"
+  const TOKEN_KEY = process.env.TOKEN_KEY 
   try {
     const token = req.headers.authorization.split(" ")[1]
     console.log("token", token)

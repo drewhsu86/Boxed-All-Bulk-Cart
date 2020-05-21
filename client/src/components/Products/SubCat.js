@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ProductThumb from '../Carousel/ProductThumb'
 import api from '../../services/apiConfig'
 import { withRouter } from 'react-router-dom'
+import DisplayNav from './DisplayNav'
 
 class SubCat extends Component {
   constructor(props) {
@@ -42,16 +43,18 @@ class SubCat extends Component {
 
     return (
       <div>
-        {this.props.filteredProducts.map(product => (
-          <ProductThumb
-            product={product}
-          />
-        ))}
+        <h3>{subCategory[0].toUpperCase() + subCategory.slice(1)}</h3>
+        <div className="subCat">
+          {this.props.filteredProducts.map(product => (
+            <ProductThumb
+              product={product}
+              cartMethods={this.props.cartMethods}
+            />
+          ))}
+        </div>
       </div>
     )
   }
 }
-
-
 
 export default withRouter(SubCat)
