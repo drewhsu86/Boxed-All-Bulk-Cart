@@ -2,11 +2,17 @@
 
 # Summary
 
-Ever use an online super-store like Amazon or Boxed? As a design exercise, we've tried to implement our own version of the Boxed online store, but with some informational pop-ups that direct the user to either the All-bulk (warehouse items) store or the Express (grocery shopping service) store. We also implement corresponding separate shopping carts to improve the shopper's experience.
+Ever use an online super-store like [Boxed.com](https://www.boxed.com)? As a design exercise, we've tried to implement our own version of the Boxed online store, but with some informational pop-ups that direct the user to either the All-bulk (warehouse items) store or the Express (grocery shopping service) store. We also implement corresponding separate shopping carts to improve the shopper's experience.
 
 We also incorporate a database where products can be added to, edited and deleted from. The webpage will pull products from this database and display them for users. A secret administrator page will be used to edit products. Potential administrators will be given an invite code in order to make an administrator account.
 
 Built using MERN stack: MongoDB, Express, React, Nodejs
+
+__Deployed Site__
+[Deployed on surge.sh](http://boxed-ux-sei-p3.surge.sh/)
+
+__Admin Access__
+To test the CRUD features of our full-stack app, one may reach the admin area by going to [http://boxed-ux-sei-p3.surge.sh/admin](http://boxed-ux-sei-p3.surge.sh/admin). To create an account, use the invite code "mockups2boxed".
 
 # Team Members
 
@@ -57,6 +63,8 @@ Our post-MVP development involved including a number of quality of life and UX f
 The UX team provided a set of mockups, both detailing the components and styling for the Boxed.com site, as well as the new features they wanted to introduce.
 
   * [Mockups in Zeplin](https://scene.zeplin.io/project/5ea47ccc58a80025db2899bb)
+  
+  * [Actual Boxed.com](https://www.boxed.com)
 
 ##### Feature 1: Home popup
 The purpose of this mockup is to distinguish the two different stores or services of Boxed.come. The first is All-Bulk, which is bulk purchasing which is shipped from their warehouses. The second is Express, which is a shopping or grocery service where a local affiliate purchases the items and delivers them to the customer's home.
@@ -110,20 +118,20 @@ Because this was our first time working together, and also our first time doing 
 #### Routes 
 
 1. Read (No Restriction)
-  * get /products/
-  * get /products/:id 
-  * get /categories/:category
-  * get /categories/:category/:subcategory
-  * get /search/:terms 
+    * get /products/
+    * get /products/:id 
+    * get /categories/:category
+    * get /categories/:category/:subcategory
+    * get /search/:terms 
   
 2. Create, Update, Delete (Restricted via JWT)
-  * post /products
-  * put /products/:id
-  * delete /products/:id
+    * post /products
+    * put /products/:id
+    * delete /products/:id
   
 3. Signup, Signin
-  * post /signup
-  * post /signin
+    * post /signup
+    * post /signin
 
 #### User Schema
  
