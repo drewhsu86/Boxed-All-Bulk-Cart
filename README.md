@@ -21,7 +21,7 @@ Built using MERN stack: MongoDB, Express, React, Nodejs
 2. Bengisu Halezeroglu
 3. Tara Jung
 
-# App Design 
+# App Design And Development
 
 ## Features 
 Our main app features revolve around the following two goals: (1) creating a functional full-stack app that allows users to browse products in the store, which are served from the database, and (2) employing the features designed by the UX team in their project to enhance the user experience of the Boxed.com site. 
@@ -73,13 +73,24 @@ In Boxed.com's current implementation, the shopping cart is one column and both 
 
 [Feature 3: Boxed Bulk and Express shopping carts](https://scene.zeplin.io/project/5ea47ccc58a80025db2899bb/screen/5ea47de033694a2667fbeae7)
 
-#### Post-MVP
 
 # Development
 
 ## Project Timeframe
 
-Because this was our first time working together, and also our first time doing a group software development project, we ended up front loading a lot of work in the first few days of our schedule.
+Because this was our first time working together, and also our first time doing a group software development project, we ended up front loading a lot of work in the first few days of our schedule. The following table shows a rough breakdown of the time spent on each part of the project. Our group used a Trello board to track our process to the level of detail of components or features.
+
+##### Rough Estimate of Feature Completeness Per Day Of Project
+* FE = Frontend Features, BE = Backend Features
+* For Post-MVP, percent is relative to amount completed between end of MVP and Project Due Date: Friday, May/22/2020
+| By End Of Day | MVP | FE | BE | Post-MVP | FE | BE | CSS |
+| --- | --- | -- | -- | -------- | -- | -- | --- |
+| Thu - 5/14 | | 10% | 50% | | | | |
+| Fri - 5/15 | | 40% | 100% | | | | |
+| Mon - 5/18 | | 80% | 100% | | | | |
+| Tues - 5/19 | X | 100% | 100% | - | 40% | 50% | 30% |
+| Wed - 5/20 | X | 100% | 100% | - | 100% | 50% | 90% |
+| Thu - 5/21 | X | 100% | 100% | - | 100% | 100% | 100% |
 
 #### Trello Board
 
