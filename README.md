@@ -99,6 +99,7 @@ The User Schema only holds the following (all required) fields, which are requir
 The Product Schema has many more keys than the User and many are used for categorization and filtering on the products page of the app.
 
 ##### Product Schema Fields
+  | -------- | ------------ | ---------------------- | ------------------- | -------------|
   | REQUIRED | name: string | images: array[strings] | description: string | price: string |
   | REQUIRED | stock: number | rating: number (int 0-5) | categories: string | subcategories: string |
   | NOT REQUIRED | typeOfProduct: string | values: string | brands: string |
