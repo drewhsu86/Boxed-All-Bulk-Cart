@@ -1,0 +1,32 @@
+.nav0-container {
+  background-color: #304767;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+}
+
+.nav0-container a {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.nav0-container a:visited {
+  color: lightblue;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.nav0-exit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 1px solid white;
+  padding: 2px 5px;
+  font-size: 10px;
+  font-weight: thin;
+}
