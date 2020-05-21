@@ -66,11 +66,17 @@ while i < len(prodThumbs):
     title = "''".join(title.split('"'))
 
     # image
-    imageTag = prodThumbs[i].find("img")
-    image = imageTag['src']
+    imageTag = prodThumbs[i].find("img", {"id": "SkuPageMainImg"})
 
-    # need to remove the // because of commenting syntax
-    image = ''.join(image.split('//'))
+    try:
+        image = imageTag['data-src']
+    except:
+        image = imageTag['src']
+
+    # if the first part is /Images/ we need to add
+    # www.quill.com/is
+    # https://www.quill.com/is/image/Quill/83392_s7?$156$
+    image = 'https://' + ''.join(image.split('//'))
 
     # price
     priceSpan = prodThumbs[i].find("span", {"class": "priceupdate"})

@@ -1,6 +1,6 @@
 const db = require("../db")
 const Product = require("../models/products")
-const products = require("../WebScrape/products_05-20-20_22:44:16.json")
+const products = require("../WebScrape/products_05-20-20_23:54:23.json")
 
 db.on("error", console.error.bind(console, "MongoDB Connection Error:"))
 
