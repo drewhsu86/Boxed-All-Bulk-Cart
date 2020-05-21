@@ -89,19 +89,22 @@ Because this was our first time working together, and also our first time doing 
 
 #### Example for product schema and thumbnail
 ```js
-  {
-    name: 'Capn Crunch Pancake Mix',
-    images: [
-      "https://i.imgur.com/aJIBBDK.jpg",
-      "https://i.imgur.com/hqxVr7Q.jpg",
-      "https://i.imgur.com/BAe5mwe.jpg",
-      "https://i.imgur.com/3z1wuuc.png"
+{
+    "name": "TriFun Cereal Box",
+    "images": [
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-   in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140429902.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140428983.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140430817.jpg",
+      "https://vpc-prod-thumbor-public-gcp.boxed.com/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/http://dcmzfk78s4reh.cloudfront.net/1436140433415.jpg"
     ],
-    description: 'Yummy in my tummy :) Some assembly required.',
-    price: '4.99',
-    rating: 3,
-    stock: 25,
-    categories: 'grocery',
-    subcategories: 'cereal & breakfast'
-   }
+    "description": "Variety Pack. 58 oz. In stock",
+    "price": "11.59",
+    "rating": "3",
+    "stock": "25",
+    "categories": "grocery",
+    "subcategories": "cereal & breakfast",
+    "typeOfProduct": "cereals",
+    "values": "",
+    "brands": "Kellogg's"
+  }
 ```
