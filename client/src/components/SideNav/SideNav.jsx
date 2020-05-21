@@ -12,7 +12,6 @@ class SideNav extends Component {
     }
   }
 
-
   linkClicked = (ind) => {
     this.setState({
       catIndex: ind
@@ -20,7 +19,6 @@ class SideNav extends Component {
   }
 
   render() {
-
     const CATEGORIES = categories.map((cat, ind) => (
       <div className="nav">
         <Link to={`/products/${cat.url}`}>
@@ -29,11 +27,11 @@ class SideNav extends Component {
           </p>
         </Link>
         {this.state.catIndex === ind ?
-          cat.subcat.map((sc) => (
-            <Link to={`/products/${cat.url}/${sc.url}`} className="navSubCat">
+          cat.subcat.map((sc) => {
+            return <Link to={`/products/${cat.url}/${sc.url}`} className="navSubCat">
               {sc.name}
             </Link>
-          ))
+          })
           : null}
       </div>
     ))
@@ -46,6 +44,5 @@ class SideNav extends Component {
     )
   }
 }
-
 
 export default SideNav
