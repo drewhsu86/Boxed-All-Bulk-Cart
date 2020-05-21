@@ -40,6 +40,7 @@ class App extends Component {
     const cartMethods = this.state.cartMethods
     return (
       <div className="App">
+
         <Nav toggleCart={cartMethods.toggleCart || null} />
         <ShoppingCart initAppMethods={this.initState} />
 
@@ -53,8 +54,11 @@ class App extends Component {
           {/* CRUD functions handled by admin with its own routes */}
           <Route path="/admin" render={() => <Admin />} />
           <Route path="/login" render={() => <Login />} />
+          <Route path="/login" render={() => <Login />} />
+
 
         </Switch>
+
       </div>
     );
 

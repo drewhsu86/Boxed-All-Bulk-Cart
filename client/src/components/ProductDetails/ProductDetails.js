@@ -24,6 +24,7 @@ class ProductDetails extends Component {
     let id = this.props.match.params.id
     const product = await getProduct(id)
     this.setState({ product })
+
   }
 
   handleAddToCart = () => {

@@ -3,7 +3,6 @@ import Carousel from '../Carousel/Carousel'
 import api from '../../services/apiConfig'
 import { withRouter } from 'react-router-dom'
 
-
 class AllBulk extends Component {
   constructor(props) {
     super(props)

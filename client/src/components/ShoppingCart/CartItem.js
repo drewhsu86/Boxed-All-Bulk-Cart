@@ -15,7 +15,7 @@ export default function CartItem(props) {
         <h5>{product.name}</h5>
         <p>{product.description}</p>
         <StarRating rating={product.rating} />
-        <h5>${product.price}</h5>
+        <h5 className="price">${product.price}</h5>
       </div>
       <div className="itemOptions">
         <div className="itemCounter">
