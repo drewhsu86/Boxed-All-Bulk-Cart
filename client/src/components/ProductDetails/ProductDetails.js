@@ -54,22 +54,28 @@ class ProductDetails extends Component {
       return null
     } else {
       return (
+        <div>
+          <DisplayNav
+            category={product.categories}
+            subcategory={product.subcategory}
+          />
 
-        <div className="detail-container">
-          <CheckoutModal setModal={this.setModal} handleAddToCart={this.handleAddToCart} />
-          <div className="prodColumnLeft">
-            <div className="topRow">
-              <Images images={this.state.product.images} altText={this.state.product.name} />
+          <div className="detail-container">
+            <CheckoutModal setModal={this.setModal} handleAddToCart={this.handleAddToCart} />
+            <div className="prodColumn left">
+              <div className="topRow">
+                <Images images={this.state.product.images} altText={this.state.product.name} />
+              </div>
+              <Reviews />
             </div>
-            <Reviews />
-          </div>
-          <div className="prodColumnRight">
-            <div className="topRow">
-              <Info
-                openModal={this.state.openModal}
-                product={this.state.product}
-              />
-
+            <div className="prodColumn right">
+              <div className="topRow">
+                <Info
+                  openModal={this.state.openModal}
+                  product={this.state.product}
+                />
+              </div>
+              <RelatedItems />
             </div>
           </div>
         </div>
