@@ -99,7 +99,7 @@ Because this was our first time working together, and also our first time doing 
 
 ## React Component Chart
 
-[React component map](./readme/React Comp Map.png)
+![React component map](./readme/React%20Comp%20Map.png)
 
 ## React Route Chart 
 
