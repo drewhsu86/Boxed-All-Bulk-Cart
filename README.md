@@ -17,7 +17,7 @@ To test the CRUD features of our full-stack app, one may reach the admin area by
 # Team Members
 
 #### Software Engineering Immersive (SEI)
-1. Andre Gonzalez
+1. Andres Gonzalez
 2. Andrew Hsu
 3. Tom Moliterno
 4. Luke Sweeney
