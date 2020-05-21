@@ -5,40 +5,6 @@ import StarRating from '../../StarRating'
 const data = require('../../RelatedItemsDummyData.json')
 
 
-
-
-// export default class RelatedItems extends Component {
-
-
-
-//   render() {
-//     const id = this.props.match.params.id;
-//     const data = data.find(item => item.id === id);
-
-
-//     return (
-//       <div className="related-details">
-
-//         <h3>Related: </h3>
-//         {items.map(item => (
-//             <div>
-//               <h4>{data.name}</h4>
-//               <h4>{data.id}</h4>
-//             </div>
-//           ))}
-
-//         <Link
-//           to={{
-//             pathname: "/",
-//             state: this.props.location.state
-//           }}
-//         >
-//         </Link>
-//       </div>
-//     );
-//   }
-// }
-
 const RelatedItems = () => {
   const item = data
   return (

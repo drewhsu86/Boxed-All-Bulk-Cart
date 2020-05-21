@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import api from '../../services/apiConfig'
+import catStructure from '../../categories.json'
 
 export default class Create extends Component {
   constructor(props) {
@@ -8,7 +9,9 @@ export default class Create extends Component {
       inputCreate: this.resetCreate(),
       inputNumbers: ['rating', 'stock'],  // names of inputs that are numbers in the schema
       errMsg: '',
-      canSubmit: false
+      canSubmit: false,
+      categories: catStructure,
+      subcategories: []
     }
   }
 
@@ -124,6 +127,26 @@ export default class Create extends Component {
     return true
   }
 
+  // fill the subcategories based on imported json (catStructure)
+  fillSubcat = (catUrl) => {
+    let subcat
+    catStructure.forEach(cat => {
+      if (catUrl === cat.url) {
+        subcat = cat.subcat
+      }
+    })
+    this.setState({
+      subcategories: subcat
+    })
+  }
+
+  // on change for category dropdown 
+  handleChangeCat = (e) => {
+    const catUrl = e.target.value
+    // find the element in the array with matching url 
+    this.fillSubcat(catUrl)
+    this.handleChange(e, 'categories')
+  }
 
   // ==============
   // render
@@ -132,7 +155,7 @@ export default class Create extends Component {
     // grab the keys from inputCreate
     // to map our form inputs 
     const keys = Object.keys(this.state.inputCreate)
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <div className="adminInputs">
         <h3>Add a product</h3>
@@ -143,7 +166,7 @@ export default class Create extends Component {
         <form onSubmit={this.handleSubmit}>
           {this.state.errMsg ? <p className="error">{this.state.errMsg}</p> : null}
 
-          <h4>Submit To Create</h4>
+          <h4>Fill In Fields, Then Submit To Create</h4>
           <button disabled={!this.state.canSubmit}>
             Submit
           </button>
@@ -152,11 +175,25 @@ export default class Create extends Component {
             keys.map((inputField) => {
               return (<>
                 <label>{inputField}</label> <br />
-                <input
+                {!['categories', 'subcategories'].includes(inputField) ? <input
                   type="text"
                   value={this.state.inputCreate[inputField]}
                   onChange={e => this.handleChange(e, inputField)}
-                />
+                /> : (
+                    <select onChange={inputField === 'categories' ? this.handleChangeCat : (e) => { this.handleChange(e, inputField) }}>
+                      {
+                        inputField === 'categories' ? (
+                          this.state.categories.map(cat => {
+                            return <option value={cat.url}>{cat.name !== 'All Bulk' ? cat.name : 'Choose a category'}</option>
+                          })
+                        ) : (
+                            this.state.subcategories.map((subcat, ind) => {
+                              return <option value={subcat.url}>{ind === 0 ? 'Choose a subcategory' : subcat.name}</option>
+                            })
+                          )
+                      }
+                    </select>
+                  )}
                 <br />
               </>)
             })

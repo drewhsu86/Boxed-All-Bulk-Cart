@@ -10,6 +10,7 @@ export default class Signup extends Component {
       inputEmail: '',
       inputUsername: '',
       inputPassword: '',
+      inputInviteCode: '',
       errMsg: '',
       creationSuccess: false,
       canSubmit: false
@@ -41,7 +42,8 @@ export default class Signup extends Component {
         const response = await api.post('/signup', {
           email: this.state.inputEmail,
           username: this.state.inputUsername,
-          password: this.state.inputPassword
+          password: this.state.inputPassword,
+          invite_code: this.state.inputInviteCode
         })
 
         console.log(response)
@@ -124,6 +126,11 @@ export default class Signup extends Component {
             <label>Password</label>
             <input type="password" value={this.state.inputPassword}
               onChange={e => this.handleChange(e, 'inputPassword')}
+            />
+
+            <label>Invite Code</label>
+            <input type="text" value={this.state.inputInviteCode}
+              onChange={e => this.handleChange(e, 'inputInviteCode')}
             />
 
             <button disabled={!this.state.canSubmit}>Submit</button>

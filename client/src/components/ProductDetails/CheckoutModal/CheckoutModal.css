@@ -1,0 +1,81 @@
+.checkout-item-info {
+  display: inline-block;
+  margin-top: 5px;
+  height: 100px;
+  width: 200px;
+}
+
+.checkout-item-one {
+  background-color: white;
+  height: 100px;
+  width: 500px;
+}
+
+.checkout-item-title {
+  display: inline-block;
+  font-family: 'Open Sans';
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: .24px;
+  margin: 0;
+  width: 250px;
+}
+
+.checkout-modal-bottom {
+  background-color: #ddedf7;
+  text-align: center;
+}
+
+.checkout-modal-button {
+  border: 2px solid #273645;
+  display: block;
+  color: #273645;
+  float: right;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-weight: bold;
+  height: 25px;
+  margin: 35px 30px;
+  text-align: center;
+  width: 90px;
+}
+
+.checkout-modal-main {
+  position: fixed;
+  width: 500px;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  margin: auto;
+}
+
+.checkout-modal-title {
+  background-color: #ddedf7;
+  color: #273645;
+  font-family: 'Open Sans';
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.checkout-related-image {
+  display: block;
+  float: left;
+  margin: 0;
+  margin-top: 10px;
+  height: 80px;
+  width: 100px;
+}
+
+.refund-button {
+  background-color: #4d6988;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .25);
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-weight: bold;
+  height: 45px;
+  margin: 20px;
+  width: 350px;
+}

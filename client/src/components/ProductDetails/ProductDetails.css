@@ -5,17 +5,19 @@
   width: 60%;
 }
 
-.prodColumnLeft {
+.prodColumn {
   display: flex;
   flex-direction: column;
-	justify-content: space-around;
+	justify-content: flex-start;
   align-items: flex-start;
   width: 70%;
-  height: stretch;
-  margin: auto;
 }
 
-.prodColumnRight {
+.prodColumn.left {
+  margin: 0;
+}
+
+.prodColumn.right {
   margin-left: 200px;
 }
 

@@ -26,11 +26,12 @@ class ProductThumb extends Component {
       <div className="productThumb">
         <Link to={`/productdetails/${product['_id']}`}>
 
-
-          {product.images[0] ? <img src={product.images[0]}
-            alt="Product Image" /> : <h5>No Image Available</h5>}
-
+          <div className="productThumbImgHolder">
+            {product.images[0] ? <img src={product.images[0]}
+              alt="Product Image" /> : <h5>No Image Available</h5>}
+          </div>
           <h4>{product.name}</h4>
+
 
         </Link>
 
@@ -39,7 +40,7 @@ class ProductThumb extends Component {
         <h3>${product.price}</h3>
         <p>Save 12% vs retail</p>
         {
-          product.stock > 0 ? <button onClick={() => { this.handleClick(product['_id']) }}>Add to cart</button> : <button disabled>Out of stock</button>
+          product.stock > 0 ? <button onClick={() => { this.handleClick(product['_id']) }}>ADD TO CART</button> : <button disabled>OUT OF STOCK</button>
         }
       </div>
     )

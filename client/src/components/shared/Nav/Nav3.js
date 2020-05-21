@@ -1,16 +1,14 @@
 import React from 'react'
 import './Nav3.css'
-// import { NavLink } from 'react-router-dom'
+import NavCatMenu from './NavCatMenu'
 
 
 const Nav = ({ user }) => {
   return (
     <nav>
       <div className="nav3-container">
+        <NavCatMenu />
         <a
-          href="/products"
-          className="categories">Categories</a>
-        <a 
           href="#"
           className="expressDelivery">Express Delivery</a>
         <a

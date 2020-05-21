@@ -3,7 +3,7 @@ import CartItem from './CartItem'
 
 export default function Cart(props) {
 
-  const items = props.items
+  const items = props.items || []
   const total = items ? items.reduce((accum, item) => {
     if (!isNaN(Number(item.product.price))) {
       return accum + (Number(item.product.price) * item.quantity)
@@ -29,7 +29,7 @@ export default function Cart(props) {
         }
       </div>
       <div className="cartTotal">
-        <p>CHECKOUT - ${total}</p>
+        <p>CHECKOUT - ${total.toFixed(2)}</p>
       </div>
     </div>
   )

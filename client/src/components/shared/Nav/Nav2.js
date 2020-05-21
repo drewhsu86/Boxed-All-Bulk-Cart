@@ -65,7 +65,7 @@ class Nav2 extends React.Component {
                 value={this.state.inputSearch}
                 onChange={this.handleChange}
               />
-              <button>Search</button>
+
             </form>
 
             <NavLink

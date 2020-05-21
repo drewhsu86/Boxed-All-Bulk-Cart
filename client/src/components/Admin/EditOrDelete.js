@@ -179,7 +179,7 @@ class EditOrDelete extends Component {
           <form onSubmit={this.handleSubmit}>
             {this.state.errMsg ? <p className="error">{this.state.errMsg}</p> : null}
 
-            <h4>Edit Here</h4>
+            <h4>Fill In Fields, Then Submit to Edit</h4>
             <button disabled={!this.state.canSubmit}>
               Submit
             </button>

@@ -4,6 +4,7 @@ import api from '../../services/apiConfig'
 import { withRouter } from 'react-router-dom'
 import './Products.css'
 
+
 class SubCat extends Component {
   constructor(props) {
     super(props)
@@ -21,9 +22,7 @@ class SubCat extends Component {
   async apiCall() {
     const category = this.props.match.params.category
     const subCategory = this.props.match.params.subcategory
-    //console.log(category, subCategory)
     const res = await api.get(`/categories/${category}/${subCategory}`)
-    //console.log(res)
     this.props.setProducts(res.data)
 
     this.setState({
