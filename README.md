@@ -36,7 +36,24 @@ Our main MVP features revolve around the following two goals: (1) creating a fun
 * Styling based on UX mockups and Boxed.com aesthetics
 
 #### UX Features
+The UX team provided a set of mockups, both detailing the components and styling for the Boxed.com site, as well as the new features they wanted to introduce.
+
 [Mockups in Zeplin](https://scene.zeplin.io/project/5ea47ccc58a80025db2899bb)
+
+##### Feature 1: Home popup
+The purpose of this mockup is to distinguish the two different stores or services of Boxed.come. The first is All-Bulk, which is bulk purchasing which is shipped from their warehouses. The second is Express, which is a shopping or grocery service where a local affiliate purchases the items and delivers them to the customer's home.
+
+![Feature 1: Boxed homepage popup](https://scene.zeplin.io/project/5ea47ccc58a80025db2899bb/screen/5ea47de08b7dc7272d15114d)
+
+##### Feature 2: Add to cart popup
+When a customer wants to order an item, it may be out of stock or undeliverable in the period between ordering and shipping. This feature was designed to ask if the customer would like a replacement to be shipped if the original were not available (and to be charged/refunded appropriately and automatically) after clicking the "Add to cart" button on the product details page.
+
+![Feature 2: Boxed add to cart popup](https://scene.zeplin.io/project/5ea47ccc58a80025db2899bb/screen/5ea47de08b7dc7272d15114d)
+
+##### Feature 3: Bulk and Express shopping carts 
+In Boxed.com's current implementation, the shopping cart is one column and both Bulk and Express orders are added to it. This may become confusing to users because the two carts still need to be checked out separately. This double column design helps users see the difference between their two carts.
+
+![Feature 3: Boxed Bulk and Express shopping carts](https://scene.zeplin.io/project/5ea47ccc58a80025db2899bb/screen/5ea47de033694a2667fbeae7)
 
 # Development
 
