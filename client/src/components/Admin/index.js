@@ -54,6 +54,9 @@ class Index extends Component {
     this.forceUpdate()
   }
 
+  // ============
+  // render
+  // ============
 
   render() {
     console.log('admin user: ', this.state.user)

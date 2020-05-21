@@ -5,12 +5,9 @@ import Images from './Image/Images'
 import RelatedItems from './RelatedItems/RelatedItems'
 import './ProductDetails.css'
 import DisplayNav from '../Products/DisplayNav'
-
-import { getProduct, deleteProduct } from '../../services/products'
-import { withRouter, Link } from 'react-router-dom'
+import { getProduct, } from '../../services/products'
+import { withRouter } from 'react-router-dom'
 import CheckoutModal from './CheckoutModal/CheckoutModal'
-
-// const data = require('../../products.json')
 
 class ProductDetails extends Component {
   constructor(props) {

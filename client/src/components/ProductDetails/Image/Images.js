@@ -64,7 +64,7 @@ export default class Images extends Component {
 
             <div className="imageMain">
               <img className="imageImg"
-                src={images[this.state.currIndex]} alt={this.state.altText} />
+                src={images[this.state.currIndex]} alt={altText} />
             </div>
           </div>
         </div>

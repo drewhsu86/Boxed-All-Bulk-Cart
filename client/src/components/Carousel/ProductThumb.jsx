@@ -40,7 +40,7 @@ class ProductThumb extends Component {
         <h3>${product.price}</h3>
         <p>Save 12% vs retail</p>
         {
-          product.stock > 0 ? <button onClick={() => { this.handleClick(product['_id']) }}>Add to cart</button> : <button disabled>Out of stock</button>
+          product.stock > 0 ? <button onClick={() => { this.handleClick(product['_id']) }}>ADD TO CART</button> : <button disabled>OUT OF STOCK</button>
         }
       </div>
     )

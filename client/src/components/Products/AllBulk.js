@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import ProductThumb from '../Carousel/ProductThumb'
 import Carousel from '../Carousel/Carousel'
 import api from '../../services/apiConfig'
 import { withRouter } from 'react-router-dom'
-import DisplayNav from './DisplayNav'
+
 
 class AllBulk extends Component {
   constructor(props) {
