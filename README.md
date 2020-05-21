@@ -86,12 +86,12 @@ Because this was our first time working together, and also our first time doing 
 
 | By End Of Day | MVP | FE | BE | Post-MVP | FE | BE | CSS |
 | ------------- | --- | -- | -- | -------- | -- | -- | --- |
-| Thu - 5/14 | | 10% | 50% | | | | |
-| Fri - 5/15 | | 40% | 100% | | | | |
-| Mon - 5/18 | | 80% | 100% | | | | |
-| Tues - 5/19 | X | 100% | 100% | - | 40% | 50% | 30% |
-| Wed - 5/20 | X |  |  | - | 100% | 50% | 90% |
-| Thu - 5/21 | X |  |  | - | 100% | 100% | 100% |
+| Thu - 5/14 | - | 10% | 50% | | | | |
+| Fri - 5/15 | - | 40% | 100% | | | | |
+| Mon - 5/18 | - | 80% | 100% | | | | |
+| Tues - 5/19 | - | 100% | 100% | - | 40% | 50% | 30% |
+| Wed - 5/20 |  |  |  | - | 100% | 50% | 90% |
+| Thu - 5/21 |  |  |  | - | 100% | 100% | 100% |
 
 #### Trello Board
 
@@ -120,6 +120,10 @@ __Create, Update, Delete__ (Restricted via JWT)
   * post /products
   * put /products/:id
   * delete /products/:id
+  
+__Signup, Signin__
+  * post /signup
+  * post /signin
 
 #### User Schema
  
