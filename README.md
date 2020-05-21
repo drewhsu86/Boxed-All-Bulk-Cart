@@ -133,7 +133,7 @@ Because this was our first time working together, and also our first time doing 
 
 #### User Schema
  
-The User Schema only holds the following (all required) fields, which are required upon admin account creation:
+The User Schema only holds the following fields, which are required upon admin account creation:
   * email: string
   * username: string
   * password_digest: string
