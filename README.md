@@ -109,19 +109,19 @@ Because this was our first time working together, and also our first time doing 
 
 #### Routes 
 
-__Read__ (No Restriction)
+1. Read (No Restriction)
   * get /products/
   * get /products/:id 
   * get /categories/:category
   * get /categories/:category/:subcategory
   * get /search/:terms 
   
-__Create, Update, Delete__ (Restricted via JWT)
+2. Create, Update, Delete (Restricted via JWT)
   * post /products
   * put /products/:id
   * delete /products/:id
   
-__Signup, Signin__
+3. Signup, Signin
   * post /signup
   * post /signin
 
