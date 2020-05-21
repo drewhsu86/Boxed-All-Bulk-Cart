@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import './HomeModal.css'
 import { Link } from 'react-router-dom'
 
@@ -27,12 +26,14 @@ class HomeModal extends Component {
               alt="boxed modal logo" />
             <p className="description-left">Bulk goods shipped right from our warehouse, straight to your door</p>
 
-            <button
-              className="bulk-button"
-              onClick=""
-            >
-              SHOP BULK
+            <Link to="/products">
+              <button
+                className="bulk-button"
+                onClick=""
+              >
+                SHOP BULK
             </button>
+            </Link>
           </div>
 
           <div className="modalRight">
@@ -72,10 +73,5 @@ const Modal = ({ handleClose, show, children }) => {
     </div>
   );
 };
-
-
-// const container = document.createElement('div');
-// document.body.appendChild(container);
-// ReactDOM.render(<HomeModal />, container);
 
 export default HomeModal
