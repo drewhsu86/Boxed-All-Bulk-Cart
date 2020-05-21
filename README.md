@@ -103,7 +103,23 @@ Because this was our first time working together, and also our first time doing 
 
 ## React Route Chart 
 
+![React component map](./readme/React%20Routes%20Map.png)
+
 ## Express Routes and Models/Schemas
+
+#### Routes 
+
+__Read__ (No Restriction)
+  * get /products/
+  * get /products/:id 
+  * get /categories/:category
+  * get /categories/:category/:subcategory
+  * get /search/:terms 
+  
+__Create, Update, Delete__ (Restricted via JWT)
+  * post /products
+  * put /products/:id
+  * delete /products/:id
 
 #### User Schema
  
