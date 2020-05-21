@@ -97,29 +97,33 @@ Because this was our first time working together, and also our first time doing 
 
 [Development Trello Board](https://trello.com/b/OVCriFYj/ga-sei-apollo-project-3-boxed)
 
-## Code Examples And References
+## React Component Chart
 
-#### Express/Mongoose: User Schema
+## React Route Chart 
+
+## Express Routes and Models/Schemas
+
+#### User Schema
  
 The User Schema only holds the following (all required) fields, which are required upon admin account creation:
   * email: string
   * username: string
   * password_digest: string
 
-#### Express/Mongoose: Product Schema
+#### Product Schema
 
 The Product Schema has many more keys than the User and many are used for categorization and filtering on the products page of the app.
 
 ##### Product Schema Fields
   | Required? | Field | Field | Field| Field |
   | -------- | ------------ | ---------------------- | ------------------- | -------------|
-  | REQUIRED | name: string | images: array[strings] | description: string | price: string |
-  | REQUIRED | stock: number | rating: number (int 0-5) | categories: string | subcategories: string |
-  | NOT REQUIRED | typeOfProduct: string | values: string | brands: string | |
+  | REQUIRED | __name__: string | __images__: array[strings] | __description__: string | __price__: string |
+  | REQUIRED | __stock__: number | __rating__: number (int 0-5) | __categories__: string | __subcategories__: string |
+  | NOT REQUIRED | __typeOfProduct__: string | __values__: string | __brands__: string | |
   
 If the app were to be refactored further, the front end would have its filter functions redesigned so that the last three fields (typeOfProduct, values, brands) could be arrays.
 
-#### Express/Mongoose: Example of product json object for seeding database based on Product Schema
+##### Example of product json object for seeding database based on Product Schema
 ```js
 {
     "name": "TriFun Cereal Box",
