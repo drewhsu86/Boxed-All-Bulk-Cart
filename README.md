@@ -8,11 +8,15 @@ We also incorporate a database where products can be added to, edited and delete
 
 Built using MERN stack: MongoDB, Express, React, Nodejs
 
-__Deployed Site__
+#### Deployed Site
 [Deployed on surge.sh](http://boxed-ux-sei-p3.surge.sh/)
 
-__Admin Access__
+#### Admin Access
 To test the CRUD features of our full-stack app, one may reach the admin area by going to [http://boxed-ux-sei-p3.surge.sh/admin](http://boxed-ux-sei-p3.surge.sh/admin). To create an account, use the invite code "mockups2boxed".
+
+#### The App In Action 
+
+![Gif of Boxed Mockup Site After Deployment](./readme/boxed-mockup-tour.gif)
 
 # Team Members
 
